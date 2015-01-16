@@ -8,3 +8,8 @@ __Availability poll:__ [LINK](http://doodle.com/maqattenc3z8xnu7)
 
 __David Chen__
 * Cell: 647 628 3398
+
+__Haris Shoaib__
+* Cell: 416 806 5597
+* email: haris005@gmail.com
+
