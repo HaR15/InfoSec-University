@@ -11,5 +11,9 @@ __David Chen__
 
 __Haris Shoaib__
 * Cell: 416 806 5597
-* email: haris005@gmail.com
+* email: haris005@gmail.com  
+
+__Lucas Lima__
+* Cell: 647 464 6927  
+* Email: lucas.lsl.lima@gmail.com  
 
