@@ -17,3 +17,6 @@ __Lucas Lima__
 * Cell: 647 464 6927  
 * Email: lucas.lsl.lima@gmail.com  
 
+__Shudmanul Chowdhury__
+* Cell: 647 761 0541
+* Email: shudman@gmail.com
