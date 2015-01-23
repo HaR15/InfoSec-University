@@ -1,0 +1,24 @@
+- user registration -> profiles, comparison, progress
+- scoring system 
+- increasing levels of difficulty
+	- progressing from people with minimal experience to knowledgable developer
+- extra option: teacher profile managing student profiles
+	- monitoring progress
+- extra option: discussion board, chat box
+- extra option: scenario based tutorials
+
+- entering site, first time users get main lobby page containing seeing getting started information
+- entering site, regular users get main lobby page containing profile information, recommendations
+
+- any user has access to site navigation from top/side
+
+- tutorial based mini-exercises to help prepare users for scenario based tutorials
+
+
+
+
+Killer Features
+
+1. UI/UX
+2. Tutorials and Challenges
+3. Global chat
