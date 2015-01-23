@@ -24,3 +24,7 @@ __Shudmanul Chowdhury__
 __Alexei Darmin__
 * Cell: 647 802 5036
 * Email: alexei.darmin@gmail.com
+
+__Eric Scott__
+* Cell: 647 881 9601
+* Email: ebrianscott@gmail.com
