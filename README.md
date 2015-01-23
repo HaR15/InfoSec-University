@@ -20,3 +20,7 @@ __Lucas Lima__
 __Shudmanul Chowdhury__
 * Cell: 647 761 0541
 * Email: shudman@gmail.com
+
+__Alexei Darmin__
+* Cell: 647 802 5036
+* Email: alexei.darmin@gmail.com
