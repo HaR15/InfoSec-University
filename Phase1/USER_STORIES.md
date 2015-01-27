@@ -1,7 +1,7 @@
 ## User Stories
 
-#Note:
-#Suggested Format: As ____, I want _________________, so that _______________.
+###Note:
+###Suggested Format: As ____, I want _________________, so that _______________.
 
 User Story: As a user with no computer security experience, I want information to help me get started with the security tutorials and exercises. (this is vague, what is "information")
 
