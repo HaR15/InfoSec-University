@@ -4,9 +4,9 @@ User Story: As a user with no computer security experience, I want information t
 
 User Story: As a user with no computer security experience, I want information about the computer security field to help me become familiar with the field.
 
-User Story: As a user with computer security experience, I want information about the computer security field to keep me up-to-date and to learn about more advanced topics. 
-
 User Story: As a user with no computer security experience, I want to review and practice basic security principles to prepare me for more difficult topics. 
+
+User Story: As a user with computer security experience, I want information about the computer security field to keep me up-to-date and to learn about more advanced topics. 
 
 User Story: As a user with computer security experience, I want to review and practice using SQL Injection exploits. 
 
@@ -15,3 +15,10 @@ User Story: As a user with computer security experience, I want to review and pr
 User Story: As a user with computer security experience, I want to review and practice using Session Hijacking exploits.
 
 User Story: As a user with computer security experience, I want to review and practice using Cryptography. 
+
+
+====
+## Unapproved user stories
+As a user with no computer security experience, I want to apply what I learned into other projects
+
+As a user with computer security experience, I want to be able to quickly look up security information and confirm my understanding on a particular project
