@@ -3,21 +3,33 @@
 ###Note:
 ###Suggested Format: As ____, I want _________________, so that _______________.
 
-User Story: As a user with no computer security experience, I want information to help me get started with the security tutorials and exercises. (this is vague, what is "information")
+User Story: As a user with no computer security experience, I want a guide to help me get started with the security tutorials and exercises so that I am able to start off with easier exercises until I am comfortable attempting advanced tutorials/exercises.
 
-User Story: As a user with no computer security experience, I want information about the computer security field to help me become familiar with the field. (vague also because of "information", maybe say a history of security?)
+User Story: As a user with no computer security experience, I want to read news about the computer security field so that I can become familiar with the field and recent events. 
 
-User Story: As a user with no computer security experience, I want to learn and practice basic security principles to prepare me for more difficult topics. (what are "basic security principles" and how does one practice them, also "review AND practice" could be split into two stories)
+User Story: As a user with computer security experience, I want to read news about the computer security field so that I can keep me up-to-date and to learn the application of advanced topics.
 
-User Story: As a user with computer security experience, I want information about the computer security field to keep me up-to-date and to learn about more advanced topics. (A+)
+User Story: As a user with no computer security experience, I want to learn basic computer security principles so that I am better prepared to learn about more advanced topics.
 
-User Story: As a user with computer security experience, I want to review and practice using SQL Injection exploits. (A+)
+User Story: As a user with computer security experience, I want to review SQL Injection exploits so that I understand how they work and how to prevent this exploit.
 
-User Story: As a user with computer security experience, I want to learn and practice using Cross Site Scripting  exploits. (A+)
+User Story: As a user with computer security experience, I want to practice using SQL Injection exploits so that I can test my understanding.
 
-User Story: As a user with computer security experience, I want to learn and practice using Session Hijacking exploits. (A+)
+User Story: As a user with computer security experience, I want to review Cross Site Scripting exploits so that I understand how they work and how to prevent this exploit.
 
-User Story: As a user with computer security experience, I want to review and practice using Cryptography. (A+)
+User Story: As a user with computer security experience, I want to practice using Cross Site Scripting exploits so that I can test my understanding.
+
+User Story: As a user with computer security experience, I want to review Session exploits so that I understand how they work and how to prevent this exploit.
+
+User Story: As a user with computer security experience, I want to practice using Session exploits so that I can test my understanding.
+
+User Story: As a user with computer security experience, I want to review Cryptography so that I understand how it works.
+
+User Story: As a user with computer security experience, I want to practice using Cryptography so that I can test my understanding.
+
+
+
+
 
 User Story: As a Jr. Web Developer, I want to learn about the most common security vulnerabilties so that I can be mindful of them when developing an application.
 
