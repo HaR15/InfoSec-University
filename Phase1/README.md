@@ -14,3 +14,6 @@ I am an international CS student. I have some experience in Web Development and 
 
 __Haris Shoaib__<br />
 I am a 3rd year Computer Science Specialist, hoping to graduate in 2017. Currently, I am also a part-time Jr. Web developer student at OISE. At work, I help my supervisor in completing small, independent tasks, which also helps me learn about the basics of front and back end web development at a manageable pace. Although, at the moment my strengths lie in Front-end Web development, I hope to be proficient in working with the full stack. In my spare time, I like to read tech articles like those on HackerNews, play basketball, or go out with my friends. 
+
+__Caroline Pessoa Caetano__<br />
+I am a fourth-year Computer Science student. I have participated in a research project in which I developed a website for the tourism observatory of Sao Paulo. Another interesting project consisted of the design of an educational game during IHC course. During the last summer I worked as Junior Software Developer at [Readyportal](http://www.readyportal.com/); one of the projects that I have worked on is available [here](http://wizardriodejaneiro.com.br/).
