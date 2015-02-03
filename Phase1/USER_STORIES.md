@@ -1,7 +1,9 @@
 __User Story Scoring__
-1: Fundamental feature. Without this feature, our product has no value to our users.
-2: Valuable feature. This feature would be great to have in our product, but is not a fundamental feature.
-3: Nice to have feature. This feature would be nice to have in the product, if possible, but not a problem if the product doesn't have it.
+<ul>
+<li>1: Fundamental feature. Without this feature, our product has no value to our users.</li>
+<li>2: Valuable feature. This feature would be great to have in our product, but is not a fundamental feature.</li>
+<li>3: Nice to have feature. This feature would be nice to have in the product, if possible, but not a problem if the product doesn't have it.</li>
+</ul>
 
 
 
