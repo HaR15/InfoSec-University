@@ -1,3 +1,5 @@
+<img src="TEAM_PHOTO.jpg" /> <br />
+
 ## Introduction
 
 __Zhi Hao (David) Chen__<br />
