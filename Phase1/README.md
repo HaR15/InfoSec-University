@@ -19,3 +19,6 @@ I am a 3rd year Computer Science Specialist, hoping to graduate in 2017. Current
 
 __Caroline Pessoa Caetano__<br />
 I am a fourth-year Computer Science student. I have participated in a research project in which I developed a website for the tourism observatory of Sao Paulo. Another interesting project consisted of the design of an educational game during IHC course. During the last summer I worked as Junior Software Developer at [Readyportal](http://www.readyportal.com/); one of the projects that I have worked on is available [here](http://wizardriodejaneiro.com.br/).
+
+__Antonio Carlos Raposo__<br />
+I am a 3rd year Computer Science student. I have participated in a few projects of research back in brazil, one of them involving Big Data and in Toronto i had an intership at the Big Data University, During my intership my team developed a educational game using the Oculus rift technology in order to gather atention of the youth, you can see it [here](http://geovr.mybluemix.net/). One of my hobbies is to play card games like poker, magic the gathering and Hearthstone.
