@@ -64,6 +64,4 @@ User Story: As a user with computer security experience, I want to have a list o
 
 User Story: As a user with no computer security experience, I want to be able to chat with other users so I can get assistance with tutorials or exercises.
 
-User Story: As a user with computer security experience, I want to be able to chat with other users so that I can discuss more difficult exercises with them.
-
 User Story: As a user with computer security experience, I want to be able to skip tutorials/exercises, so that I don't have to complete topics I am already familiar with.
