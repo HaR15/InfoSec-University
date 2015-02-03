@@ -16,7 +16,7 @@ __User Story Scoring__
 
 **Master** User Story As a user with computer security experience, I want to be able to practice fixing vulnerabilities so that I know how to deal with these vulnerabilites on my own applications.
 
-**Following user stories dependant on above 3 user stories**
+**Following user stories dependant on above 3 user stories**<br />
 User Story: As a user with computer security experience, I want to review SQL Injection exploits so that I understand how they work and how to prevent this exploit.
 
 User Story: As a user with computer security experience, I want to practice using SQL Injection exploits so that I can test my understanding.
@@ -32,7 +32,7 @@ User Story: As a user with computer security experience, I want to practice usin
 User Story: As a user with computer security experience, I want to review Cryptography so that I understand how it works.
 
 User Story: As a user with computer security experience, I want to practice using Cryptography so that I can test my understanding.
-**End of dependant user stories**
+<br />**End of dependant user stories**<br />
 
 User Story: As a user with no computer security experience, I want to learn basic computer security principles so that I am better prepared to learn about more advanced topics.
 
