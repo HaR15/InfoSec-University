@@ -2,9 +2,10 @@
 
 	* __Master User Story:__ As a user with no computer security experience, I want to be able to view tutorials on particular computer security topics so I can learn about the topics.
 
-	* __Master User Story:__ As a user with no computer security experience, I want to be able to practice a computer security topics through exercises so that I can test my understanding of the topic.
+	* __Master User Story:__ As a user with no computer security experience, I want to be able to practice a computer security topic through exercises so that I can test my understanding of the topic.
 
 	* __Master User Story:__ As a user with computer security experience, I want to be able to practice fixing vulnerabilities so that I know how to deal with these vulnerabilites on my own applications.  
+
 	* __User Story__: As a user with computer security experience, I want to review SQL Injection exploits so that I understand how they work and how to prevent this exploit.
 
 	* __User Story__: As a user with computer security experience, I want to practice using SQL Injection exploits so that I can test my understanding.
