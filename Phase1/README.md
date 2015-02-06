@@ -1,3 +1,7 @@
+# Phase 1 Documentation
+Phase 1 Full PDF documentation: [Click here](https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/master/Phase1/Phase%201%20Final%20doc.pdf)
+
+
 <img src="TEAM_PHOTO.jpg" /> <br />
 
 ## Introduction
