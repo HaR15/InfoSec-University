@@ -28,3 +28,7 @@ __Alexei Darmin__
 __Eric Scott__
 * Cell: 647 881 9601
 * Email: ebrianscott@gmail.com
+
+__Caroline Caetano__
+* Cell: 647 871 1376
+* Email: carolinecpessoa@gmail.com
