@@ -23,7 +23,8 @@
     "grunt-contrib-less": "0.11.1",
     "grunt-contrib-coffee": "~0.10.1",
     "bcrypt-nodejs":"~0.0.3",
-    "sails-mongo":"~0.10.5"
+    "sails-mongo":"~0.10.5",
+    "passport": "~0.2.1"
   },
   "scripts": {
     "start": "node app.js",
