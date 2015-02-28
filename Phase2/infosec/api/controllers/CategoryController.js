@@ -14,12 +14,10 @@ module.exports = {
 
  index: function(req, res){
 
-  var cat = req.param('cat');
-
-  Tutorial.find({category : cat}).exec(function(err,tutorials){
+  Category.find({ name: { 'like': '%' }}).exec(function(err,categories){
    if(!err){
     return res.view('categories',{
-     tutorials: tutorials
+     categoriesList: categories
     })
    }
   });

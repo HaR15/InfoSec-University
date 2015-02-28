@@ -7,5 +7,18 @@
 
 module.exports = {
 	
+  	index: function(req, res){
+
+	  var cat = req.param('cat');
+
+	  Tutorial.find({category : cat}).exec(function(err,tutorials){
+	   if(!err){
+	    return res.view('tutorial',{
+	     tutorials: tutorials
+	    })
+	   }
+	});
+ }
+
 };
 
