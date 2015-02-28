@@ -10,11 +10,18 @@ Sessions are used to maintain a semi-permanent state between two or more parties
 
 <b>Cross-Site Request Forgery:</b> A CSRF attack forces a victim’s browser, with an established session, to send a forged HTTP request, including the victim’s session cookie and any other automatically included authentication information, to a vulnerable web application. This allows the attacker to force the victim’s browser to generate requests the vulnerable application thinks are legitimate requests from the victim.
 
-__Exercises__
+__Overview__
 
+<h3>Session Fixation</h3>
 <ol>
 	<li>Login to application using another user's session id (which is provided).</li>
-	<li>With application using GET/POST parameters for session, execute a command as another user.</li>
 	<li>Combine Cross-Site Scripting and Session Fixation to have another user run malicious code.</li>
+</ol>
+<h3>Session Hijacking</h3>
+<ol>
+	<li>With application using GET/POST parameters for session, execute a command as another user.</li>
+</ol>
+<h3>Cross-Site Request Forgery</h3>
+<ol>
 	<li>Cross-Site Request Forgery scenario</li>
 </ol>

@@ -40,14 +40,22 @@ There are three main goals for cryptography:
 	FURTHER DETAIL TO BE ADDED
 
 
-__Exercises__
+__Overview__
 
+<h3>Ciphers</h3>
 <ol>
 	<li>Break a simple substitution cipher.</li>
 	<li>Break a simple caesar cipher.</li>
-	<li>Verify the resistances of provided hash functions.</li>
 	<li>Work through a Diffie-Hellman Key Exchange and arrive at the expected shared key.</li>
+</ol>
+<h3>Hash Functions</h3>
+<ol>
+	<li>Verify the resistances of provided hash functions.</li>
+</ol>
+<h3>Password Security</h3>
+<ol>
 	<li>Provide user with example etc/passwd file (not using shadow file), determine unencrypted password and login using it.</li>
+	<li>Provide user with example etc/passwd file (that is using shadow file), determine unencrypted password and login using it.</li>
 </ol>
 
 

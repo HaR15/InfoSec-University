@@ -7,6 +7,36 @@ SQL stands for Structured Query Language. It is a type of language which allows 
 
 <h2>Overview</h2>
 
+<h3>Error Based</h3>
+<ol>
+	<li>Execute SQL Injection that will return an error.</li>
+</ol>
+<h3>Time Delay</h3>
+<ol>
+	<li>Execute SQL Injection that will wait X seconds to complete.</li>
+</ol>
+<h3>Stacked Queries</h3>
+<ol>
+	<li>Execute SQL Injection that will execute a series of queries.</li>
+</ol>
+<h3>Boolean Based</h3>
+<ol>
+	<li>Execute SQL Injection that will use booleans to determine structure of database.</li>
+</ol>
+<h3>Union Based</h3>
+<ol>
+	<li>Execute SQL Injection that will use SQL UNIONS to determine structure of database.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
 __Offensive Steps__
 <ol>
 <li>Find a target, the website.</li>
