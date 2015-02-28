@@ -36,6 +36,12 @@ module.exports.routes = {
     view: 'main/homepage'
   },
 
+  '/category': {
+
+    controller:'CategoryController',
+    action: 'index'
+
+  }
 
   /***************************************************************************
   *                                                                          *
