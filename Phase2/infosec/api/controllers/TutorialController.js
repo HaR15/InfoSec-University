@@ -14,7 +14,7 @@ module.exports = {
 	  Tutorial.find({category : cat}).exec(function(err,tutorials){
 	   if(!err){
 	    return res.view('tutorial',{
-	     tutorials: tutorials
+	     tutorialsList: tutorials
 	    })
 	   }
 	});
