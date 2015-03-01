@@ -7,11 +7,22 @@
 
 module.exports = {
 
-  attributes: {
-  	title:{
-  		type: 'string'
-  	}
-
-  }
+    attributes: {
+    
+        tutorialId: {
+            autoIncrement: 'true',
+            type: 'integer',
+            primaryKey: 'true'
+        },
+        
+        categoryId: { type: 'integer' },
+        
+        title: { type: 'string' },
+        
+  	description: { type: 'string' },
+  	    
+  	src: { type: 'string' }
+  	    
+    }
 };
 
