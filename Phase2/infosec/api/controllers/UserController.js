@@ -10,33 +10,43 @@ module.exports = {
 	login: function (req, res) {
 		var bcrypt = require('bcrypt-nodejs');
 
-		User.findOneByUser(req.body.user).exec(function (err, user) {
+		// Search database for provided username
+		User.find({username : req.param('username')}).exec(function (err, user) {
+			// If we cannot connect to database, return error
 			if (err) {
-				res.json({ error: 'DB error' }, 500)
+				return res.status(500).json({ error: 'DB error' });
 			};
 
-			if (user) {
-				bcrypt.compare(req.body.password, user.password, function (err, match) {
+			// Check if we find a username matching the provided username
+			if (user.length != 0) {
+				// Encrypt plaintext provided password and compare this against the hashed password
+				// stored in the database
+				bcrypt.compare(req.param('password'), user[0].password, function (err, match) {
+
+					// If there was an issue encrypting or comparing the passwords, return an error
 					if (err){
-						res.json({ error: 'Server error' }, 500);
+						return res.status(500).json({ error: 'Server error' });
 					}
 
-					// If the user/password provided is correct
+					// If the username/password provided is correct, save user's id in the session
+					// and return user's information as JSON
 					if (match) {
 						req.session.user = user.id;
 						res.json(user);
 					}
-					// Otherwise, user/password provided is incorrect
+					
+					// Otherwise, username/password provided is incorrect so return an error
 					else{
 						if (req.session.user) {
 							req.session.user = null;
 						}
-						res.json({ error: 'Invalid password' }, 400);
+						return res.status(400).json({ error: 'Invalid password' });
 					}
 				});
 			}
+			// Otherwise, provided username does not exist in database
 			else {
-				res.json({ error: 'User not found' }, 404);
+				return res.status(404).json({ error: 'User not found' });
 			}
 		});
 	}
