@@ -1,0 +1,20 @@
+<div>
+  <h1>Category name: <!-- <%= category.name %> --></h1>
+  <p>Category background: <!-- <%= category.background %> --></p>
+<div>
+
+
+<div id="container">
+  
+
+  <% _.each(tutorials, function(tutorial) { %>
+
+    <a href="/tutorial/byid?id=<%= tutorial.id %>">
+      <div class="box">
+        <li><%= tutorial.title %></li>
+        <p><%= tutorial.description %></p>
+      </div>
+    </a>
+
+  <% }) %>
+<div>
