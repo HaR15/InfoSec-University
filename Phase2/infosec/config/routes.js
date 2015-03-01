@@ -41,7 +41,7 @@ module.exports.routes = {
     controller:'CategoryController',
     action: 'index'
 
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -52,5 +52,7 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-
+  '/test': {
+    view: 'exercise/exercise'
+  }
 };
