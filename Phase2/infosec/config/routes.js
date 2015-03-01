@@ -20,7 +20,7 @@
  * http://sailsjs.org/#/documentation/concepts/Routes/RouteTargetSyntax.html
  */
 
-module.exports.routes = {
+ module.exports.routes = {
 
   /***************************************************************************
   *                                                                          *
@@ -37,10 +37,18 @@ module.exports.routes = {
   },
 
   '/category': {
-
     controller:'CategoryController',
     action: 'index'
+  }
 
+  '/tutorial': {
+    controller: 'TutorialController',
+    action: 'byCategory'
+  }
+
+  '/tutorial/tutorial': {
+    controller: 'TutorialController',
+    action: 'byId'
   }
 
   /***************************************************************************

@@ -7,7 +7,7 @@
 
 module.exports = {
 	
-    bycategory: function(req, res) {
+    byCategory: function(req, res) {
         var categoryId = req.param('id');
         Tutorial.find({categoryId : categoryId}).exec(function(err, tutorials) {
             if (!err) {
@@ -24,7 +24,7 @@ module.exports = {
     },
 
 
-    byid: function(req, res) {
+    byId: function(req, res) {
         var tutorialId = req.param('id');
         Tutorial.find({id : tutorialId}).exec(function(err, tutorials) {
             if (!err) {

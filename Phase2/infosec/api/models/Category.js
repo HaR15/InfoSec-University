@@ -12,8 +12,7 @@ module.exports = {
   		type: 'string'
   	},
 
-  	description:{
-
+  	description: {
   		type: 'string'
   	}
 
