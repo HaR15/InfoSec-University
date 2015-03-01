@@ -8,15 +8,12 @@
 module.exports = {
 
     attributes: {
-    
-        
+
       categoryId: { type: 'string' },
         
       title: { type: 'string' },
         
-      description: { type: 'string' },
-  	    
-  	route: { type: 'string' }
+      description: { type: 'string' }
   	    
     }
 };
