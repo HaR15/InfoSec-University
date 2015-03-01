@@ -34,21 +34,6 @@
 
   '/': {
     view: 'main/homepage'
-  },
-
-  '/category': {
-    controller:'CategoryController',
-    action: 'index'
-  }
-
-  '/tutorial': {
-    controller: 'TutorialController',
-    action: 'byCategory'
-  }
-
-  '/tutorial/tutorial': {
-    controller: 'TutorialController',
-    action: 'byId'
   }
 
   /***************************************************************************
