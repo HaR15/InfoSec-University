@@ -1,18 +1,17 @@
 <div>
-  <h1>Category name: <!-- <%= category.name %> --></h1>
-  <p>Category background: <!-- <%= category.background %> --></p>
+  <h1><%= category.name %></h1>
+  <p><%= category.description %></p>
 <div>
 
 
 <div id="container">
-  
 
   <% _.each(tutorials, function(tutorial) { %>
 
     <a href="/tutorial/byid?id=<%= tutorial.id %>">
       <div class="box">
         <li><%= tutorial.title %></li>
-        <p><%= tutorial.description %></p>
+        <p><%= tutorial.brief %></p>
       </div>
     </a>
 

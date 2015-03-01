@@ -12,9 +12,11 @@ module.exports = {
       categoryId: { type: 'string' },
         
       title: { type: 'string' },
-        
+       
+      brief: { type: 'string' },
+
       description: { type: 'string' }
-  	    
+        
     }
 };
 
