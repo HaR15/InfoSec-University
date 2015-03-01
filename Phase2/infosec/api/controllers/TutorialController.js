@@ -10,16 +10,20 @@ module.exports = {
     byCategory: function(req, res) {
         var categoryId = req.param('id');
         Tutorial.find({categoryId : categoryId}).exec(function(err, tutorials) {
-            if (!err) {
-                Category.find({id: categoryId}).exec(function(err, category) {
-                    if(!err) {
+            if (!err && tutorials.length > 0) {
+                Category.find({id: categoryId}).exec(function(err, categories) {
+                    if(!err && categories.length > 0) {
                         return res.view('tutorial/tutorialsList', {
                             tutorials: tutorials,
-                            category: category[0]
+                            category: categories[0]
                         });
                     }
                 });
             }
+            return res.view('tutorial/tutorialsList', {
+                tutorials: [],
+                category: []
+            });
         });
     },
 
@@ -28,7 +32,12 @@ module.exports = {
         var tutorialId = req.param('id');
         Tutorial.find({id : tutorialId}).exec(function(err, tutorials) {
             if (!err) {
-                return res.view('tutorial/tutorial', { tutorial: tutorials[0] });
+                if (tutorials.length > 0) {
+                    return res.view('tutorial/tutorial', { tutorial: tutorials[0] });
+                } else {
+                    return res.view('tutorial/tutorial', { tutorial: []})
+                }
+                
             }
         });
     }
