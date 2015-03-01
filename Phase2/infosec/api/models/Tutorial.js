@@ -9,19 +9,14 @@ module.exports = {
 
     attributes: {
     
-        tutorialId: {
-            autoIncrement: 'true',
-            type: 'integer',
-            primaryKey: 'true'
-        },
         
-        categoryId: { type: 'integer' },
+      categoryId: { type: 'string' },
         
-        title: { type: 'string' },
+      title: { type: 'string' },
         
-  	description: { type: 'string' },
+      description: { type: 'string' },
   	    
-  	src: { type: 'string' }
+  	route: { type: 'string' }
   	    
     }
 };

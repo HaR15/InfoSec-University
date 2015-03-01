@@ -7,17 +7,30 @@
 
 module.exports = {
 	
-  	index: function(req, res){
+    bycategory: function(req, res) {
+        var categoryId = req.param('id');
+        Tutorial.find({categoryId : categoryId}).exec(function(err, tutorials) {
+            if (!err) {
+                Category.find({id: categoryId}).exec(function(err, category) {
+                    if(!err) {
+                        return res.view('tutorial/tutorialsList', {
+                            tutorials: tutorials,
+                            category: category[0]
+                        });
+                    }
+                });
+            }
+        });
+    },
 
-	  var cat = req.param('cat');
 
-	  Tutorial.find({category : cat}).exec(function(err,tutorials){
-	   if(!err){
-	    return res.view('tutorial',{
-	     tutorialsList: tutorials
-	    })
-	   }
-	});
- }
+    byid: function(req, res) {
+        var tutorialId = req.param('id');
+        Tutorial.find({id : tutorialId}).exec(function(err, tutorials) {
+            if (!err) {
+                return res.view('tutorial/tutorial', { tutorial: tutorials[0] });
+            }
+        });
+    }
 
-};
+}
