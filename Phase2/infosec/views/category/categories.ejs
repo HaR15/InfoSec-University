@@ -1,11 +1,11 @@
-<div id="container">
+<div id="boxes-container">
   
 
-  <% _.each(categoriesList, function(category) { %>
+  <% _.each(categories, function(category) { %>
 
     <a href="/tutorial/byCategory?id=<%= category.id %>">
-      <div class="box">
-        <li><%= category.name %></li>
+      <div class="section-box">
+        <h2><%= category.name %></h2>
         <p><%= category.description %></p>
       </div>
     </a>
