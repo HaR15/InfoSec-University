@@ -7,6 +7,17 @@
 
 module.exports = {
 
+	create: function(req, res) {
+		User.create(req.body).exec(function(err, result){
+	    	if (err) {
+	      		return res.status(500).json({ error: 'Server error' });
+	    	}
+	    	
+	    	// Redirect user to homepage after signing up
+	    	return res.redirect('/')
+	  	});
+	},
+
 	login: function (req, res) {
 		var bcrypt = require('bcrypt-nodejs');
 

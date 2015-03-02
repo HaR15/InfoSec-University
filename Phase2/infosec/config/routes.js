@@ -44,6 +44,10 @@
   'POST /user/login':{
     controller: 'UserController',
     action: 'login'
+  },
+
+  'GET /user/signup': {
+    view: 'user/signup'
   }
 
   /***************************************************************************
