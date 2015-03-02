@@ -7,12 +7,16 @@
 <div>
 
 <div id="container">
-  <% _.each(tutorials, function(tutorial) { %>
+  <% if(tutorials.length > 0) { %>
+    <% _.each(tutorials, function(tutorial) { %>
     <a href="/tutorial/byid?id=<%= tutorial.id %>">
       <div class="box">
-        <li><%= tutorial.title %></li>
+        <h2><%= tutorial.title %></h2>
         <p><%= tutorial.brief %></p>
       </div>
     </a>
-  <% }) %>
+    <% }) %>
+
+  <% } %>
+
 <div>
