@@ -8,14 +8,17 @@
 module.exports = {
 
   attributes: {
-  	name:{
+  	title:{
   		type: 'string'
-  	}
-  	/*
-  	description:{
+  	},
 
+  	brief: {
+  		type:'string'
+  	},
+
+  	description: {
   		type: 'string'
   	}
-	*/
+	
   }
 };

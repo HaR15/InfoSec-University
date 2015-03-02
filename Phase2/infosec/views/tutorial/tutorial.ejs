@@ -1,0 +1,11 @@
+<div>
+  <% if(tutorial.length > 0){ %>
+    <h1><%= tutorial.name %></h1>
+    <p><%= tutorial.description %></p>
+    <br>
+  <% } %>
+  <a href="/exercise/byid?id=<%= tutorial.id  %>">
+    <h3>Exercises</h3>
+  </a>
+
+</div>

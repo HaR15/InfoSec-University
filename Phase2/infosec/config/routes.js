@@ -20,7 +20,7 @@
  * http://sailsjs.org/#/documentation/concepts/Routes/RouteTargetSyntax.html
  */
 
-module.exports.routes = {
+ module.exports.routes = {
 
   /***************************************************************************
   *                                                                          *
@@ -33,15 +33,18 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'main/homepage'
-  },
-
-  '/category': {
-
-    controller:'CategoryController',
+    controller: 'MainController',
     action: 'index'
-
   },
+
+  'GET /user/login': {
+    view: 'user/login'
+  },
+
+  'POST /user/login':{
+    controller: 'UserController',
+    action: 'login'
+  }
 
   /***************************************************************************
   *                                                                          *

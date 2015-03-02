@@ -12,15 +12,20 @@
 
 module.exports = {
 
- index: function(req, res){
+   index: function(req, res){
 
-  Category.find({ name: { 'like': '%' }}).exec(function(err,categories){
-   if(!err){
-    return res.view('categories',{
-     categoriesList: categories
-    })
+	Category.find().exec(function(err,categories){
+		if(!err){
+	  		return res.view('category/categories',{
+	   			categories: categories
+	  		});
+	 	}else{
+	 		return res.view('category/categories',{
+	 			categories: []
+	 		});
+	 	}
+	});
+
    }
-  });
- }
  
 };
