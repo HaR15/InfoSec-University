@@ -48,6 +48,11 @@
 
   'GET /user/signup': {
     view: 'user/signup'
+  },
+
+  'GET /user/logout': {
+    controller: 'UserController',
+    action: 'logout'
   }
 
   /***************************************************************************

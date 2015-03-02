@@ -53,7 +53,7 @@
             <ul class="nav navbar-nav navbar-right">
               <% if(req.session.username){ %>
                   <li><a href="/"><%= req.session.username %></a></li>
-                  <li><a href="#">LOGOUT</a></li>
+                  <li><a href="/user/logout">LOGOUT</a></li>
 
               <% }else{ %>
                   <li><a href="/user/signup">SIGN UP</a></li>

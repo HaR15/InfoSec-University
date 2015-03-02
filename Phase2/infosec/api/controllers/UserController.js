@@ -12,7 +12,7 @@ module.exports = {
 	    	if (err) {
 	      		return res.status(500).json({ error: 'Server error' });
 	    	}
-	    	
+
 	    	// Redirect user to homepage after signing up
 	    	return res.redirect('/')
 	  	});
@@ -61,5 +61,12 @@ module.exports = {
 				return res.status(404).json({ error: 'User not found' });
 			}
 		});
+	},
+
+	logout: function (req, res) {
+		// Destroy user's session to log them out, then redirect to homepage
+		req.session.destroy();
+		return res.redirect('/');
 	}
+
 };
