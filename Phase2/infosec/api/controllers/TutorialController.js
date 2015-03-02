@@ -22,7 +22,7 @@ module.exports = {
             }
             return res.view('tutorial/tutorialsList', {
                 tutorials: [],
-                category: []
+                category: null
             });
         });
     },
