@@ -1,20 +1,18 @@
 <div>
   <h1> Hello </h1>
-  <h1><%= category.name %></h1>
-  <p><%= category.description %></p>
+  <% if(category){ %>
+    <h1><%= category.name %></h1>
+    <p><%= category.description %></p>  
+  <% } %>
 <div>
 
-
 <div id="container">
-
   <% _.each(tutorials, function(tutorial) { %>
-
     <a href="/tutorial/byid?id=<%= tutorial.id %>">
       <div class="box">
         <li><%= tutorial.title %></li>
         <p><%= tutorial.brief %></p>
       </div>
     </a>
-
   <% }) %>
 <div>
