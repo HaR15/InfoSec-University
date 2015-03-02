@@ -29,10 +29,10 @@ module.exports = {
 					}
 
 					// If the username/password provided is correct, save user's id in the session
-					// and return user's information as JSON
+					// and return user's information to the UserView
 					if (match) {
 						req.session.user = user.id;
-						res.json(user);
+						return res.view('user/login', { username: user[0].username});
 					}
 					
 					// Otherwise, username/password provided is incorrect so return an error
