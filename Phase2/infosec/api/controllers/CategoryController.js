@@ -16,7 +16,7 @@ module.exports = {
 
   Category.find({ name: { 'like': '%' }}).exec(function(err,categories){
    if(!err){
-    return res.view('categories',{
+    return res.view('category',{
      categoriesList: categories
     })
    }
