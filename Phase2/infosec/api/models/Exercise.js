@@ -9,6 +9,31 @@ module.exports = {
 
   attributes: {
 
+
+  	title: {
+  		type: 'string'
+  	},
+
+  	instructions: {
+  		type: 'string'
+  	},
+
+  	expected: {
+  		type: 'string'
+  	},
+
+  	additionalCode: {
+  		type: 'string'
+  	},
+
+  	level: {
+  		type: 'string'
+  	},
+
+  	tutorialId: {
+  		type: 'string'
+  	}
+
   }
 };
 
