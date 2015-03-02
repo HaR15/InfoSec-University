@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Audiowide);
 
 @light-blue: rgba(52, 152, 219,1.0);
-@asphalt: rgba(52, 73, 94,1.0);
+@asphalt: rgba(52, 73, 94,0.9);
 @white: rgba(255, 255, 255,1.0);
 @grey: rgba(236, 240, 241,1.0);
 @green: rgba(46, 204, 113,1.0);
@@ -15,18 +15,20 @@ h1,h2,h3,h4{
 
 html, body{
 	height:100%;
+	width: 100%;
+	color: @asphalt;	
 }
 
 body{
 	padding-top: 55px;
-	background-color: @light-blue;
-	font-family: 'Advent Pro', sans-serif;	
+	background-color: #F1F2F2;
+	font-family: 'Advent Pro', sans-serif;
 }
 
 #navbar-top{
 	background-color: @white;
 	height: 55px;
-	box-shadow: @bottom-shadow;
+	//box-shadow: @bottom-shadow;
 
 	.container{
 		background-color: @white;

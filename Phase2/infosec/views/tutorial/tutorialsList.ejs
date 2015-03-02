@@ -1,22 +1,23 @@
-<div>
-  <h1> Hello </h1>
-  <% if(category){ %>
-    <h1><%= category.name %></h1>
-    <p><%= category.description %></p>  
-  <% } %>
-<div>
 
-<div id="container">
+<div class="boxes-container">
+  
+  <div class="section-header">
+    <% if(category){ %>
+      <h1><%= category.name %></h1>
+      <br>
+      <p><%= category.description %></p>  
+    <% } %>
+  <div>
+
   <% if(tutorials.length > 0) { %>
     <% _.each(tutorials, function(tutorial) { %>
     <a href="/tutorial/byid?id=<%= tutorial.id %>">
-      <div class="box">
+      <div class="section-box">
         <h2><%= tutorial.title %></h2>
         <p><%= tutorial.brief %></p>
       </div>
     </a>
     <% }) %>
-
   <% } %>
 
-<div>
+</div>
