@@ -35,6 +35,10 @@ module.exports.session = {
   //   maxAge: 24 * 60 * 60 * 1000
   // },
 
+  cookie: {
+    maxAge: 60 * 1000
+  },
+
   /***************************************************************************
   *                                                                          *
   * In production, uncomment the following lines to set up a shared redis    *
@@ -72,6 +76,9 @@ module.exports.session = {
   // port: 27017,
   // db: 'sails',
   // collection: 'sessions',
+
+    adapter: 'mongo',
+    url: 'mongodb://infosec-university:302project-team12@ds047911.mongolab.com:47911/infosec'
 
   /***************************************************************************
   *                                                                          *
