@@ -34,6 +34,15 @@
 
   '/': {
     view: 'main/homepage'
+  },
+
+  'GET /user/login': {
+    view: 'user/login'
+  },
+
+  'POST /user/login':{
+    controller: 'UserController',
+    action: 'login'
   }
 
   /***************************************************************************
