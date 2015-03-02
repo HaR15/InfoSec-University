@@ -33,7 +33,8 @@
   ***************************************************************************/
 
   '/': {
-    view: 'main/homepage'
+    controller: 'MainController',
+    action: 'index'
   },
 
   'GET /user/login': {
