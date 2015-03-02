@@ -32,7 +32,7 @@ module.exports = {
 					// and return user's information to the UserView
 					if (match) {
 						req.session.user = user.id;
-						return res.view('user/login', { username: user[0].username});
+						return res.redirect('/');
 					}
 					
 					// Otherwise, username/password provided is incorrect so return an error

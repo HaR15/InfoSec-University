@@ -10,8 +10,10 @@ module.exports = {
     byCategory: function(req, res) {
         var categoryId = req.param('id');
         Tutorial.find({categoryId : categoryId}).exec(function(err, tutorials) {
+            console.log(tutorials);
             if (!err && tutorials.length > 0) {
                 Category.find({id: categoryId}).exec(function(err, categories) {
+                    console.log(categories);
                     if(!err && categories.length > 0) {
                         return res.view('tutorial/tutorialsList', {
                             tutorials: tutorials,
@@ -19,11 +21,12 @@ module.exports = {
                         });
                     }
                 });
+            }else{                
+                return res.view('tutorial/tutorialsList', {
+                    tutorials: [],
+                    category: null
+                });
             }
-            return res.view('tutorial/tutorialsList', {
-                tutorials: [],
-                category: null
-            });
         });
     },
 

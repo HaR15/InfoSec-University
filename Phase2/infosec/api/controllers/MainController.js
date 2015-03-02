@@ -6,9 +6,9 @@
  */
 
 module.exports = {
-	home: function(req, res){
+	index: function(req, res){
 		return res.view('main/homepage',{
-			layout: 'layouts/landing'
+			layout: 'layouts/public'
 		});
 	}
 	
