@@ -41,6 +41,16 @@ module.exports = {
                 
             }
         });
+    },
+
+    categories: function(req, res) {
+        Category.find().exec(function(err, cats){
+            if (!err) {
+                return res.view('admin/createTutorial', cats);
+            } else {
+                return res.view('500');
+            }
+        });
     }
 
 }
