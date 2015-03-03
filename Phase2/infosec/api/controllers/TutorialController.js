@@ -29,7 +29,6 @@ module.exports = {
         });
     },
 
-
     byId: function(req, res) {
         var tutorialId = req.param('id');
         Tutorial.find({id : tutorialId}).exec(function(err, tutorials) {
@@ -44,14 +43,16 @@ module.exports = {
         });
     },
 
-    categories: function(req, res) {
-        Category.find().exec(function(err, cats){
+    createTutorial: function(req, res) {
+        Category.find().exec(function(err, categories){
             if (!err) {
-                return res.view('admin/createTutorial', cats);
+                return res.view('admin/createTutorial', categories);
             } else {
                 return res.view('500');
             }
         });
     }
+
+
 
 }
