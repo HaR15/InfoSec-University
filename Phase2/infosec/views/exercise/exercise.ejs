@@ -8,17 +8,61 @@
 	<div class="container">
 		<div class="row">
 			<div class="row">
-				<h1> Level: </h1>
+				<h1> Level: <%= exercise.level %></h1>
 			</div>
 
+			<!-- Vertical space -->
 			<div class="row" style="height:30px">
 			</div>
 
+			<!-- Exercise part -->
 			<div class="col-xs-4" style="background:white;height:500px;">
+				<h1> <%= exercise.title %> </h1>
+				<p> <%= exercise.instructions %> </p>
+				<p> "<%= exercise.id %>" </p>
 			</div>
 			<div class="col-xs-8" style="background:grey;height:500px;padding:0px;">
-				<textarea class="form-control" style="height:100%;background:grey;"></textarea>
+				<form name="codeForm" id="codeForm" action="/exercise/validate" method="GET">
+					<input name="id" value="<%= exercise.id %>"> 
+					<textarea name="code" class="form-control" style="height:100%;background:grey;"></textarea>
+					<input type="submit" value="Submit">
+				</form>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!-- Putting scripts at the end -->
+<!--
+<script> 
+    // wait for the DOM to be loaded 
+    $(document).ready(function() { 
+        // bind 'myForm' and provide a simple callback function 
+        $('#codeForm').ajaxForm(function() { 
+            alert("Thank you for your comment!"); 
+        }); 
+    }); 
+</script>
+-->
+
+<script>
+	$("codeForm").submit(function(e){
+		var postData = $(this).serializeArray();
+		var formURL = $(this).attr("action");
+		$.ajax({
+			url: formURL,
+			type: "GET",
+			data: postData,
+			success: function(){
+				alert("hi");
+			},
+			error: function(){
+				alert("error");
+			}
+		});
+		e.preventDefault();
+		e.unbind();
+	});
+
+	$("codeForm").submit();
+</script>

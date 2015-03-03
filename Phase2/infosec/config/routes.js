@@ -79,7 +79,4 @@
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  '/test': {
-    view: 'exercise/exercise'
-  }
 };
