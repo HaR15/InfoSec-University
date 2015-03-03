@@ -143,16 +143,16 @@ module.exports = {
 
 	createExercise: function(req, res){
 
-		Exercise.find() 
-		.exec(function(err, exercises){
+		Tutorial.find() 
+		.exec(function(err, tutorials){
 
-			// If no error occurred, then return all the Exercises
+			// If no error occurred, then return all the tutorials
 			if(!err){ 
-				return res.view('exercise/createExercise', { exercises: exercises });
+				return res.view('exercise/createExercise', { tutorials: tutorials });
 
 			// If error occurred, then return an empty array
 			}else{ 
-				return res.view('exercise/createExercise', { exercises: [] });
+				return res.view('exercise/createExercise', { tutorials: [] });
 			}
 		});
 
