@@ -10,6 +10,7 @@ module.exports = {
     byCategory: function(req, res) {
         var categoryId = req.param('id');
         Tutorial.find({categoryId : categoryId}).exec(function(err, tutorials) {
+            console.log(tutorials);
             if (!err && tutorials.length > 0) {
                 Category.findOne({id: categoryId}).exec(function(err, cat) {
                     if(!err && cat) {

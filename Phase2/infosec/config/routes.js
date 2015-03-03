@@ -60,9 +60,18 @@
     action: 'getSignup'
   },
 
+  'GET /user/profile': {
+    controller: 'UserController',
+    action: 'getProfile'
+  },
+
   'GET /user/logout': {
     controller: 'UserController',
     action: 'logout'
+  },
+
+  '/tutorial/create': {
+    view: 'admin/createTutorial'
   }
 
   /***************************************************************************
