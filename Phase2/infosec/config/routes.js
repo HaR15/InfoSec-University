@@ -37,6 +37,14 @@
     action: 'index'
   },
 
+  '/about':{
+    view: 'main/about'
+  },
+
+  '/guide':{
+    view: 'main/guide'
+  },
+
   'GET /user/login': {
     view: 'user/login'
   },
