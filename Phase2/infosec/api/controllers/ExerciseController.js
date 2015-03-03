@@ -50,6 +50,7 @@ module.exports = {
 
 				// If error occurred or object not found then respond with 404	
 				}else{ 
+					console.log(err);
 					return res.send(404);
 				}
 			});
@@ -126,7 +127,9 @@ module.exports = {
 
 					}else{
 						// Otherwise if this is an HTML-wanting browser, do a redirect. 
-						return res.redirect('/exercise/byId?id=' + exercideId);   						
+						//return res.redirect('/exercise/byId?id=' + exercideId);
+						//return res.json({validation: 'test'}); 
+						return res.send("hey");  						
 					}
 
 				// If any error occurs or exercise is not found, respond with 404
@@ -135,7 +138,26 @@ module.exports = {
 				}
 
 			});
+	},
+
+
+	createExercise: function(req, res){
+
+		Exercise.find() 
+		.exec(function(err, exercises){
+
+			// If no error occurred, then return all the Exercises
+			if(!err){ 
+				return res.view('exercise/createExercise', { exercises: exercises });
+
+			// If error occurred, then return an empty array
+			}else{ 
+				return res.view('exercise/createExercise', { exercises: [] });
+			}
+		});
+
 	}
+
 	
 };
 
