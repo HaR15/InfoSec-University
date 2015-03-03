@@ -11,10 +11,13 @@
 
   <% if(tutorials.length > 0) { %>
     <% _.each(tutorials, function(tutorial) { %>
-    <a href="/tutorial/byid?id=<%= tutorial.id %>">
+    
       <div class="section-box">
         <h2><%= tutorial.title %></h2>
         <p><%= tutorial.brief %></p>
+
+        <a href="/tutorial/byid?id=<%= tutorial.id %>" class="tutorial">Tutorials</a>
+        <a href="/exercise/byid?id=<%= tutorial.id  %>" class="excercise">Excercises</a>
       </div>
     </a>
     <% }) %>
