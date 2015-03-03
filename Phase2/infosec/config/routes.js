@@ -63,6 +63,10 @@
   'GET /user/logout': {
     controller: 'UserController',
     action: 'logout'
+  },
+
+  '/tutorial/create': {
+    view: 'admin/createTutorial'
   }
 
   /***************************************************************************
