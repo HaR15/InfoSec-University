@@ -46,7 +46,8 @@
   },
 
   'GET /user/login': {
-    view: 'user/login'
+    controller: 'UserController',
+    action: 'getLogin'
   },
 
   'POST /user/login':{
@@ -55,7 +56,8 @@
   },
 
   'GET /user/signup': {
-    view: 'user/signup'
+    controller: 'UserController',
+    action: 'getSignup'
   },
 
   'GET /user/logout': {
