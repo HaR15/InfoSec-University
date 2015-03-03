@@ -148,11 +148,11 @@ module.exports = {
 
 			// If no error occurred, then return all the tutorials
 			if(!err){ 
-				return res.view('exercise/createExercise', { tutorials: tutorials });
+				return res.view('admin/createExercise', { tutorials: tutorials });
 
 			// If error occurred, then return an empty array
 			}else{ 
-				return res.view('exercise/createExercise', { tutorials: [] });
+				return res.view('admin/createExercise', { tutorials: [] });
 			}
 		});
 
