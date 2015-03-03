@@ -15,6 +15,10 @@ module.exports = {
 		return res.view('user/signup');
 	},
 
+	getProfile: function (req, res) {
+		return res.view('user/profile');
+	},
+
 	create: function(req, res) {
 		User.create(req.body).exec(function(err, result){
 	    	if (err) {
@@ -63,7 +67,7 @@ module.exports = {
 						if (req.session.user) {
 							req.session.user = null;
 						}
-						
+
 						FlashService.error(req, 'The password provided is incorrect, please try again.');
 						return res.redirect('/user/login');
 					}
