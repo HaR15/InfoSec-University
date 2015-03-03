@@ -1,13 +1,11 @@
 <h1>Create a Tutorial</h1>
 <form action="/tutorial" method="post">
 
-  <label>CategoryId<input name="categoryId" type="text"/></label>
-  <select>
-    <% _.each(categories, function(category){ %>
-      <option value=<%= category.id %>><% category.title %></option>
+  <label>CategoryId <select>
+    <% _.each(categories, function(category) { %>
+      <option value=<%= category.id %>><%= category.title %></option>
     <% }) %>
-
-  </select>
+  </select></label>
   <br/>
 
   <label>Title<input name="title" type="text"/></label>

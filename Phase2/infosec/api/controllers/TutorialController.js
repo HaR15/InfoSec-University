@@ -46,7 +46,7 @@ module.exports = {
     createTutorial: function(req, res) {
         Category.find().exec(function(err, categories){
             if (!err) {
-                return res.view('admin/createTutorial', categories);
+                return res.view('admin/createTutorial', { categories: categories });
             } else {
                 return res.view('500');
             }
