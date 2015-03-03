@@ -74,6 +74,11 @@
     view: 'admin/createTutorial'
   }
 
+  '/tutorial/create': {
+    controller: 'TutorialController',
+    action: 'createTutorial'
+  }
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
