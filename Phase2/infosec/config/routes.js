@@ -37,13 +37,37 @@
     action: 'index'
   },
 
+  '/about':{
+    view: 'main/about'
+  },
+
+  '/guide':{
+    view: 'main/guide'
+  },
+
   'GET /user/login': {
-    view: 'user/login'
+    controller: 'UserController',
+    action: 'getLogin'
   },
 
   'POST /user/login':{
     controller: 'UserController',
     action: 'login'
+  },
+
+  'GET /user/signup': {
+    controller: 'UserController',
+    action: 'getSignup'
+  },
+
+  'GET /user/profile': {
+    controller: 'UserController',
+    action: 'getProfile'
+  },
+
+  'GET /user/logout': {
+    controller: 'UserController',
+    action: 'logout'
   }
 
   /***************************************************************************

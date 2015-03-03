@@ -19,7 +19,10 @@ module.exports = {
 	  		type: 'string',
 	  		required: true,
 	  		minLength: 8
-	  	}
+	  	},
+	  	exercisesCompleted: {
+			type: 'list'
+		}
 	},
 
 	// Before creating our user, we will hash their password

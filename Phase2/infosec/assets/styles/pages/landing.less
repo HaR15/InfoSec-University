@@ -1,21 +1,28 @@
 
-
 #top-banner{
-	background-image: url("/images/banner.svg");
+	//background-image: url("/images/banner.svg");
+	background-color: rgba(52, 152, 219,1.0);
 	background-size: 100% 95%;
 	background-repeat: no-repeat;
-	width: 75%;
-	height: 50%;
+	width: 100%;
+	height: 55%;
 	margin: 0 auto;
-	margin-top: 5%;
+	//margin-top: 5%;
+	padding-top: 2%;
+
+	img{
+		width: 75%;
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 
 #main-links{
 	width: 75%;
-	height: 40%;
+	height: 30%;
 	margin: 0 auto;
-	margin-top: 2%;
+	margin-top: 4%;	
 
 	.main-links-frame{
 		width: 15%;
@@ -31,7 +38,7 @@
 		}
 
 		h2{
-			font-size: 22px;
+			font-size: 26px;
 			margin: 0;
 			
 		}
@@ -39,11 +46,48 @@
 		a{
 			color: @asphalt;
 			text-decoration: none;
-
-			:hover{
-				color: @white;
-			}
 		}
+		a:hover{
+			color:  @light-blue;
+		}		
 
 	}	
+}
+
+
+
+footer{
+	width: 100%;
+	margin-top: 6%;
+
+	a{
+		color: @asphalt;
+	}
+
+}
+
+
+.footer-links{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+
+	p{
+		a{
+			color: @asphalt;
+		}
+	}
+
+}
+
+
+
+.footer-info{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+
+	p{
+		font-size: 16px;
+	}
 }

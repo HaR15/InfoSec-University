@@ -51,8 +51,15 @@
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">SIGN UP</a></li>
-              <li><a href="#">LOGIN</a></li>
+              <% if(req.session.username){ %>
+                  <li><a href="/user/profile"><%= req.session.username %></a></li>
+                  <li><a href="/user/logout">LOGOUT</a></li>
+
+              <% }else{ %>
+                  <li><a href="/user/signup">SIGN UP</a></li>
+                  <li><a href="/user/login">LOGIN</a></li>
+
+              <% } %>
             </ul>
           </div>
 
