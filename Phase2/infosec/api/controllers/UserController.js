@@ -12,9 +12,10 @@ module.exports = {
 	    	if (err) {
 	      		return res.status(500).json({ error: 'Server error' });
 	    	}
-
-	    	// Redirect user to homepage after signing up
-	    	return res.redirect('/')
+	    	else {
+	    		// Log in user using their registered account
+	    		return sails.controllers.user.login(req, res);
+	    	}
 	  	});
 	},
 
@@ -26,7 +27,7 @@ module.exports = {
 			// If we cannot connect to database, return error
 			if (err) {
 				return res.status(500).json({ error: 'DB error' });
-			};
+			}
 
 			// Check if we find a username matching the provided username
 			if (user.length != 0) {
