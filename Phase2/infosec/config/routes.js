@@ -45,6 +45,10 @@
     view: 'main/guide'
   },
 
+  '/news':{
+    view: 'main/news'
+  },
+
   'GET /user/login': {
     controller: 'UserController',
     action: 'getLogin'
