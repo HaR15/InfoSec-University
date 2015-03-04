@@ -8,29 +8,6 @@
 module.exports = {
 
 
-	// ACTION NAME: index
-	// USE: Action returns all the exercises 
-	// PARAMETERS/INPUTS: none
-	index: function(req, res){
-
-		// Find all exercises in the Exercises Collection
-		Exercise.find() 
-			.exec(function(err, exercises){
-
-				// If no error occurred, then return all the Exercises
-				if(!err){ 
-					return res.view('exercise/list', { exercises: exercises });
-
-				// If error occurred, then return an empty array
-				}else{ 
-					return res.view('exercise/list', { exercises: [] });
-				}
-			});
-	},
-
-
-
-
 	// ACTION NAME: byId
 	// USE: Action returns exercise by a given ID
 	// PARAMETERS/INPUTS:
@@ -73,11 +50,11 @@ module.exports = {
 
 				// If no error occurred, then return all the Exercises
 				if(!err){ 
-					return res.view('exercise/list', { exercises: exercises });
+					return res.view('exercise/exercises', { exercises: exercises });
 
 				// If error occurred, then return an empty array	
 				}else{ 
-					return res.view('exercise/list', { exercises: [] });
+					return res.view('exercise/exercises', { exercises: [] });
 				}
 			});
 	},
@@ -95,7 +72,7 @@ module.exports = {
 		var exercideId = req.param('id'); 
 
 		// Get Code parameter from HTTP Request
-		var received = req.param('code'); 
+		var received = String(req.param('code')).replace(/[\n\r]/g,'').replace(/ /g,''); 
 
 		// Find the exercise object by the given ID
 		Exercise.findOne({ id: exercideId}) 
@@ -110,26 +87,26 @@ module.exports = {
     				// send a simple response letting the user agent know they were logged out
     				// successfully.
 				    if (req.wantsJSON) {
+				    	var expected = exercise.expected.replace(/[\n\r]/g,'').replace(/ /g,'');
+
 
 				    	// Tests if code received matches the code expected
 				    	// by comparing the two string without whitespaces
-				    	if(exercise.expected.replace(/ /g,'')===received.replace(/ /g,'')){
+				    	if(expected===received){
 
 				    		// If code matchs, respond with validation=true
-  							return res.ok({ validation: 'true'});
+  							return res.ok({ validation: 'true', expected:  expected, received: received});
 				    	}else{
 
 				    		// If code doesn't match, responde with validation=false
-  							return res.ok({ validation: 'false'});
+  							return res.ok({ validation: 'false', expected:  expected, received: received});
 
 				    	}
 
 
 					}else{
 						// Otherwise if this is an HTML-wanting browser, do a redirect. 
-						//return res.redirect('/exercise/byId?id=' + exercideId);
-						//return res.json({validation: 'test'}); 
-						return res.send("hey");  						
+						return res.redirect('/exercise/byId?id=' + exercideId); 						
 					}
 
 				// If any error occurs or exercise is not found, respond with 404

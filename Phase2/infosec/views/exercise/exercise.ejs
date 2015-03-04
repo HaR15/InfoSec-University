@@ -1,17 +1,11 @@
-<div class="boxes-container excercise">
-  <div class="section-header">
-    <h1>Excercise</h1>
-  </div>
+<form id="submitExercise">
 
-  <div class="instructions">
-    <p>The following code is vulnurable, fix it.</p>
+    <input type="text" name="id" value="<%= exercise.id %>" hidden>
 
-    <code>
-    $query= "SELECT id, username, firstName, lastName, passwd FROM account WHERE username='$user' AND passwd='$password'";
-    $result = pg_prepare($dbconn, "", $query);
-    </code>
+    <textarea name="code">
+    </textarea>
 
-  </div>
+    <input type="submit" value="Submit">
 
-  <div class="input"></div>
-</div>
+
+</form>

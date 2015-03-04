@@ -16,9 +16,9 @@
   <label>Level<input name="level" type="text"/></label>
   <br/>
 
-  <label>Tutorial <select>
+  <label>Tutorial <select name="categoryId">
     <% _.each(tutorials, function(tutorial) { %>
-      <option value=<%= tutorial.id %>><%= tutorial.title %></option>
+      <option value="<%= tutorial.id %>"><%= tutorial.title %></option>
     <% }) %>
   </select></label>
   <br/>

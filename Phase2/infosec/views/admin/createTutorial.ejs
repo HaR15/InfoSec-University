@@ -1,9 +1,9 @@
 <h1>Create a Tutorial</h1>
 <form action="/tutorial" method="post">
 
-  <label>Category <select>
+  <label>Category <select name="categoryId">
     <% _.each(categories, function(category) { %>
-      <option value=<%= category.id %>><%= category.title %></option>
+      <option value="<%= category.id %>"><%= category.title %></option>
     <% }) %>
   </select></label>
   <br/>
