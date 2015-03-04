@@ -156,5 +156,81 @@ body{
 	}
 }
 
+.article{
+	padding-right:10px;
+	max-width:900px;
+	display:block;
+	width:100%;
+	border-color:grey;
+	border-width:2px;
+	border-radius:5px;
+	border-style:solid;
+	overflow:auto;
+	margin-top:20px;
+	max-height:210px;
+	background-color:rgba(0, 153, 255, 0.2);
+	h3{
+		margin: 10px 0px 10px 0px;
+		white-space: nowrap; 
+	    overflow: hidden;
+	    text-overflow: ellipsis; 
+	}
+	img{
+		max-height:200px;
+		max-width:300px;
+		margin-right:10px;
+		float:left;
+		width:20%;
+	}
+	.content{
+		display:block;
+	}
+	.content p{
+		display:block;
+		font-size:12pt;
+		/* Below code enforces a multi-line ellipses */
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -webkit-box;
+	    -webkit-box-orient: vertical;
+	    -webkit-line-clamp: 6; /* number of lines to show */
+	    line-height: 1;        /* fallback */
+	    max-height: 1*1;       /* fallback */
+	}
+}
+
+.article:hover{
+	background-color:rgba(0, 153, 255, 0.4)
+}
+
+@media (max-width: 700px) {
+  .article {
+    .content{
+    	display:none;
+    }
+    .vert-hack{
+    	display:block;
+    	height:15%;
+    }
+    h3{
+    	margin-top:10px;
+    	display:block;
+    	width:70%;
+    	height:100%;
+    	font-size:13pt;
+    	margin: 10px 0px 10px 0px;
+		white-space: initial; 
+		/* Below code enforces a multi-line ellipses */
+	       overflow: hidden;
+		   text-overflow: ellipsis;
+		   display: -webkit-box;
+		   -webkit-box-orient: vertical;
+		   -webkit-line-clamp: 3; /* number of lines to show */
+		   line-height: 1.2;        /* fallback */
+		   max-height: 3*3;       /* fallback */
+    }
+  }
+}
+
 
 
