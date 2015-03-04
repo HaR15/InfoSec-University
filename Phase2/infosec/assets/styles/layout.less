@@ -203,22 +203,21 @@ body{
 	background-color:rgba(0, 153, 255, 0.4)
 }
 
+/* Applies new design to small screens */
 @media (max-width: 700px) {
   .article {
+    /* Removes paragraph snapshot */
     .content{
     	display:none;
     }
-    .vert-hack{
-    	display:block;
-    	height:15%;
-    }
+
+    /* Article titles become 3 lines long */
     h3{
-    	margin-top:10px;
     	display:block;
     	width:70%;
     	height:100%;
     	font-size:13pt;
-    	margin: 10px 0px 10px 0px;
+    	margin: 20px 0px 10px 0px;
 		white-space: initial; 
 		/* Below code enforces a multi-line ellipses */
 	       overflow: hidden;
