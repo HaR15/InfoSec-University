@@ -33,12 +33,12 @@
 <h1>Login</h1>
 <form action="/user/login" method="post">
 
-  <label for="username">Your name ?</label>
+  <label for="username" required>Your name ?</label>
   <input name="username" type="text"/>
   <br/>
 
   <label for="password">Your safe word?</label>
-  <input name="password" type="password"/>
+  <input name="password" type="password" pattern=".{8,}" required title="8 characters minimum"/>
   <br/>
 
   <input type="submit"/>
