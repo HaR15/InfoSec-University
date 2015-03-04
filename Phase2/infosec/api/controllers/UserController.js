@@ -25,8 +25,13 @@ module.exports = {
 	      		return res.status(500).json({ error: 'Server error' });
 	    	}
 	    	else {
-	    		// Log in user using their registered account
-	    		return sails.controllers.user.login(req, res);
+	    		// Search database for provided username
+				User.find({username : req.param('username')}).exec(function (err, user) {
+					if (user.length != 0)
+						return res.redirect('/user/signup');
+		    		// Log in user using their registered account
+		    		return sails.controllers.user.login(req, res);
+		    	});
 	    	}
 	  	});
 	},
