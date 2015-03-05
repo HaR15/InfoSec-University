@@ -32,34 +32,30 @@ Providing us vital information that can be used to craft exploits for specific d
 <h2>Overview</h2>
 
 <h3>Error Based</h3>
-<ol>
-	<li>
-		Using an error-based SQL injection forces the database to generate an error, giving the attacker information upon which to refine their injection.
 
-		This method only works when the application doesn't handle errors properly by showing it on the screen to the user. By showing database errors to the user, a malicious user can use this data to determine the structure of the database and what functionality they can get access to (modifying tables, viewing DBMS configurations, etc).
+Using an error-based SQL injection forces the database to generate an error, giving the attacker information upon which to refine their injection.
 
-		Example: '
+This method only works when the application doesn't handle errors properly by showing it on the screen to the user. By showing database errors to the user, a malicious user can use this data to determine the structure of the database and what functionality they can get access to (modifying tables, viewing DBMS configurations, etc).
 
-			Just using a single quote can even let us know if the application is vulnerable to SQL injection, resulting in an error message like so:
+Example: '
 
-				Warning: pg_prepare() [function.pg-prepare]: Query failed: ERROR: unterminated quoted string at or near "''' AND passwd=''" LINE 1: ...ame, lastName, passwd FROM account WHERE username=''' AND pa... ^
+	Just using a single quote can even let us know if the application is vulnerable to SQL injection, resulting in an error message like so:
+
+		Warning: pg_prepare() [function.pg-prepare]: Query failed: ERROR: unterminated quoted string at or near "''' AND passwd=''" LINE 1: ...ame, lastName, passwd FROM account WHERE username=''' AND pa... ^
 
 
-		Example: '||cast((chr(95)||current_database()) as numeric)||'
+Example: '||cast((chr(95)||current_database()) as numeric)||'
 
-			Here we try to cast string as numeric, which will throw an error but the evaluated string with the current database name will part of the error message. As a result, the malicious user can use this to get furhter information about the database.
-	</li>
-</ol>
+	Here we try to cast string as numeric, which will throw an error but the evaluated string with the current database name will part of the error message. As a result, the malicious user can use this to get furhter information about the database.
+
 <h3>Time Delay</h3>
-<ol>
-	<li>
-		This method is a type of "Blind Query". Blind querying is different from SQL injections such as Error based injection, since the user can't see errors from the database. However, just because errors or other such information isn't being returned, doesn't mean the application is not vulnerable to SQL injection! This type of query is especially useful to know if the application is SQL injectable or not. In this SQL injection type, we can use database commands (ex. sleep) to delay answers in conditional queries. If the query takes some time to complete, we will then know if it executed our SQL injection, and therefore if the application is SQL injectable. 
 
-		Example: SELECT IF(version()=5.3, sleep(5), 'false'); --
+This method is a type of "Blind Query". Blind querying is different from SQL injections such as Error based injection, since the user can't see errors from the database. However, just because errors or other such information isn't being returned, doesn't mean the application is not vulnerable to SQL injection! This type of query is especially useful to know if the application is SQL injectable or not. In this SQL injection type, we can use database commands (ex. sleep) to delay answers in conditional queries. If the query takes some time to complete, we will then know if it executed our SQL injection, and therefore if the application is SQL injectable. 
 
-		Using this SQL injection, an attacker sends a bunch of true-false statements with a sleep function running on a true or false case to gain information. This attack is trickier to use since we are essentially going through this blind so it will require trial and error, trying continuously with new values until we get the behaviour we are looking for. Automated tools, like SQLMAP, are useful in this case as it can automate such tasks. 
-	</li>
-</ol>
+Example: SELECT IF(version()=5.3, sleep(5), 'false'); --
+
+Using this SQL injection, an attacker sends a bunch of true-false statements with a sleep function running on a true or false case to gain information. This attack is trickier to use since we are essentially going through this blind so it will require trial and error, trying continuously with new values until we get the behaviour we are looking for. Automated tools, like SQLMAP, are useful in this case as it can automate such tasks. 
+		
 <h3>Stacked Queries</h3>
 <ol>
 	<li>Execute SQL Injection that will execute a series of queries.</li>
