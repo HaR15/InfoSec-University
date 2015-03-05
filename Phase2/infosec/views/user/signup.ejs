@@ -30,16 +30,19 @@
   <br>
 <% } %>
 
-<h1>Signup</h1>
-<form action="/user" method="post">
+<div class="user-container">
+  <h1>Signup</h1>
+  <form action="/user" method="post">
 
-  <label for="username">Your name ?</label>
-  <input name="username" type="text"/>
-  <br/>
+    <label for="username">Your name ?</label>
+    <input name="username" type="text" pattern="[A-Za-z]{4,}" title="4 characters minimum | only upper and lowcase letters" required />
+    <br/>
 
-  <label for="password">Your safe word?</label>
-  <input name="password" type="password"/>
-  <br/>
+    <label for="password">Your safe word?</label>
+    <input name="password" type="password" pattern=".{8,}" required title="8 characters minimum"/>
+    <br/>
+    <br />
 
-  <input type="submit"/>
-</form>
+    <input type="submit"/>
+  </form>
+</div>
