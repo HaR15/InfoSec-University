@@ -1,13 +1,13 @@
-### Sprint Planning Meeting:
+# Sprint Planning Meeting:
 * Date: 05/03/2015
 * Location: BA1230
 * Participants: 
-** Shudman
-** Haris
-** Eric
-** David
-** Caroline
-** Antonio
+..* Shudman
+..* Haris
+..* Eric
+..* David
+..* Caroline
+..* Antonio
 
 
 ## Phase3 Goals 
