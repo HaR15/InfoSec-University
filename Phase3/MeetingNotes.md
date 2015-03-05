@@ -8,6 +8,8 @@
 ..* David
 ..* Caroline
 ..* Antonio
+..* Lucas
+..* Alexei
 
 
 ## Phase3 Goals 
