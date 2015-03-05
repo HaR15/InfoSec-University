@@ -1,48 +1,68 @@
-<!-- 
-	Alert section. If there are any errors, warnings, or confirmations to display to user,
-	display it here.
--->
-<% if (messages && messages['error'].length > 0) { %>
-  <div class="alert alert-error">
-  <% messages['error'].forEach(function(message) { %>
-    <%= message %>
-    <br>
-  <% }); %>
-  </div>
-  <br>
-<% } %>
-<% if (messages && messages['warning'].length > 0) { %>
-  <div class="alert alert-warning">
-  <% messages['warning'].forEach(function(message) { %>
-    <%= message %>
-    <br>
-  <% }); %>
-  </div>
-  <br>
-<% } %>
-<% if (messages && messages['success'].length > 0) { %>
-  <div class="alert alert-success">
-  <% messages['success'].forEach(function(message) { %>
-    <%= message %>
-    <br>
-  <% }); %>
-  </div>
-  <br>
-<% } %>
 
-<div class="user-container">
-  <h1>Signup</h1>
-  <form action="/user" method="post">
+<div class="container">
 
-    <label for="username">Your name ?</label>
-    <input name="username" type="text" pattern="[A-Za-z]{4,}" title="4 characters minimum | only upper and lowcase letters" required />
-    <br/>
+  <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Sign Up</div>
+            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="/user/login">Login</a></div>
+        </div>  
+        <div class="panel-body" >
+            <form id="signupform" class="form-horizontal" role="form" action="/user" method="post">
+               <!-- 
+                Alert section. If there are any errors, warnings, or confirmations to display to user,
+                display it here.
+              -->
+               <% if (messages && messages['error'].length > 0) { %>
+               <div id="signupalert" class="alert alert-danger col-sm-12">
+                <% messages['error'].forEach(function(message) { %>
+                  <%= message %>
+                <% }); %>
+                </div>
+              <% } %>
+              <% if (messages && messages['warning'].length > 0) { %>
+              <div id="signupalert" class="alert alert-warning col-sm-12">
+                <% messages['warning'].forEach(function(message) { %>
+                  <%= message %>
+                <% }); %>
+                </div>
+              <% } %>
+              <% if (messages && messages['success'].length > 0) { %>
+              <div id="signupalert" class="alert alert-success col-sm-12">
+                <% messages['success'].forEach(function(message) { %>
+                  <%= message %>
+                <% }); %>
+                </div>
+              <% } %>    
+                  
+              <div class="form-group">
+                  <label for="username" class="col-md-3 control-label">Username</label>
+                  <div class="col-md-9">
+                      <input type="text" class="form-control" name="username" placeholder="Choose a username" pattern="[A-Za-z]{4,}" title="4 characters minimum | only upper and lowcase letters" required >
+                  </div>
+              </div>
 
-    <label for="password">Your safe word?</label>
-    <input name="password" type="password" pattern=".{8,}" required title="8 characters minimum"/>
-    <br/>
-    <br />
 
-    <input type="submit"/>
-  </form>
+              <div class="form-group">
+                  <label for="password" class="col-md-3 control-label">Password</label>
+                  <div class="col-md-9">
+                      <input type="password" class="form-control" name="password" placeholder="Password" pattern=".{8,}" required title="8 characters minimum">
+                  </div>
+              </div>
+             
+              <div class="form-group">
+                  <!-- Button -->                                        
+                  <div class="col-md-offset-3 col-md-9">
+                      <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>  
+                  </div>
+              </div>                                                      
+                
+                
+            </form>
+         </div>
+    </div>              
+               
+                
+   </div> 
+
 </div>
