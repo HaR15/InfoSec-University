@@ -13,10 +13,14 @@
     <% _.each(tutorials, function(tutorial) { %>
     
       <div class="section-box">
-        <h2><%= tutorial.title %></h2>
-        <p><%= tutorial.brief %></p>
+          <div class="section-box-heading">            
+        <a href="/tutorial/byid?id=<%= tutorial.id %>">
+            <h2><%= tutorial.title %></h2>
+            <p><%= tutorial.brief %></p>
+        </a>
+          </div>
+        <div style="clear: both;"></div>
 
-        <a href="/tutorial/byid?id=<%= tutorial.id %>" class="tutorial">Tutorial</a>
         <a href="/exercise/byTutorial?id=<%= tutorial.id  %>" class="excercise">Exercises</a>
       </div>
     </a>
