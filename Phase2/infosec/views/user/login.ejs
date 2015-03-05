@@ -1,47 +1,97 @@
-<!-- 
-	Alert section. If there are any errors, warnings, or confirmations to display to user,
-	display it here.
--->
-<% if (messages && messages['error'].length > 0) { %>
-  <div class="alert alert-error">
-  <% messages['error'].forEach(function(message) { %>
-    <%= message %>
-    <br>
-  <% }); %>
-  </div>
-  <br>
-<% } %>
-<% if (messages && messages['warning'].length > 0) { %>
-  <div class="alert alert-warning">
-  <% messages['warning'].forEach(function(message) { %>
-    <%= message %>
-    <br>
-  <% }); %>
-  </div>
-  <br>
-<% } %>
-<% if (messages && messages['success'].length > 0) { %>
-  <div class="alert alert-success">
-  <% messages['success'].forEach(function(message) { %>
-    <%= message %>
-    <br>
-  <% }); %>
-  </div>
-  <br>
-<% } %>
 
-<div class="user-container">
-  <h1>Login</h1>
-  <form action="/user/login" method="post">
 
-    <label for="username" required>Your name ?</label>
-    <input name="username" type="text" pattern="[A-Za-z]{4,}" title="4 characters minimum | only upper and lowcase letters"/>
-    <br/>
+<div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+              <div class="panel-heading">
+                  <div class="panel-title">Login</div>
+              </div>
 
-    <label for="password">Your safe word?</label>
-    <input name="password" type="password" pattern=".{8,}" required title="8 characters minimum"/>
-    <br/><br />
 
-    <input type="submit"/>
-  </form>
-</div>
+
+              <div style="padding-top:30px" class="panel-body" >
+
+
+              <!-- 
+                Alert section. If there are any errors, warnings, or confirmations to display to user,
+                display it here.
+              -->
+
+                    <% if (messages && messages['error'].length > 0) { %>
+                    <div  id="login-alert" class="alert alert-danger col-sm-12">
+                      <% messages['error'].forEach(function(message) { %>
+                        <%= message %>
+                      <% }); %>
+                    </div>
+                    <% } %>
+
+                    <% if (messages && messages['warning'].length > 0) { %>
+                    <div  id="login-alert" class="alert alert-warning col-sm-12">                          
+                    <% messages['warning'].forEach(function(message) { %>
+                      <%= message %>
+                    <% }); %>
+                    </div>
+                    <% } %>
+
+                    <% if (messages && messages['success'].length > 0) { %>
+                    <div  id="login-alert" class="alert alert-success col-sm-12">                          
+                    <% messages['success'].forEach(function(message) { %>
+                      <%= message %>
+                    <% }); %>
+                    </div>
+                    <% } %> 
+
+                      
+                  <form id="loginform" class="form-horizontal" role="form" action="/user/login" method="post">
+                              
+                      <div style="margin-bottom: 25px" class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username" pattern="[A-Za-z]{4,}" title="4 characters minimum | only upper and lowcase letters">                                        
+                      </div>
+                          
+                      <div style="margin-bottom: 25px" class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                          <input id="login-password" type="password" class="form-control" name="password" placeholder="password" pattern=".{8,}" required title="8 characters minimum">
+                      </div>
+                              
+
+                          
+                      <div class="input-group">
+                        <div class="checkbox">
+                          <label>
+                            <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                          </label>
+                        </div>
+                      </div>
+
+
+                        <div style="margin-top:10px" class="form-group">
+                            <!-- Button -->
+
+                            <div class="col-sm-12 controls">
+                               <input id="btn-login" type="submit" class="btn btn-success" value="Login"/>
+                              <!-- <a id="btn-login" href="#" class="btn btn-success">Login  </a> -->
+
+                            </div>
+                        </div>
+
+
+                          <div class="form-group">
+                              <div class="col-md-12 control">
+                                  <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                      Don't have an account! 
+                                  <a href="/user/signup">
+                                      Sign Up Here
+                                  </a>
+                                  </div>
+                              </div>
+                          </div>    
+                      </form>     
+
+
+
+                  </div>                     
+              </div>  
+        </div>
+        
+    </div>
