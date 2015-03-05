@@ -37,16 +37,17 @@ Using an error-based SQL injection forces the database to generate an error, giv
 
 This method only works when the application doesn't handle errors properly by showing it on the screen to the user. By showing database errors to the user, a malicious user can use this data to determine the structure of the database and what functionality they can get access to (modifying tables, viewing DBMS configurations, etc).
 
-Example: '
+Just using a single quote can even let us know if the application is vulnerable to SQL injection, resulting in an error message like so:
 
-	Just using a single quote can even let us know if the application is vulnerable to SQL injection, resulting in an error message like so:
+	SQL Injection: '
 
-		Warning: pg_prepare() [function.pg-prepare]: Query failed: ERROR: unterminated quoted string at or near "''' AND passwd=''" LINE 1: ...ame, lastName, passwd FROM account WHERE username=''' AND pa... ^
+	Warning: pg_prepare() [function.pg-prepare]: Query failed: ERROR: unterminated quoted string at or near "''' AND passwd=''" LINE 1: ...ame, lastName, passwd FROM account WHERE username=''' AND pa... ^
 
 
-Example: '||cast((chr(95)||current_database()) as numeric)||'
+We can also try to cast string as numeric, which will throw an error but the evaluated string with the current database name will part of the error message. As a result, the malicious user can use this to get further information about the database.
 
-	Here we try to cast string as numeric, which will throw an error but the evaluated string with the current database name will part of the error message. As a result, the malicious user can use this to get furhter information about the database.
+	SQL Injection: '||cast((chr(95)||current_database()) as numeric)||'
+
 
 <h3>Time Delay</h3>
 
@@ -55,7 +56,7 @@ This method is a type of "Blind Query". Blind querying is different from SQL inj
 Example: SELECT IF(version()=5.3, sleep(5), 'false'); --
 
 Using this SQL injection, an attacker sends a bunch of true-false statements with a sleep function running on a true or false case to gain information. This attack is trickier to use since we are essentially going through this blind so it will require trial and error, trying continuously with new values until we get the behaviour we are looking for. Automated tools, like SQLMAP, are useful in this case as it can automate such tasks. 
-		
+
 <h3>Stacked Queries</h3>
 <ol>
 	<li>Execute SQL Injection that will execute a series of queries.</li>
