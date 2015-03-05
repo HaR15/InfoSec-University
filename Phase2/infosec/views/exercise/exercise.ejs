@@ -17,16 +17,16 @@
 			</div>
 
 			<!-- Exercise part -->
-			<div class="col-xs-4" style="background:white;height:500px;">
+			<div class="col-xs-4" id="instructions" style="background:white;height:500px;">
 				<h1> <%= exercise.title %> </h1>
 				<p> <%= exercise.instructions %> </p>
 				<p> "<%= exercise.id %>" </p>
 			</div>
-			<div class="col-xs-8" style="background:grey;height:500px;padding:0px;">
-				<form id="submitExercise">
-					<input name="id" value="<%= exercise.id %>"> 
+			<div class="col-xs-8" id="" style="background:grey;height:500px;padding:0px;">
+				<form id="submitExercise" style="height:100%">
+					<input class="hidden" name="id" value="<%= exercise.id %>"> 
 					<textarea name="code" class="form-control" style="height:100%;background:grey;"></textarea>
-					<input type="submit" value="Submit">
+					<input class="pull-right" type="submit" value="Submit">
 				</form>
 			</div>
 		</div>
