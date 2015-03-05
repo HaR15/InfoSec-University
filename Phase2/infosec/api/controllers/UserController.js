@@ -20,19 +20,25 @@ module.exports = {
 	},
 
 	create: function(req, res) {
-		User.create(req.body).exec(function(err, result){
-	    	if (err) {
-	      		return res.status(500).json({ error: 'Server error' });
-	    	}
-	    	else {
-	    		// Search database for provided username
-				User.find({username : req.param('username')}).exec(function (err, user) {
-					if (user.length != 0)
-						return res.redirect('/user/signup');
-		    		// Log in user using their registered account
-		    		return sails.controllers.user.login(req, res);
-		    	});
-	    	}
+		// Search database for provided username
+		User.find({username : req.param('username')}).exec(function (err, user) {
+		    	if (err) {
+		      		FlashService.error(req, 'There was an issue creating your account, please try again.');
+					return res.redirect('/user/signup');
+		    	}
+		    	else {
+				// Check if the provided username already exists
+				if (user.length != 0) {
+					FlashService.error(req, 'Username is already in use, please use another username.');
+					return res.redirect('/user/signup');					
+				}
+				else {
+					// If username does not exist, create their account and log them in
+					User.create(req.body).exec(function(err, result){
+						return sails.controllers.user.login(req, res);
+					});
+				}
+			}
 	  	});
 	},
 
