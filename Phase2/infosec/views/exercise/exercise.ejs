@@ -25,8 +25,8 @@
 				<form name="codeForm" id="codeForm" action="/exercise/validate" method="GET">
 					<input name="id" value="<%= exercise.id %>"> 
 					<textarea name="code" class="form-control" style="height:100%;background:grey;"></textarea>
-					<input type="submit" value="Submit">
 				</form>
+				<button id="b">Le Click</button>
 			</div>
 		</div>
 	</div>
@@ -46,23 +46,28 @@
 -->
 
 <script>
-	$("codeForm").submit(function(e){
+
+
+$(document).ready(function(){
+
+	$("#b").click(function(){
 		var postData = $(this).serializeArray();
 		var formURL = $(this).attr("action");
 		$.ajax({
 			url: formURL,
 			type: "GET",
+			dataType: "json",
 			data: postData,
-			success: function(){
+			success:function(data, textStatus, jqXHR) {
 				alert("hi");
 			},
-			error: function(){
+			error: function(jqXHR, textStatus, errorThrown){
 				alert("error");
 			}
 		});
-		e.preventDefault();
-		e.unbind();
 	});
 
 	$("codeForm").submit();
+});
+
 </script>
