@@ -2,14 +2,14 @@
 * Date: 05/03/2015
 * Location: BA1230
 * Participants: 
-..* Shudman
-..* Haris
-..* Eric
-..* David
-..* Caroline
-..* Antonio
-..* Lucas
-..* Alexei
+  * Shudman
+  * Haris
+  * Eric
+  * David
+  * Caroline
+  * Antonio
+  * Lucas
+  * Alexei
 
 
 ## Phase3 Goals 
