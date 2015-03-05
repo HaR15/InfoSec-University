@@ -16,8 +16,8 @@
         <h2><%= tutorial.title %></h2>
         <p><%= tutorial.brief %></p>
 
-        <a href="/tutorial/byid?id=<%= tutorial.id %>" class="tutorial">Tutorials</a>
-        <a href="/exercise/byid?id=<%= tutorial.id  %>" class="excercise">Excercises</a>
+        <a href="/tutorial/byid?id=<%= tutorial.id %>" class="tutorial">Tutorial</a>
+        <a href="/exercise/byTutorial?id=<%= tutorial.id  %>" class="excercise">Excercises</a>
       </div>
     </a>
     <% }) %>

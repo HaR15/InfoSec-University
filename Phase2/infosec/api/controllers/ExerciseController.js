@@ -45,7 +45,7 @@ module.exports = {
 		var tutorialId = req.param('id'); 
 
 		// Find all exercises in the Exercises Collection by Tutorial id
-		Exercise.find({ tutorial: tutorialId }) 
+		Exercise.find({ tutorialId: tutorialId }) 
 			.exec(function(err, exercises){
 
 				// If no error occurred, then return all the Exercises
@@ -72,7 +72,7 @@ module.exports = {
 		var exercideId = req.param('id'); 
 
 		// Get Code parameter from HTTP Request
-		var received = String(req.param('code')).replace(/[\n\r]/g,'').replace(/ /g,''); 
+		var received = String(req.param('code')).replace(/[\n\r\t]/g,'').replace(/ /g,''); 
 
 		// Find the exercise object by the given ID
 		Exercise.findOne({ id: exercideId}) 
@@ -87,7 +87,7 @@ module.exports = {
     				// send a simple response letting the user agent know they were logged out
     				// successfully.
 				    if (req.wantsJSON) {
-				    	var expected = exercise.expected.replace(/[\n\r]/g,'').replace(/ /g,'');
+				    	var expected = exercise.expected.replace(/[\n\r\t]/g,'').replace(/ /g,'');
 
 
 				    	// Tests if code received matches the code expected

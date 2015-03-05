@@ -1,0 +1,21 @@
+
+<div class="boxes-container">
+  
+  <div class="section-header">
+    
+  <div>
+
+  <% if(exercises.length > 0) { %>
+    <% _.each(exercises, function(exercise) { %>
+    
+    <a href="/exercise/byId?id=<%= exercise.id %>">
+      <div class="section-box">
+        <h2><%= exercise.title %></h2> 
+        <p>Level: <%= exercise.level %> </p>       
+      </div>
+    </a>
+
+    <% }) %>
+  <% } %>
+
+</div>

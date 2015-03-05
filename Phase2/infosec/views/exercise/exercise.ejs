@@ -1,38 +1,42 @@
 
-<!-- Writing inline style until I figure out were to put elsewhere-->
 
-<!-- vertical white space -->
-<div style="height:50px">
-</div>
+<section class="exercise-container">
 
-<section>
-	<div class="container">
-		<div class="row">
-			<div class="row">
-				<h1> Level: <%= exercise.level %></h1>
-			</div>
 
-			<!-- Vertical space -->
-			<div class="row" style="height:30px">
-			</div>
+	<div class="exercise-container-instructions">
+		<% if(exercise) {%>
 
-			<!-- Exercise part -->
-			<div class="col-xs-4" id="instructions" style="background:white;height:500px;">
-				<h1> <%= exercise.title %> </h1>
-				<p> <%= exercise.instructions %> </p>
-				<p> "<%= exercise.id %>" </p>
-			</div>
-			<div class="col-xs-8" id="" style="background:grey;height:500px;padding:0px;">
-				<form id="submitExercise" style="height:100%">
-					<input class="hidden" name="id" value="<%= exercise.id %>"> 
-					<textarea name="code" class="form-control" style="height:100%;background:grey;"></textarea>
-					<input class="pull-right" type="submit" value="Submit">
-				</form>
-			</div>
-		</div>
+			<h1> <%= exercise.title %> </h1>
+			<p> <%= exercise.instructions %> </p>
+		<% } %>
+
 	</div>
+
+
+	<div class="exercise-container-editor">
+
+
+		<div id="editor">
+		</div>
+
+		<div style="clear: both;"></div>
+
+		<div id="validation-sucess" class="exercise-alert" style="color: green;">Well done! You successfully completed the exercise.</div>
+		<div id="validation-invalid" class="exercise-alert" style="color: red;">Oops, try again.</div>
+
+		<form id="submitExercise">
+			<input type="hidden" name="id" value="<%= exercise.id %>">
+			<textarea name="code" id="code" style="display: none;">
+			</textarea>
+			<input id="button-submit" type="submit" class="btn btn-primary" value="Submit" style="float: right; margin: 6px; font-size: 18px;">
+		</form>
+
+		<a href="/exercise/byTutorial?id=<%= exercise.tutorialId %>"><button id="button-more" class="btn btn-primary" style="margin: 6px; font-size: 18px; position: fixed; right: 0; top: 1;">More Exercises</button></a>
+
+	</div>
+	
+
 </section>
 
-<!-- vertical white space -->
-<div style="height:50px">
-</div>
+
+
