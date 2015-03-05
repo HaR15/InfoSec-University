@@ -7,16 +7,24 @@
 
 module.exports = {
 
-    attributes: {
+  attributes: {
 
-      categoryId: { type: 'string' },
-        
-      title: { type: 'string' },
-       
-      brief: { type: 'string' },
+    categoryId: { 
+      type: 'string' 
+    },
+    
+    title: { 
+      type: 'string' 
+    },
+    
+    brief: { 
+      type: 'string' 
+    },
 
-      description: { type: 'string' }
-        
-    }
+    description: {
+     type: 'string' 
+   }
+   
+ }
 };
 
