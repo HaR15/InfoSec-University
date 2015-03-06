@@ -16,7 +16,7 @@ We had four planning and review meetings in total during all four sprints.
 
 As we are a big team and it is a difficult task to find an appropriate time for everybody to meet in person. Therefore, we decided to use the Skype chat. David volunteered to be our scrum master. Which was very helpful to organize the entire team and each member’s progress in his or her tasks.
 
-# Final progress & considerations
+# Final progress
 
 90 % of minimum product completed <br />
 10 % incomplete consisting of the following features:
