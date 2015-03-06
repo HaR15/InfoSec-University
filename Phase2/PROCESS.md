@@ -9,7 +9,7 @@ We had four planning and review meetings in total during all four sprints.
 <li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_12.pdf">First meeting</a><br /></li>
 <li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_24.pdf">Second meeting</a><br /></li>
 <li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_27.pdf">Third meeting</a><br /></li>
-<li><a href="#">Fourth meeting</a><br /></li>
+<li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/Final_Sprint_Meeting.md">Fourth meeting</a><br /></li>
 </ul>
 
 # Daily scrum meetings
