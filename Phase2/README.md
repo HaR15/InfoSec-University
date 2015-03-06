@@ -1,7 +1,7 @@
 # Running the application
 <ol>
 	<li>
-		Download Ubuntu virtual machine containing our prepared application from the following link: 
+		Download Ubuntu virtual machine containing our prepared application from the following link: https://mega.co.nz/#!ZkwVkTQY!Fwbg9q3x294tc_li87wcHav29DBrBB3oHpPos1sQkf0
 	</li>
 	<li>
 		Open the virtual machine using VMplayer, VMware Fusion, or your prefered virtual machine tool.
