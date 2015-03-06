@@ -1,9 +1,9 @@
 We had four planning and review meetings in total during all four sprints.
 <ul>
 <li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_12.pdf">First meeting</a><br /></li>
-<li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_24.pdf">Second meeting</a>:<br /></li>
-<li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_27.pdf">Third meeting</a>:<br /></li>
-<li><a href="#">Fourth meeting</a>:<br /></li>
+<li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_24.pdf">Second meeting</a><br /></li>
+<li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_27.pdf">Third meeting</a><br /></li>
+<li><a href="#">Fourth meeting</a><br /></li>
 </ul>
 
 <h3>Retrospective Meeting + Important Decision</h3>
