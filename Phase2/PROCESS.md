@@ -1,6 +1,13 @@
+Meetong <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_12.pdf">One</a><br />
+Meeting <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_24.pdf">Two</a>:<br />
+Meeting <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase2/Phase2/meeting_minutes/scrum_meeting_feb_27.pdf">Three</a>:<br />
+
 <h3>Retrospective Meeting + Important Decision</h3>
-110 % of minimum product completed <br />
-0 % incomplete consisting of the following features:
+90 % of minimum product completed <br />
+10 % incomplete consisting of the following features:
+
+Uncompleted: Completed excercises are displayed in the user profile.
+
 <h5>Extra Features that were not part of release plan</h5>
 <ul> 
 <li>Basic CMS for content management</li>
