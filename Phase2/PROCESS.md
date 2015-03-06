@@ -1,7 +1,3 @@
-● A summary of your planning and review meetings for all your sprints (4 sprints in total).
-
-○ Includes date and location.
-
 <h3>Retrospective Meeting + Important Decision</h3>
 110 % of minimum product completed <br />
 0 % incomplete consisting of the following features:
