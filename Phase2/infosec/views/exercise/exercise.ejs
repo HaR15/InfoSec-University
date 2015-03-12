@@ -1,0 +1,45 @@
+
+
+<section class="exercise-container">
+
+
+	<div class="exercise-container-instructions">
+
+		<% if(exercise) {%>
+			<h1> <%= exercise.title %> </h1>
+			<p> <%- exercise.instructions %> </p>
+		<% } %>
+
+	</div>
+
+
+	<div class="exercise-container-editor">
+
+
+		<div id="editor"></div>
+
+		<div style="clear: both;"></div>
+
+		<div id="validation-sucess" class="exercise-alert" style="color: green;">Well done! You successfully completed the exercise.</div>
+
+		<div id="validation-invalid" class="exercise-alert" style="color: red;">Oops, try again.</div>
+
+		<form id="submitExercise">
+
+			<input type="hidden" name="id" value="<%= exercise.id %>">
+			<textarea name="code" id="code" style="display: none;"></textarea>
+			<input id="button-submit" type="submit" class="btn btn-primary" value="Submit" style="float: right; margin: 6px; font-size: 18px;">
+
+		</form>
+
+		<a href="/exercise/byTutorial?id=<%= exercise.tutorialId %>">
+			<button id="button-more" class="btn btn-primary" style="margin: 6px; font-size: 18px; position: fixed; right: 0; top: 1;">More Exercises</button>
+		</a>
+
+	</div>
+
+
+</section>
+
+
+
