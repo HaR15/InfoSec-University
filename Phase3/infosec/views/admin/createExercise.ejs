@@ -1,0 +1,28 @@
+<h1>Create a Exercise</h1>
+<form action="/exercise" method="post">
+
+  <label>Title<input name="title" type="text"/></label>
+  <br/>
+
+  <label>Instructions<textarea cols="40" rows="2" name="instructions"/></textarea></label>
+  <br/>
+
+  <label>Expected<textarea cols="40" rows="2" name="expected"/></textarea></label>
+  <br/>
+
+  <label>Additional code<textarea cols="40" rows="2" name="additionalCode"/></textarea></label>
+  <br/>
+
+  <label>Level<input name="level" type="text"/></label>
+  <br/>
+
+  <label>Tutorial <select name="tutorialId">
+    <% _.each(tutorials, function(tutorial) { %>
+      <option value="<%= tutorial.id %>"><%= tutorial.title %></option>
+    <% }) %>
+  </select></label>
+  <br/>
+
+
+  <input type="submit"/>
+</form>
