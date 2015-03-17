@@ -95,6 +95,7 @@ module.exports = {
 				    	if(expected===received){
 
 				    		// If code matchs, respond with validation=true
+				    		sails.controllers.user.updateExercisesCompleted(req, res, exercise.title);
   							return res.ok({ validation: 'true', expected:  expected, received: received});
 				    	}else{
 
