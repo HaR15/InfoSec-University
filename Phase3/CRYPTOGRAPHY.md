@@ -43,7 +43,7 @@ D: K x C -> M
 
 <b>Exercises</b>
 <ol>
-	<li>
+	<li><br>
 		<p>For this decryption each letter correspond to another one in the alphabet:
 			<li>A stands for Z</li>
 			<li>B stands for Y</li>
