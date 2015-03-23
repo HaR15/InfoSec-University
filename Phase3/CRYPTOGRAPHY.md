@@ -29,6 +29,18 @@ There are three main goals for cryptography:
 
 <h3>Ciphers</h3>
 
+<b>Tutorials</b>
+
+A cipher is defined over (K, M, C):
+K – Set of all possible keys.
+M – Set of all possible messages.
+C – Set of all possible cipher texts.
+The cipher itself is an algorithm for performing encryption or decryption (E,D). It has series of well-defined steps that can be followed as a procedure.
+A cipher must follow properties in order to guarantee that using a key the message can be converted to a cipher text. And that using the same key the cipher text can be converted in the initial message.
+E : K x M -> C
+D: K x C -> M
+
+
 <b>Exercises</b>
 <ol>
 	<li>
