@@ -54,7 +54,7 @@ D: K x C -> M
 			
 			A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
 			
-			Z Y X W V U T S R Q P O N M L K J I H G F E D C B A<br>
+			Z Y X W V U T S R Q P O N M L K J I H G F E D C B A<br><br>
 
 			<b>Break a simple substitution cipher (using reversed alphabet key):</b> GSRH RH NB HVXIVG NVHHZTV. DVOO WLMV!
 		</p>
@@ -64,6 +64,7 @@ D: K x C -> M
 	</li>
 	<li>
 		<p>
+			In cryptography, a Caesar cipher, also known as the shift cipher, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 5, F would be replaced by A, G would become B, and so on. <br><br>
 			<b>Break a simple caesar cipher (using n=5 shift):</b> YMNX NX RD XJHWJY RJXXFLJ. BJQQ ITSJ!
 		</p>
 		<p>
