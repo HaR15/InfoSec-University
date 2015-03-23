@@ -103,7 +103,7 @@ D: K x C -> M
 				<li><b>Preimage Resistance:</b> Given y, it is computationally difficult to find x such that h(x)=y.</li>
 				<li><b>2nd-Preimage Resistance:</b> Given x, it is computationally difficult to find x1 such that h(x)=h(x1).</li>
 				<li><b>Collision Resistence:</b> It is computationally difficult to find x0 and x1 such that h(x0)=h(x1).</li>
-			</ol>
+			</ol><br>
 		
 			<b>Verify the resistances of provided hash functions:</b>
 			Using a byte XOR hashing function that takes a list of integers and computes the XOR of the binary representation of the integers, what hash function properties does this have?
