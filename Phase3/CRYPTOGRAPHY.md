@@ -44,7 +44,15 @@ D: K x C -> M
 <b>Exercises</b>
 <ol>
 	<li>
-		<p>
+		<p>For this decryption each letter correspond to another one in the alphabet:
+			<li>A stands for Z</li>
+			<li>B stands for Y</li>
+			<li>C stands for X</li>
+			<li>...</li>
+			
+			A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+			Z Y X W V U T S R Q P O N M L K J I H G F E D C B A<br>
+
 			<b>Break a simple substitution cipher (using reversed alphabet key):</b> GSRH RH NB HVXIVG NVHHZTV. DVOO WLMV!
 		</p>
 		<p>
