@@ -93,18 +93,18 @@ D: K x C -> M
 <h3>Hash Functions</h3>
 
 <b>Exercises</b>
-<br><br>
-<b> Hash function properties</b>
-<br><br>
-<ol>
-	<li><b>Preimage Resistance:</b> Given y, it is computationally difficult to find x such that h(x)=y.</li>
-	<li><b>2nd-Preimage Resistance:</b> Given x, it is computationally difficult to find x1 such that h(x)=h(x1).</li>
-	<li><b>Collision Resistence:</b> It is computationally difficult to find x0 and x1 such that h(x0)=h(x1).</li>
-</ol>
 
 <ol>
 	<li>
 		<p>
+			<b> Hash function properties</b>
+			<br>
+			<ol>
+				<li><b>Preimage Resistance:</b> Given y, it is computationally difficult to find x such that h(x)=y.</li>
+				<li><b>2nd-Preimage Resistance:</b> Given x, it is computationally difficult to find x1 such that h(x)=h(x1).</li>
+				<li><b>Collision Resistence:</b> It is computationally difficult to find x0 and x1 such that h(x0)=h(x1).</li>
+			</ol>
+		
 			<b>Verify the resistances of provided hash functions:</b>
 			Using a byte XOR hashing function that takes a list of integers and computes the XOR of the binary representation of the integers, what hash function properties does this have?
 			<i>For example: byteXOR([200,200]) = 0, byteXOR([100,200]) = 172, byteXOR([100,200,300]) = 384</i>
