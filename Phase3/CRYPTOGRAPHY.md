@@ -29,10 +29,33 @@ There are three main goals for cryptography:
 
 <h3>Ciphers</h3>
 
+<b>Tutorials</b>
+
+A cipher is defined over (K, M, C):
+K – Set of all possible keys.
+M – Set of all possible messages.
+C – Set of all possible cipher texts.
+The cipher itself is an algorithm for performing encryption or decryption (E,D). It has series of well-defined steps that can be followed as a procedure.
+A cipher must follow properties in order to guarantee that using a key the message can be converted to a cipher text. And that using the same key the cipher text can be converted in the initial message.
+E : K x M -> C
+D: K x C -> M
+
+
 <b>Exercises</b>
 <ol>
 	<li>
-		<p>
+		<p>For this decryption each letter correspond to another one in the alphabet:
+			<ul>A stands for Z</ul>
+			<ul>B stands for Y</ul>
+			<ul>C stands for X</ul>
+			<ul>...</ul>
+			
+			An extra help:<br>
+			
+			A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+			
+			Z Y X W V U T S R Q P O N M L K J I H G F E D C B A<br><br>
+
 			<b>Break a simple substitution cipher (using reversed alphabet key):</b> GSRH RH NB HVXIVG NVHHZTV. DVOO WLMV!
 		</p>
 		<p>
@@ -41,6 +64,7 @@ There are three main goals for cryptography:
 	</li>
 	<li>
 		<p>
+			In cryptography, a Caesar cipher, also known as the shift cipher, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 5, F would be replaced by A, G would become B, and so on. <br><br>
 			<b>Break a simple caesar cipher (using n=5 shift):</b> YMNX NX RD XJHWJY RJXXFLJ. BJQQ ITSJ!
 		</p>
 		<p>
@@ -69,9 +93,18 @@ There are three main goals for cryptography:
 <h3>Hash Functions</h3>
 
 <b>Exercises</b>
+
 <ol>
 	<li>
 		<p>
+			<b> Hash function properties</b>
+			<br>
+			<ol>
+				<li><b>Preimage Resistance:</b> Given y, it is computationally difficult to find x such that h(x)=y.</li>
+				<li><b>2nd-Preimage Resistance:</b> Given x, it is computationally difficult to find x1 such that h(x)=h(x1).</li>
+				<li><b>Collision Resistence:</b> It is computationally difficult to find x0 and x1 such that h(x0)=h(x1).</li>
+			</ol><br>
+		
 			<b>Verify the resistances of provided hash functions:</b>
 			Using a byte XOR hashing function that takes a list of integers and computes the XOR of the binary representation of the integers, what hash function properties does this have?
 			<i>For example: byteXOR([200,200]) = 0, byteXOR([100,200]) = 172, byteXOR([100,200,300]) = 384</i>
