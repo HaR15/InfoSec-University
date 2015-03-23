@@ -93,6 +93,15 @@ D: K x C -> M
 <h3>Hash Functions</h3>
 
 <b>Exercises</b>
+<br><br>
+<b> Hash function properties</b>
+<br><br>
+<ol>
+	<li><b>Preimage Resistance:</b> Given y, it is computationally difficult to find x such that h(x)=y.</li>
+	<li><b>2nd-Preimage Resistance:</b> Given x, it is computationally difficult to find x1 such that h(x)=h(x1).</li>
+	<li><b>Collision Resistence:</b> It is computationally difficult to find x0 and x1 such that h(x0)=h(x1).</li>
+</ol>
+
 <ol>
 	<li>
 		<p>
