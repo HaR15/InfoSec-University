@@ -72,7 +72,7 @@ D: K x C -> M
 		</p>
 	</li>
 	<li>
-		<p>
+		<p>The Diffie–Hellman key exchange method allows two parties that have no prior knowledge of each other to jointly establish a shared secret key over an insecure communication channel. This key can then be used to encrypt subsequent communications using a symmetric key cipher. <br><br>
 			<b>Work through a Diffie-Hellman Key Exchange and arrive at the expected shared key:</b>
 			You are Bob, you have the following Diffie Hellman key exchance with Alice
 			Alice sent me g= 395363377763382207649834920348203840923840239847162
