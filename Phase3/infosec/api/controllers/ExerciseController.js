@@ -94,8 +94,11 @@ module.exports = {
 				    	// by comparing the two string without whitespaces
 				    	if(expected===received){
 
-				    		// If code matchs, respond with validation=true
-				    		sails.controllers.user.updateExercisesCompleted(req, res, exercise.title);
+				    		// If code matches, update user's profile with the completed exercise (if logged in)
+				    		// and respond with validation=true
+				    		if (req.session.user) {
+				    			sails.controllers.user.updateExercisesCompleted(req, res, exercise.title);
+				    		}
   							return res.ok({ validation: 'true', expected:  expected, received: received});
 				    	}else{
 
