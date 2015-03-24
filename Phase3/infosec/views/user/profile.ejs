@@ -1,7 +1,14 @@
 <section class="default-center">
 	<h1><%= req.session.username %>'s Profile</h1>
 	<h2>Exercises Completed</h2>
+
 	<!--DISPLAY COMPLETED EXERCISES HERE-->
+	<% console.log(user); %>
+	<% for (i = 0; i < user[0].completedExercises.length; i++) { %>
+	    <div>          
+	        <p><%= user[0].completedExercises[i] %></p>
+	    </div>
+	<% } %>
 
 	<div class="excercise-complete">
 		<div class="container">

@@ -96,7 +96,7 @@ module.exports = {
 
 				    		// If code matches, update user's profile with the completed exercise (if logged in)
 				    		// and respond with validation=true
-				    		if (req.session.user) {
+				    		if (req.session.username) {
 				    			sails.controllers.user.updateExercisesCompleted(req, res, exercise.title);
 				    		}
   							return res.ok({ validation: 'true', expected:  expected, received: received});
