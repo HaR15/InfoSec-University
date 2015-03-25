@@ -119,16 +119,41 @@
         return res.view('500');
       }
     });
-  }
+  },
 
-  // createExercise: function(req, res) {
-    
-  //   Exercise.find().exec(function(err, categories){
-  //     if (!err) {
-  //       return res.view('admin/createExercise', { : categories });
-  //     } else {
-  //       return res.view('500');
-  //     }
-  //   });
-  // }
+  exerciseCreation: function (req, res) {
+
+    Tutorial.find().exec( function (err, tutorials) {
+
+      // If no error occurred, then return all the tutorials
+      if(!err){ 
+        return res.view('admin/exerciseCreation', { tutorials: tutorials });
+
+      // If error occurred, send error
+      }else{ 
+        return res.serverError(err);
+      }
+    });
+
+  },
+
+  createExercise: function (req, res) {
+    var params = req.allParams();
+    var exercise = {
+      title: params.title,
+      instructions: params.instructions,
+      expected: params.expected,
+      additionalCode: params.additionalCode,
+      level: params.level,
+      tutorialId: params.tutorialId
+    };
+    Exercise.create(exercise).exec( function (err, e) {
+      if (!err) {
+        req.flash('success', 'Created exercise successfully!');
+        return res.redirect('/admin');
+      } else {
+        return res.serverError(err);
+      }
+    });
+  }
 }

@@ -119,26 +119,7 @@ module.exports = {
 				}
 
 			});
-	},
-
-
-	createExercise: function(req, res){
-
-		Tutorial.find() 
-		.exec(function(err, tutorials){
-
-			// If no error occurred, then return all the tutorials
-			if(!err){ 
-				return res.view('admin/createExercise', { tutorials: tutorials });
-
-			// If error occurred, then return an empty array
-			}else{ 
-				return res.view('admin/createExercise', { tutorials: [] });
-			}
-		});
-
 	}
-
 	
 };
 
