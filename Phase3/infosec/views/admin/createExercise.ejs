@@ -1,28 +1,41 @@
-<h1>Create a Exercise</h1>
-<form action="/exercise" method="post">
+<div class="small-container">
+  <h1 class="text-center">Create an Exercise</h1>
+  <form id="exerciseCreation" action="/exercise/create" method="post">
 
-  <label>Title<input name="title" type="text"/></label>
-  <br/>
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="Title" name="title" required>
+    </div>
 
-  <label>Instructions<textarea cols="40" rows="2" name="instructions"/></textarea></label>
-  <br/>
+    <div class="form-group">
+      <label>Instructions</label>
+      <textarea class="form-control" cols="40" rows="2" name="instructions"/></textarea>
+    </div>
 
-  <label>Expected<textarea cols="40" rows="2" name="expected"/></textarea></label>
-  <br/>
+    <div class="form-group">
+      <label>Expected</label>
+      <textarea class="form-control" cols="40" rows="2" name="expected"/></textarea>
+    </div>
 
-  <label>Additional code<textarea cols="40" rows="2" name="additionalCode"/></textarea></label>
-  <br/>
+    <div class="form-group">
+      <label>Instructions</label>
+      <textarea class="form-control" cols="40" rows="2" name="additionalCode"/></textarea>
+    </div>
 
-  <label>Level<input name="level" type="text"/></label>
-  <br/>
+    <div class="form-group">
+      <label>Level</label>
+      <input type="text" class="form-control" placeholder="Level" name="level" required>
+    </div>
 
-  <label>Tutorial <select name="tutorialId">
-    <% _.each(tutorials, function(tutorial) { %>
-      <option value="<%= tutorial.id %>"><%= tutorial.title %></option>
-    <% }) %>
-  </select></label>
-  <br/>
+    <div class="form-group">
+      <label>Tutorial</label>
+      <select class="form-control" form="exerciseCreation" name="tutorialId">
+        <% _.each(tutorials, function(tutorial) { %>
+        <option value="<%= tutorial.id %>"><%= tutorial.title %></option>
+        <% }) %>
+      </select>
+    </div>
 
-
-  <input type="submit"/>
-</form>
+    <input type="submit"/>
+  </form>
+</div>
