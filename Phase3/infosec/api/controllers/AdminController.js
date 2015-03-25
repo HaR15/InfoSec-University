@@ -120,4 +120,15 @@
       }
     });
   }
+
+  // createExercise: function(req, res) {
+    
+  //   Exercise.find().exec(function(err, categories){
+  //     if (!err) {
+  //       return res.view('admin/createExercise', { : categories });
+  //     } else {
+  //       return res.view('500');
+  //     }
+  //   });
+  // }
 }
