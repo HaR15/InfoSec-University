@@ -1,0 +1,19 @@
+<div id="chatbox">
+  <% _.each(messages, function(message) { %>
+      <div>
+        <p><b><%= message.username %>: </b><%= message.message %></p>
+      </div>
+  <% }) %>
+</div>
+
+<form id="addmessage" role="form" action="/chat/addmessage" method="post">
+	<div>
+		<input type="hidden" id="username" name="username" value="<%= req.session.username %>" />
+	</div>
+	<div>
+		<input type="text" name="message" />
+	</div>
+	<div>
+		<button type="submit">Submit</button>  
+	</div>
+</form>

@@ -45,7 +45,7 @@ module.exports = {
 		var tutorialId = req.param('id'); 
 
 		// Find all exercises in the Exercises Collection by Tutorial id
-		Exercise.find({ tutorialId: tutorialId }) 
+		Exercise.find({ tutorialId: tutorialId , sort: 'level'}) 
 			.exec(function(err, exercises){
 
 				// If no error occurred, then return all the Exercises
@@ -94,9 +94,14 @@ module.exports = {
 				    	// by comparing the two string without whitespaces
 				    	if(ValidatorService.validate(exercise, received)){
 
-				    		// If code matchs, respond with validation=true
-				    		sails.controllers.user.updateExercisesCompleted(req, res, exercise.title);
+
+				    		// If code matches, update user's profile with the completed exercise (if logged in)
+				    		// and respond with validation=true
+				    		if (req.session.username) {
+				    			sails.controllers.user.updateExercisesCompleted(req, res, exercise.title);
+				    		}
   							return res.ok({ validation: 'true'});
+
 				    	}else{
 
 				    		// If code doesn't match, responde with validation=false
@@ -116,26 +121,7 @@ module.exports = {
 				}
 
 			});
-	},
-
-
-	createExercise: function(req, res){
-
-		Tutorial.find() 
-		.exec(function(err, tutorials){
-
-			// If no error occurred, then return all the tutorials
-			if(!err){ 
-				return res.view('admin/createExercise', { tutorials: tutorials });
-
-			// If error occurred, then return an empty array
-			}else{ 
-				return res.view('admin/createExercise', { tutorials: [] });
-			}
-		});
-
 	}
-
 	
 };
 

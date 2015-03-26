@@ -7,13 +7,12 @@
 
 module.exports = {
 
-	updateExercisesCompleted: function (req, res, title){
+	updateExercisesCompleted: function (req, res, title) {
 		User.find({username : req.session.username}).exec(function (err, user) {
 			if (err) {}
 			else {
 				// If the activity has not already been completed by this user
 				// add to their list of completed activities
-				console.log(user[0].completedExercises.indexOf(title))
 				if (user[0].completedExercises.indexOf(title) == -1) {
 					user[0].completedExercises.push(title);
 					user[0].save(function(err) {});
@@ -31,7 +30,12 @@ module.exports = {
 	},
 
 	getProfile: function (req, res) {
-		return res.view('user/profile');
+		User.find({username : req.session.username}).exec(function (err, user) {
+			if (err) {}
+			else {
+				return res.view('user/profile', { user: user });
+			}
+		});
 	},
 
 	create: function(req, res) {

@@ -1,0 +1,17 @@
+<div class="boxes-container">
+
+  <div class="section-header">
+    <% if(tutorial){ %>
+      <h2><%= tutorial.title %></h2>
+      <br>
+      <%- tutorial.description %>
+      <br>
+    <% } %>
+  </div>
+
+  <br>
+  <a href="/admin/byId?id=<%= tutorial.id  %>">
+      <h3>Exercises</h3>
+  </a>
+
+</div>

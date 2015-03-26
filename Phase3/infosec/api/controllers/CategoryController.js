@@ -12,20 +12,22 @@
 
 module.exports = {
 
-   index: function(req, res){
+  index: function(req, res){
+		Category.find().exec(function(err,categories){
+			if(!err){
+		  		return res.view('category/categories',{
+		   			categories: categories
+		  		});
+		 	}else{
+		 		return res.view('category/categories',{
+		 			categories: []
+		 		});
+		 	}
+		});
+   },
 
-	Category.find().exec(function(err,categories){
-		if(!err){
-	  		return res.view('category/categories',{
-	   			categories: categories
-	  		});
-	 	}else{
-	 		return res.view('category/categories',{
-	 			categories: []
-	 		});
-	 	}
-	});
-
-   }
+	createCategory: function(req, res){
+ 		return res.view('admin/createCategory');
+ 	}
  
 };

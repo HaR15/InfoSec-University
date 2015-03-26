@@ -72,6 +72,21 @@
   'GET /user/logout': {
     controller: 'UserController',
     action: 'logout'
+  },
+
+  'GET /chat/messages': {
+    controller: 'ChatController',
+    action: 'fetchMessages'
+  },
+
+  'POST /chat/addmessage': {
+    controller: 'ChatController',
+    action: 'addMessage'
+  },
+
+  '/admin': {
+    controller: 'AdminController',
+    action: 'viewDashboard'
   }
 
   /***************************************************************************

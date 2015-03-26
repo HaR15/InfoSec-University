@@ -1,0 +1,23 @@
+<div class="panel large-container">
+  <!-- Default panel contents -->
+  <div class="panel-heading large-heading">Categories</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th class="table-heading">Title</th>
+      <th class="table-heading">Edit</th>
+      <th class="table-heading">Delete</th>
+    </tr>
+    <% _.each(categories, function(category) { %>
+        <tr>
+          <td><%= category.title %></td>
+          <td><a href="/admin/editCategory?id=<%= category.id %>">Edit</a></td>     
+          <td><a href="/admin/deleteCategory?id=<%= category.id %>">Edit</a></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/admin/createCategory">
+    <h5 style>Add Category</h5>
+  </a>
+</div>

@@ -49,9 +49,10 @@
   /* Returns a list of categories to 'admin/createTutorial' view ,
    if successful */ 
   createTutorial: function(req, res) {
-    Category.find().exec(function(err, categories){
+    var categoryId = req.param('id');
+    Category.find({id : categoryId}).exec(function(err, categories){
       if (!err) {
-        return res.view('admin/createTutorial', { categories: categories });
+        return res.view('admin/createTutorial', { category: categories[0] });
       } else {
         return res.view('500');
       }
