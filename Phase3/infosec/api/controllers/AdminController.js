@@ -104,7 +104,7 @@
       if (err) { // error occurred
         return res.serverError(JSON.stringify(err));
       } else {
-        FlashService.success(req, 'Saved category!');
+        req.flash('success', 'Saved category!');
         return res.redirect('/admin');  
       }
     });
@@ -124,7 +124,7 @@
         return res.serverError(JSON.stringify(err));
 
       } else if (deleted.length) {
-        FlashService.success(req, 'Successfully deleted category!');
+        req.flash('success', 'Successfully deleted category!');
         return res.redirect('/admin');
 
       } else {
@@ -213,7 +213,7 @@
       if (err) { // error occurred
         return res.serverError(JSON.stringify(err));
       } else {
-        FlashService.success(req, 'Saved tutorial!');
+        req.flash('success', 'Saved tutorial!');
         return res.redirect('/admin');  
       }
     });
@@ -233,7 +233,7 @@
         return res.serverError(JSON.stringify(err));
 
       } else if (deleted.length) {
-        FlashService.success(req, 'Successfully deleted tutorial!');
+        req.flash('success', 'Successfully deleted tutorial!');
         return res.redirect('/admin');
 
       } else {
@@ -324,7 +324,7 @@
       if (err) { // error occurred
         return res.serverError(JSON.stringify(err));
       } else {
-        FlashService.success(req, 'Saved exercise!');
+        req.flash('success', 'Saved exercise!');
         return res.redirect('/admin');  
       }
     });
@@ -344,7 +344,7 @@
         return res.serverError(JSON.stringify(err));
 
       } else if (deleted.length) {
-        FlashService.success(req, 'Successfully deleted exercise!');
+        req.flash('success', 'Successfully deleted exercise!');
         return res.redirect('/admin');
 
       } else {
