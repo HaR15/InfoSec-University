@@ -135,6 +135,115 @@
 
   /*
     DESCRIPTION
+      Returns the tutorial editor view. If the `id` parameter of a tutorial is 
+      supplied, then the respective tutorial can be edited and updated,
+      otherwise hitting the save button will create a new tutorial via the 
+      saveTutorial action.
+
+    PARAMETERS
+      id:   (optional) tutorial id
+  */
+  tutorialEditor: function (req, res) {
+    var tutorialId = req.param('id');
+    
+    // get a list of Categories first
+    Category.find().exec( function (err, categories) {
+
+      if(err) { // error occurred
+        return res.serverError(JSON.stringify(err));
+
+      }else{
+        var locals = {
+          edit: false,
+          categories: categories 
+        };
+
+        if (tutorialId) { // if an id was given, check if it exists
+          Tutorial.findOne({id:tutorialId}).exec(function (err, tutorial) {
+            if (err) {  // error occurred
+              return res.serverError(JSON.stringify(err));
+            
+            } else {
+              if (tutorial) { // tutorial found, send locals for editing
+                locals.edit = true;
+                locals.tutorial = tutorial;
+                return res.view("admin/tutorialEditor", locals);  
+              
+              } else { // given id was not found, send 404
+                return res.view('404');
+              }
+            }
+          });
+
+        } else { // id was not given, send locals for creating a new tutorial
+          return res.view("admin/tutorialEditor", locals);
+        }
+      }
+    });
+  },
+
+  /*
+    DESCRIPTION
+      Saves an tutorial to the database. If an tutorial `id` parameter is 
+      supplied, then the changes to the respective tutorial are saved, otherwise 
+      a new tutorial is created. If an bad id is supplied, nothing happens.
+
+    PARAMETERS
+      id:   (optional) tutorial id
+  */
+  saveTutorial: function (req, res) {
+    var params = req.allParams();
+    var tutorialEdit = {
+      categoryId: params.categoryId,
+      title: params.title,
+      brief: params.brief,
+      description: params.description
+    };
+
+    var saveAction;
+    if (params.id) { // update tutorial if an tutorial id was given
+      saveAction = Tutorial.update({id:params.id}, tutorialEdit);
+    
+    } else { // save a newly created tutorial
+      saveAction = Tutorial.create(tutorialEdit);
+    }
+
+    // return respective page
+    saveAction.exec(function (err, tutorial) {
+      if (err) { // error occurred
+        return res.serverError(JSON.stringify(err));
+      } else {
+        FlashService.success(req, 'Saved tutorial!');
+        return res.redirect('/admin');  
+      }
+    });
+  },
+
+  /*
+    DESCRIPTION
+      Deletes the specified tutorial.
+
+    PARAMENTERS
+      id:   (required) tutorial id
+  */
+  deleteTutorial: function (req, res) {
+    var tutorialId = req.param('id');
+    Tutorial.destroy({id:tutorialId}).exec(function (err, deleted) {
+      if (err) {
+        return res.serverError(JSON.stringify(err));
+
+      } else if (deleted.length) {
+        FlashService.success(req, 'Successfully deleted tutorial!');
+        return res.redirect('/admin');
+
+      } else {
+        return res.view('404');
+      }
+    });
+  },
+
+  /*
+    DESCRIPTION
       Returns the exercise editor view. If the `id` parameter of an exercise is 
       supplied, then the respective exercise can be edited and updated,
       otherwise hitting the save button will create a new exercise via the 
