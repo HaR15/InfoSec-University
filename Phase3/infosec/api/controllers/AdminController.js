@@ -308,7 +308,8 @@
       expected: params.expected,
       additionalCode: params.additionalCode,
       level: params.level,
-      tutorialId: params.tutorialId
+      tutorialId: params.tutorialId,
+      validationType: params.validationType
     };
 
     var saveAction;
