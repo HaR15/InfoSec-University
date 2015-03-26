@@ -21,7 +21,7 @@
 
     <div class="form-group">
       <label>Category</label>
-      <select class="form-control" form="tutorialEditor" name="tutorialId">
+      <select class="form-control" form="tutorialEditor" name="categoryId">
         <% _.each(categories, function(category) { %>
           <option value="<%= category.id %>" <% if (edit && category.id == tutorial.categoryId) { %><%= 'selected' %><% } %>><%= category.title %></option>
         <% }) %>

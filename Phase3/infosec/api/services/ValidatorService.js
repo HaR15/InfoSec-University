@@ -24,7 +24,7 @@ module.exports = {
 
         break;
 
-      case "patialMatchString":
+      case "partialMatchString":
         var received = String(code).replace(/[\n\r\t]/g,'').replace(/ /g,'');
         var validated = false;
         for(var i=0;i<exercise.expected.length;i++){
