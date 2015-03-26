@@ -45,7 +45,7 @@ module.exports = {
 		var tutorialId = req.param('id'); 
 
 		// Find all exercises in the Exercises Collection by Tutorial id
-		Exercise.find({ tutorialId: tutorialId }) 
+		Exercise.find({ tutorialId: tutorialId , sort: 'level'}) 
 			.exec(function(err, exercises){
 
 				// If no error occurred, then return all the Exercises
