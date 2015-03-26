@@ -1,16 +1,23 @@
-<div class="boxes-container">
-  <% _.each(categories, function(category) { %>
+<div class="panel large-container">
+  <!-- Default panel contents -->
+  <div class="panel-heading large-heading">Categories</div>
 
-    <a href="/admin/byCategory?id=<%= category.id %>">
-      <div class="section-box">
-        <h2><%= category.title %></h2>
-        <p><%= category.brief %></p>
-      </div>
-    </a>
-  <% }) %>
-  <a href="/category/createCategory">
-    <div class="section-box">
-      <h2>(+) Tutorials Category</h2>
-    </div>
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <% _.each(categories, function(category) { %>
+        <tr>
+          <td><%= category.title %></td>
+          <td><a href="/admin/editCategory?id=<%= category.id %>">Edit</a></td>     
+          <td><a href="/admin/deleteCategory?id=<%= category.id %>">Edit</a></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/admin/createCategory">
+    <h5>Add Category</h5>
   </a>
 </div>
