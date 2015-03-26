@@ -2,9 +2,7 @@
 <form action="/tutorial" method="post">
 
   <label>Category <select name="categoryId">
-    <% _.each(categories, function(category) { %>
-      <option value="<%= category.id %>"><%= category.title %></option>
-    <% }) %>
+  
   </select></label>
   <br/>
 
