@@ -11,16 +11,16 @@
 
     <div class="form-group">
       <label>Brief</label>
-      <textarea class="form-control" rows="5" placeholder="Brief Description" name="instructions"><% if (edit) { %><%= category.instructions %><% } %></textarea>
+      <textarea class="form-control" rows="5" placeholder="Brief Description" name="brief"><% if (edit) { %><%= category.brief %><% } %></textarea>
     </div>
 
     <div class="form-group">
       <label>Description</label>
-      <textarea class="form-control" rows="5" placeholder="Description" name="expected"><% if (edit) { %><%= category.description %><% } %></textarea>
+      <textarea class="form-control" rows="5" placeholder="Description" name="description"><% if (edit) { %><%= category.description %><% } %></textarea>
     </div>
 
     <div class="form-group">
-      <input class="btn btn-primary btn-lg btn-block" type="submit"/>
+      <input class="btn btn-primary btn-lg btn-block" value="Save" type="submit"/>
     </div>
   </form>
 </div>
