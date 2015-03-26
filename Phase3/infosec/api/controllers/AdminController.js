@@ -131,8 +131,7 @@
         return res.view('404');
       }
     });
-  }
-},
+  },
 
   /*
     DESCRIPTION
