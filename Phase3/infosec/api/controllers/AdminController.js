@@ -75,11 +75,11 @@
 
         // If no error occurred, then return all the Exercises
         if(!err){ 
-          return res.view('admin/exercises', { exercises: exercises });
+          return res.view('admin/adminExercisesList', { exercises: exercises });
 
         // If error occurred, then return an empty array  
         }else{ 
-          return res.view('admin/exercises', { exercises: [] });
+          return res.view('admin/adminExercisesList', { exercises: [] });
         }
       });
   },
@@ -88,7 +88,7 @@
   // USE: Action returns exercise by a given ID
   // PARAMETERS/INPUTS:
   //    id - ID of Exercise
-  byTutorialId: function(req, res){
+  byExerciseId: function(req, res){
 
     // Get ID (Tutorial ID) parameter from HTTP Request
     var exerciseId = req.param('id'); 
@@ -132,11 +132,11 @@
       id:   (optional) exercise id
   */
   exerciseEditor: function (req, res) {
-    var exerciseId = req.allParams().id;
+    var exerciseId = req.param('id');
     
+    // get a list of tutorials first
     Tutorial.find().exec( function (err, tutorials) {
 
-      // Continue searching for exercise
       if(!err) {
         var locals = {
           edit: false,
@@ -157,7 +157,7 @@
               }
             
             } else { // error occurred
-              return res.serverError(err);
+              return res.serverError(JSON.stringify(err));
             }
           });
 
@@ -167,7 +167,7 @@
 
       // error occurred
       }else{ 
-        return res.serverError(err);
+        return res.serverError(JSON.stringify(err));
       }
     });
   },
@@ -202,10 +202,34 @@
 
     // return respective page
     saveAction.exec(function (err, exercise) {
-      if (!err) {
+      if (err) { // error occurred
+        return res.serverError(JSON.stringify(err));
+      } else {
+        FlashService.success(req, 'Saved selected exercise!');
         return res.redirect('/admin');  
-      } else { // error occurred
-        return res.serverError(err);
+      }
+    });
+  },
+
+  /*
+    DESCRIPTION
+      Deletes the specified exercise.
+
+    PARAMENTERS
+      id:   (required) exercise id
+  */
+  deleteExercise: function (req, res) {
+    var exerciseId = req.param('id');
+    Exercise.destroy({id:exerciseId}).exec(function (err, deleted) {
+      if (err) {
+        return res.serverError(JSON.stringify(err));
+
+      } else if (deleted.length) {
+        FlashService.success(req, 'Successfully deleted exercise!');
+        return res.redirect('/admin');
+
+      } else {
+        return res.view('404');
       }
     });
   }
