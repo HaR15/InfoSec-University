@@ -122,10 +122,14 @@
   },
 
   /*
-    Returns the exercise editor view. If the `id` parameter of an exercise is 
-    supplied, then the respective exercise can be edited and updated, otherwise
-    hitting the save button will create a new exercise via the saveExercise
-    action.
+    DESCRIPTION
+      Returns the exercise editor view. If the `id` parameter of an exercise is 
+      supplied, then the respective exercise can be edited and updated,
+      otherwise hitting the save button will create a new exercise via the 
+      saveExercise action.
+
+    PARAMETERS
+      id:   (optional) exercise id
   */
   exerciseEditor: function (req, res) {
     var exerciseId = req.allParams().id;
@@ -169,9 +173,13 @@
   },
 
   /*
-    Saves an exercise to the database. If an exercise `id` parameter is 
-    supplied, then the changes to the respective exercise are saved, otherwise 
-    a new exercise is created. If an bad id is supplied, nothing happens.
+    DESCRIPTION
+      Saves an exercise to the database. If an exercise `id` parameter is 
+      supplied, then the changes to the respective exercise are saved, otherwise 
+      a new exercise is created. If an bad id is supplied, nothing happens.
+
+    PARAMETERS
+      id:   (optional) exercise id
   */
   saveExercise: function (req, res) {
     var params = req.allParams();
