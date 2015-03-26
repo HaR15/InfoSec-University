@@ -157,7 +157,7 @@
               }
             
             } else { // error occurred
-              return res.serverError(err);
+              return res.serverError(JSON.stringify(err));
             }
           });
 
@@ -167,7 +167,7 @@
 
       // error occurred
       }else{ 
-        return res.serverError(err);
+        return res.serverError(JSON.stringify(err));
       }
     });
   },
@@ -202,10 +202,34 @@
 
     // return respective page
     saveAction.exec(function (err, exercise) {
-      if (!err) {
+      if (err) { // error occurred
+        return res.serverError(JSON.stringify(err));
+      } else {
+        FlashService.success(req, 'Saved selected exercise!');
         return res.redirect('/admin');  
-      } else { // error occurred
-        return res.serverError(err);
+      }
+    });
+  },
+
+  /*
+    DESCRIPTION
+      Deletes the specified exercise.
+
+    PARAMENTERS
+      id:   (required) exercise id
+  */
+  deleteExercise: function (req, res) {
+    var exerciseId = req.param('id');
+    Exercise.destroy({id:exerciseId}).exec(function (err, deleted) {
+      if (err) {
+        return res.serverError(JSON.stringify(err));
+
+      } else if (deleted.length) {
+        FlashService.success(req, 'Successfully deleted exercise!');
+        return res.redirect('/admin');
+
+      } else {
+        return res.view('404');
       }
     });
   }
