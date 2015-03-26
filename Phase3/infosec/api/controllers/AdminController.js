@@ -134,6 +134,45 @@
     });
   },
 
+
+  /*
+    DESCRIPTION
+      Returns the category editor view. If the `id` parameter of a category is 
+      supplied, then the respective category can be edited and updated,
+      otherwise hitting the save button will create a new category via the 
+      saveCategory action.
+
+    PARAMETERS
+      id:   (optional) category id
+  */
+  categoryEditor: function (req, res) {
+    var categoryId = req.param('id');
+    
+    var locals = {
+      edit: false,
+    };
+
+    if (categoryId) { // if an id was given, check if it exists
+      Category.findOne({id:categoryId}).exec(function (err, category) {
+        if (err) {  // error occurred
+          return res.serverError(JSON.stringify(err));
+        
+        } else if (Category) { // category found, send locals for editing
+          locals.edit = true;
+          locals.category = category;
+          return res.view("admin/categoryEditor", locals);  
+        
+        } else { // given id was not found, send 404
+          return res.view('404');
+        }
+      });
+
+    } else { // id was not given, send locals for creating a new category
+      return res.view("admin/categoryEditor", locals);
+    }
+  },
+
+
   /*
     DESCRIPTION
       Returns the exercise editor view. If the `id` parameter of an exercise is 
@@ -150,16 +189,21 @@
     // get a list of tutorials first
     Tutorial.find().exec( function (err, tutorials) {
 
-      if(!err) {
+      if(err) { // error occurred
+        return res.serverError(JSON.stringify(err));
+
+      }else{
         var locals = {
           edit: false,
           tutorials: tutorials 
         };
 
-        // if an id was given, check if it exists
-        if (exerciseId) {        
+        if (exerciseId) { // if an id was given, check if it exists
           Exercise.findOne({id:exerciseId}).exec(function (err, exercise) {
-            if (!err) {
+            if (err) {  // error occurred
+              return res.serverError(JSON.stringify(err));
+            
+            } else {
               if (exercise) { // exercise found, send locals for editing
                 locals.edit = true;
                 locals.exercise = exercise;
@@ -168,19 +212,12 @@
               } else { // given id was not found, send 404
                 return res.view('404');
               }
-            
-            } else { // error occurred
-              return res.serverError(JSON.stringify(err));
             }
           });
 
         } else { // id was not given, send locals for creating a new exercise
           return res.view("admin/exerciseEditor", locals);
         }
-
-      // error occurred
-      }else{ 
-        return res.serverError(JSON.stringify(err));
       }
     });
   },
