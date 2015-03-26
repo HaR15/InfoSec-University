@@ -69,14 +69,14 @@ module.exports = {
 	validate: function(req, res){
 
 		// Get ID (Exercise ID) parameter from HTTP Request
-		var exercideId = req.param('id'); 
+		var exerciseId = req.param('id'); 
 
 		// Get Code parameter from HTTP Request
 		//var received = String(req.param('code')).replace(/[\n\r\t]/g,'').replace(/ /g,''); 
 		var received = String(req.param('code'));
 
 		// Find the exercise object by the given ID
-		Exercise.findOne({ id: exercideId}) 
+		Exercise.findOne({ id: exerciseId}) 
 			.exec(function(err, exercise){
 
 
@@ -112,7 +112,7 @@ module.exports = {
 
 					}else{
 						// Otherwise if this is an HTML-wanting browser, do a redirect. 
-						return res.redirect('/exercise/byId?id=' + exercideId); 						
+						return res.redirect('/exercise/byId?id=' + exerciseId); 						
 					}
 
 				// If any error occurs or exercise is not found, respond with 404
