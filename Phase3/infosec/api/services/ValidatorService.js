@@ -44,6 +44,26 @@ module.exports = {
 
         break;
 
+      case "multipleAnswers":
+        var received = String(code).replace(/[\n\r\t]/g,'').replace(/ /g,'');
+        var validated = false;
+        for(var i=0;i<exercise.expected.length;i++){
+          var expected = exercise.expected[i].replace(/[\n\r\t]/g,'').replace(/ /g,'').replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+
+          var re = new RegExp(expected, "g");
+          if(re.test(received)){
+            validated = true;
+            break;
+          }
+            
+
+        }
+
+        return validated;
+
+        break;
+
+
       default:
         return false;
         break
