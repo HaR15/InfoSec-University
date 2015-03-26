@@ -1,4 +1,4 @@
-<h3>Product Highlights :</h3>.
+<h3>Product Highlights :</h3>
 
  * Infosec University is a website focused on teaching computer security for developers . The idea is to have an organized and good looking website that contains several courses about security , such as SQL Injection , Cryptography, etc . However, Infosec  doesn’t focus only in understanding the problem, it also teach the user how to exploit and prevent such breaches  .
 
@@ -17,6 +17,7 @@
  	
 
 <h3>Typical uses of the product :</h3>
-	 * A developer is facing some problems with SQL injection in his website and he wants to learn more about this specific topic , he then do a small search about It and arrive at our website . he first have to register and with this new login he will have full access to the content . Since he already knows a lot about security he goes straight to the SQL injections tutorial and after finish reading he does all the exercises and learn more about the problem .
+
+ * A developer is facing some problems with SQL injection in his website and he wants to learn more about this specific topic , he then do a small search about It and arrive at our website . he first have to register and with this new login he will have full access to the content . Since he already knows a lot about security he goes straight to the SQL injections tutorial and after finish reading he does all the exercises and learn more about the problem .
 
  * There is a student of computer science that is taking security classes,  he liked so much the topic that he decided to learn more about it himself, he then arrive at the Infosec. He then start to follow all the recommended tutorials and exercises for beginners and starts to become really good at it, at some point that he starts to do the challenges that the Infosec offers.
