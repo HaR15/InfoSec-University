@@ -18,6 +18,10 @@ module.exports = {
   		type: 'string'
   	},
 
+    validationType: {
+      type: 'string'
+    },
+
   	expected: {
   		type: 'array'
   	},
