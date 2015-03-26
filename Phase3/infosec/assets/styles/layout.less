@@ -198,13 +198,14 @@ body{
 	border-style:solid;
 	overflow:auto;
 	margin-top:20px;
-	max-height:210px;
 	background-color:rgba(0, 153, 255, 0.2);
 	h3{
 		margin: 10px 0px 10px 0px;
-		white-space: nowrap; 
 	    overflow: hidden;
 	    text-overflow: ellipsis; 
+	}
+	h4{
+		font-style: italic;
 	}
 	img{
 		max-height:200px;
@@ -219,14 +220,6 @@ body{
 	.content p{
 		display:block;
 		font-size:12pt;
-		/* Below code enforces a multi-line ellipses */
-	    overflow: hidden;
-	    text-overflow: ellipsis;
-	    display: -webkit-box;
-	    -webkit-box-orient: vertical;
-	    -webkit-line-clamp: 6; /* number of lines to show */
-	    line-height: 1;        /* fallback */
-	    max-height: 1*1;       /* fallback */
 	}
 }
 
