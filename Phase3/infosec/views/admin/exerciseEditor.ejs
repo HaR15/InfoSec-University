@@ -16,7 +16,19 @@
 
     <div class="form-group">
       <label>Expected</label>
-      <textarea class="form-control" rows="5" placeholder="Expected" name="expected"><% if (edit) { %><%= exercise.expected %><% } %></textarea>
+      <textarea class="form-control" rows="5" placeholder="Expected" name="expected"><%
+          expected = ""; 
+          if (edit) { 
+            if (exercise.expected.constructor === Array) {
+              for (i = 0; i < exercise.expected.length; i++) {
+                expected = expected + exercise.expected[i] + ",,,";
+              }
+            }
+            else {
+              expected = exercise.expected;
+            }
+          }
+        %><%= exercise.expected %></textarea>
     </div>
 
     <div class="form-group">

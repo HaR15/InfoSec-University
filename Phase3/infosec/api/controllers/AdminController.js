@@ -302,10 +302,16 @@
   */
   saveExercise: function (req, res) {
     var params = req.allParams();
+
+    if (params.validationType == "partialMatchString") {
+      expected = params.expected.split(",,,");
+    }
+    console.log(expected);
+
     var exerciseEdit = {
       title: params.title,
       instructions: params.instructions,
-      expected: params.expected,
+      expected: expected,
       additionalCode: params.additionalCode,
       level: params.level,
       tutorialId: params.tutorialId,
