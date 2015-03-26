@@ -86,7 +86,7 @@
 
   '/admin': {
     controller: 'AdminController',
-    action: 'viewDashboard'
+    action: 'dashboard'
   }
 
   /***************************************************************************

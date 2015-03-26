@@ -7,18 +7,31 @@
 
  module.exports = {
 
-  viewDashboard: function(req, res) {
-    Category.find().exec(function(err,categories){
-      if(!err){
-          return res.view('admin/dashboard',{
-            categories: categories
-          });
-      }else{
-        return res.view('admin/dashboard',{
-          categories: []
+  dashboard: function (req, res) {
+    Category.find().exec(function (err, categories) {
+      if (err) {
+        return res.serverError(JSON.stringify(err));
+      } else {
+        Tutorial.find().exec(function (err, tutorials) {
+          if (err) {
+            res.serverError(JSON.stringify(err));
+          } else {
+            Exercise.find().exec(function (err, exercises) {
+              if (err) {
+                res.serverError(JSON.stringify(err));
+              } else {
+                locals = {
+                  categories: categories,
+                  tutorials: tutorials,
+                  exercises: exercises
+                };
+                return res.view('admin/dashboard', locals);
+              }
+            });
+          }
         });
       }
-    })
+    });
   },
 
    /* Returns the list of tutorials to 'admin/adminTutorials' view given a categoryId, 
