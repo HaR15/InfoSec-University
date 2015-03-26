@@ -1,53 +1,38 @@
 <section class="default-center">
-	<h1><%= req.session.username %>'s Profile</h1>
-	<h2>Exercises Completed</h2>
+	<h1 style="text-align:center"><%= req.session.username %>'s Profile</h1>
 
 	<!--DISPLAY COMPLETED EXERCISES HERE-->
-	<% console.log(user); %>
-	<% for (i = 0; i < user[0].completedExercises.length; i++) { %>
-	    <div>          
-	        <p><%= user[0].completedExercises[i] %></p>
-	    </div>
-	<% } %>
-
-	<div class="excercise-complete">
+	<% 
+		var completedExercisesList = [];
+		for (i = 0; i < user[0].completedExercises.length; i++) {    
+			completedExercisesList.push(user[0].completedExercises[i]);
+		} 
+	%>
+	<div class="exercise-complete">
+		<h3>Exercises Completed</h3>
 		<div class="container">
 			<h4>SQL Injections</h4>
 			<ul>
-				<li>Error Based</li>
-				<li>Time Delay</li>
-				<li>Type One</li>
-				<li>Type Two</li>
-				<li>Type Three</li>
-				<li>Type Four</li>
-				<li>Type Five</li>
-				<li>Type ...</li>
+				<% if (completedExercisesList.indexOf("Error Based: Exploit") >= 0){ %> <li>Error Based: Exploit</li> <% } %>
+				<% if (completedExercisesList.indexOf("Time Delay: Exploit") >= 0){ %> <li>Time Delay: Exploit</li> <% } %>
 			</ul>
 		</div>
 		<div class="container">
-			<h4>Site Scripting</h4>
+			<h4>Cross Site Scripting</h4>
 			<ul>
-				<li>Error Based</li>
-				<li>Time Delay</li>
-				<li>Type One</li>
-				<li>Type Two</li>
-				<li>Type Three</li>
-				<li>Type Four</li>
-				<li>Type Five</li>
-				<li>Type ...</li>
+				<!-- CROSS SITE SCRIPTING EXERCISES GO HERE -->
 			</ul>
 		</div>
 		<div class="container">
-			<h4>Hack Three</h4>
+			<h4>Sessions</h4>
 			<ul>
-				<li>Error Based</li>
-				<li>Time Delay</li>
-				<li>Type One</li>
-				<li>Type Two</li>
-				<li>Type Three</li>
-				<li>Type Four</li>
-				<li>Type Five</li>
-				<li>Type ...</li>
+				<!-- SESSION EXERCISES GO HERE -->
+			</ul>
+		</div>
+		<div class="container">
+			<h4>Cryptography</h4>
+			<ul>
+				<!-- CRYPTOGRAPHY EXERCISES GO HERE -->
 			</ul>
 		</div>
 	</div>
