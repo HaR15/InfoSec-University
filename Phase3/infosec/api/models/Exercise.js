@@ -19,7 +19,7 @@ module.exports = {
   	},
 
   	expected: {
-  		type: 'string'
+  		type: 'array'
   	},
 
   	additionalCode: {

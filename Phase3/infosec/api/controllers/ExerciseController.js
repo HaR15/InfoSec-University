@@ -45,7 +45,7 @@ module.exports = {
 		var tutorialId = req.param('id'); 
 
 		// Find all exercises in the Exercises Collection by Tutorial id
-		Exercise.find({ tutorialId: tutorialId }) 
+		Exercise.find({ tutorialId: tutorialId , sort: 'level'}) 
 			.exec(function(err, exercises){
 
 				// If no error occurred, then return all the Exercises
@@ -72,7 +72,8 @@ module.exports = {
 		var exercideId = req.param('id'); 
 
 		// Get Code parameter from HTTP Request
-		var received = String(req.param('code')).replace(/[\n\r\t]/g,'').replace(/ /g,''); 
+		//var received = String(req.param('code')).replace(/[\n\r\t]/g,'').replace(/ /g,''); 
+		var received = String(req.param('code'));
 
 		// Find the exercise object by the given ID
 		Exercise.findOne({ id: exercideId}) 
@@ -87,23 +88,24 @@ module.exports = {
     				// send a simple response letting the user agent know they were logged out
     				// successfully.
 				    if (req.wantsJSON) {
-				    	var expected = exercise.expected.replace(/[\n\r\t]/g,'').replace(/ /g,'');
-
+				    	//var expected = exercise.expected.replace(/[\n\r\t]/g,'').replace(/ /g,'');
 
 				    	// Tests if code received matches the code expected
 				    	// by comparing the two string without whitespaces
-				    	if(expected===received){
+				    	if(ValidatorService.validate(exercise, received)){
+
 
 				    		// If code matches, update user's profile with the completed exercise (if logged in)
 				    		// and respond with validation=true
 				    		if (req.session.username) {
 				    			sails.controllers.user.updateExercisesCompleted(req, res, exercise.title);
 				    		}
-  							return res.ok({ validation: 'true', expected:  expected, received: received});
+  							return res.ok({ validation: 'true'});
+
 				    	}else{
 
 				    		// If code doesn't match, responde with validation=false
-  							return res.ok({ validation: 'false', expected:  expected, received: received});
+  							return res.ok({ validation: 'false'});
 
 				    	}
 

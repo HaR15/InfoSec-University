@@ -1,0 +1,85 @@
+ {
+    "title": "Reversed alphabet key",
+    "instructions": "<p>For this decryption each letter correspond to another one in the alphabet:<ul><li>A stands for Z</li><li>B stands for Y</li><li>C stands for X</li><li>...</li></ul><p>An extra help:</p><br>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>Z Y X W V U T S R Q P O N M L K J I H G F E D C B A<br><br>\r\n<p><b>Break a simple substitution cipher (using reversed alphabet key):</b> GSRH RH NB HVXIVG NVHHZTV. DVOO WLMV!</p></p>",
+    "expected": "THIS IS MY SECRET MESSAGE. WELL DONE!",
+    "additionalCode": "",
+    "level": "1",
+    "tutorialId": "5511a0b873c19ab40f5359e6",
+    http://localhost:1337/exercise/create?title=Reversed%20alphabet%20key&instructions=%3Cp%3EFor%20this%20decryption%20each%20letter%20correspond%20to%20another%20one%20in%20the%20alphabet:%3Cul%3E%3Cli%3EA%20stands%20for%20Z%3C/li%3E%3Cli%3EB%20stands%20for%20Y%3C/li%3E%3Cli%3EC%20stands%20for%20X%3C/li%3E%3Cli%3E...%3C/li%3E%3C/ul%3E%3Cp%3EAn%20extra%20help:%3C/p%3E%3Cbr%3EA%20B%20C%20D%20E%20F%20G%20H%20I%20J%20K%20L%20M%20N%20O%20P%20Q%20R%20S%20T%20U%20V%20W%20X%20Y%20Z%3Cbr%3EZ%20Y%20X%20W%20V%20U%20T%20S%20R%20Q%20P%20O%20N%20M%20L%20K%20J%20I%20H%20G%20F%20E%20D%20C%20B%20A%3Cbr%3E%3Cbr%3E\r\n%3Cp%3E%3Cb%3EBreak%20a%20simple%20substitution%20cipher%20(using%20reversed%20alphabet%20key):%3C/b%3E%20GSRH%20RH%20NB%20HVXIVG%20NVHHZTV.%20DVOO%20WLMV!%3C/p%3E\r\n\t\t%3C/p%3E&expected=THIS%20IS%20MY%20SECRET%20MESSAGE.%20WELL%20DONE!&additionalCode=&level=1&tutorialId=5511a0b873c19ab40f5359e6&createdAt=2015-03-25T23:55:16.349Z&updatedAt2015-03-25T23:55:16.349Z&id=5511a18073c19ab40f5359e7
+  },
+
+   {
+    "categoryId": "5511939d73c19ab40f5359dd",
+    "title": "Basic Concepts",
+    "brief": "This tutorial provides an overview of cryptography.",
+    "description": "<p>Cryptography is the study of secure communications while in the presence of others who should not have access to such communications. To model this system, we have the following participants:\r\n\r\n<ul>\r\n\t<li><b>Alice and Bob</b> are the two parties seeking secure communications.</li>\r\n\t<li><b>Eve</b> is an eavesdropper who is able to listen into the secure commuications, but cannot modify the communication.</li>\r\n\t<li><b>Mallory</b> is a malicious person who can modify communications as well as add to the communication.</li>\r\n</ul>\r\n\r\n<p>There are three main goals for cryptography:</p>\r\n<ol>\r\n\t<li><b>Confidentiality:</b> To be able to communicate without Eve or Mallory understanding what is being said. Only Alice and Bob should be able to understand the communication.</li>\r\n\t<li><b>Data Integrity:</b> To be able to communicate without Mallory tampering with the message. If Mallory tries to tamper with the message, Alice and Bob should be able to know that the message has been tampered with.</li>\r\n\t<li><b>Authentication:</b> To be able to ensure that a message is coming from who it says its from. Alice should be able to confirm that a message from Bob actually came from Bob, and not Mallory (and similarly for Bob).</li>\r\n</ol>\r\n\r\n<h2>Hash function properties</h2>\r\n\r\n<ol>\r\n\t<li><b>Preimage Resistance:</b> Given y, it is computationally difficult to find x such that h(x)=y.</li>\r\n\t<li><b>2nd-Preimage Resistance:</b> Given x, it is computationally difficult to find x1 such that h(x)=h(x1).</li>\r\n\t<li><b>Collision Resistence:</b> It is computationally difficult to find x0 and x1 such that h(x0)=h(x1).</li>\r\n</ol>\r\n</p>",
+    "createdAt": "2015-03-24T17:32:42.769Z",
+    "updatedAt": "2015-03-24T17:32:42.769Z",
+    "id": "55119fba73c19ab40f5359e5"
+  }
+
+
+
+
+
+<p><b> Hash function properties</b>
+	<br>
+	<ol>
+		<li><b>Preimage Resistance:</b> Given y, it is computationally difficult to find x such that h(x)=y.</li>
+		<li><b>2nd-Preimage Resistance:</b> Given x, it is computationally difficult to find x1 such that h(x)=h(x1).</li>
+		<li><b>Collision Resistence:</b> It is computationally difficult to find x0 and x1 such that h(x0)=h(x1).</li>
+	</ol>
+	<br>
+		
+	<p>
+		<b>Example:</b>
+		Verify the resistances of provided hash functions:
+		Using a byte XOR hashing function that takes a list of integers and computes the XOR of the binary representation of the integers, what hash function properties does this have?
+		<i>For instance: byteXOR([200,200]) = 0, byteXOR([100,200]) = 172, byteXOR([100,200,300]) = 384</i>
+	</p>
+	<p>
+		<b>Solution:</b>
+		The hash function is not preimage resistant, for example:<br>
+		byteXOR([12, 200, 55, 33, 121, 99]) = 200<br>
+		byteXOR([200]) = 200<br>
+		byteXOR([12, 99, 55, 33, 121, 300]) = 300<br>
+		byteXOR([300]) = 300<br>
+	<p>
+		byteXOR goes through each element in the list and performs byte XOR operations based on the previous byte XORs. If you only have one element in the list, this value won't have another value to perform a byte XOR operation with, resulting in the single element being returned as the hash value. As a result, it's trivial to determine x where byteXOR(x) = y, since byteXOR(x) = y = byteXOR([y]) which implies that x can equal [y].
+	</p>
+	<p>
+		Similarly, the hash function is not collision resistant, for example:
+	</p>
+	<p>
+		byteXOR([12, 200, 55, 33, 121, 99]) = 200<br>
+		byteXOR([200, 12, 55, 33, 121, 99]) = 200<br>
+		byteXOR([200, 12, 33, 55, 121, 99]) = 200<br>
+		byteXOR([12, 99, 55, 33, 121, 200]) = 200<br>
+	</p>
+	<p>
+		Switching the placement of the values in the list will still provide the same hash value since byte XOR operation is symmetric (x XOR y XOR z = x XOR z XOR y). Also, using the same examples as to why the hash function is not preimage resistant, setting x = [y] will cause a collision.
+	</p>
+	<p>
+		Since the hash function is not preimage resistant and not collision resistant, it is not 2nd-preimage resistant as well. To find x1 where h(x) = h(x1), you can simply set x1 = [y] where y = h(x). For example:
+	</p>
+	<p>
+		byteXOR([1, 2, 3, 4, 5]) = 1
+	</p>
+	<p>
+		To get x1 so that byteXOR(x1) = 1, set x1 = [1]:<br>
+		byteXOR([1]) = 1
+	</p>
+	
+</p>
+
+<p>
+	Which of the properties the function below has?
+	f(n) = (n mod m) + 10
+
+	Please provide the answer in the following format : 
+	1 , 2 , 3 
+	if the number is in the list it means that the function has this property, in this example the function would have the three resistances. 
+	
+	solution : 1 , 2 , 3
+
+</p>
