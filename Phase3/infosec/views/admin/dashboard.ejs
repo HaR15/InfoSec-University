@@ -12,12 +12,61 @@
     <% _.each(categories, function(category) { %>
         <tr>
           <td><%= category.title %></td>
-          <td><a href="/admin/editCategory?id=<%= category.id %>">Edit</a></td>     
-          <td><a href="/admin/deleteCategory?id=<%= category.id %>">Edit</a></td>
+          <td><a href="/admin/categoryEditor?id=<%= category.id %>">Edit</a></td>     
+          <td><a href="/admin/deleteCategory?id=<%= category.id %>">Delete</a></td>
         </tr>
     <% }) %>
   </table>
-  <a href="/admin/createCategory">
+  <a href="/admin/categoryEditor">
     <h5 style>Add Category</h5>
   </a>
 </div>
+
+<div class="panel large-container">
+  <!-- Default panel contents -->
+  <div class="panel-heading large-heading">Tutorials</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th class="table-heading">Title</th>
+      <th class="table-heading">Edit</th>
+      <th class="table-heading">Delete</th>
+    </tr>
+    <% _.each(tutorials, function(tutorial) { %>
+        <tr>
+          <td><%= tutorial.title %></td>
+          <td><a href="/admin/tutorialEditor?id=<%= tutorial.id %>">Edit</a></td>     
+          <td><a href="/admin/tutorialCategory?id=<%= tutorial.id %>">Delete</a></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/admin/tutorialEditor">
+    <h5 style>Add Tutorial</h5>
+  </a>
+</div>
+
+<div class="panel large-container">
+  <!-- Default panel contents -->
+  <div class="panel-heading large-heading">Exercise</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th class="table-heading">Title</th>
+      <th class="table-heading">Edit</th>
+      <th class="table-heading">Delete</th>
+    </tr>
+    <% _.each(exercises, function(exercise) { %>
+        <tr>
+          <td><%= exercise.title %></td>
+          <td><a href="/admin/exerciseEditor?id=<%= exercise.id %>">Edit</a></td>     
+          <td><a href="/admin/deleteExercise?id=<%= exercise.id %>">Delete</a></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/admin/exerciseEditor">
+    <h5 style>Add Exercise</h5>
+  </a>
+</div>
+

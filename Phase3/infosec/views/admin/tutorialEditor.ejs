@@ -1,0 +1,35 @@
+<div class="panel small-container">
+  
+  <h1 class="text-center"><%= edit ? "Edit" : "Create a" %> Tutorial</h1>
+  
+  <form id="tutorialEditor" action="/admin/saveTutorial<%= edit ? '?id=' + tutorial.id : ''%>" method="post">
+
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="Title" name="title" value="<% if (edit) { %><%= tutorial.title %><% } %>">
+    </div>
+
+    <div class="form-group">
+      <label>Brief</label>
+      <textarea class="form-control" rows="3" placeholder="Add a brief description" name="brief"><% if (edit) { %><%= tutorial.brief %><% } %></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" rows="5" placeholder="Add tutorial content" name="description"><% if (edit) { %><%= tutorial.description %><% } %></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Category</label>
+      <select class="form-control" form="exerciseEditor" name="tutorialId">
+        <% _.each(categories, function(category) { %>
+        <option value="<%= tutorial.id %>" <% if (edit && category.id == tutorial.categoryId) { %><%= 'selected' %><% } %>><%= tutorial.title %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <input class="btn btn-primary btn-lg btn-block" value="Save" type="submit"/>
+    </div>
+  </form>
+</div>
