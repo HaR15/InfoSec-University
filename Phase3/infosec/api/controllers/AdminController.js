@@ -121,23 +121,38 @@
     });
   },
 
-  exerciseCreation: function (req, res) {
-
+  exerciseEditor: function (req, res) {
+    var exerciseId = req.allParams().id;
     Tutorial.find().exec( function (err, tutorials) {
 
       // If no error occurred, then return all the tutorials
-      if(!err){ 
-        return res.view('admin/exerciseCreation', { tutorials: tutorials });
+      if(!err && tutorials) {
+        var locals = {
+          edit: false,
+          tutorials: tutorials 
+        };
+        if (exerciseId) {
+          Exercise.findOne({id:exerciseId}).exec(function (err, exercise) {
+            if (!err && exercise) {
+              locals.edit = true;
+              locals.exercise = exercise;
+              return res.view("admin/exerciseEditor", locals);
+            } else {
+              return res.serverError(err);
+            }
+          });
+        } else {
+          return res.view("admin/exerciseEditor", locals);
+        }
 
-      // If error occurred, send error
+      // If an error occurred, send error
       }else{ 
         return res.serverError(err);
       }
     });
-
   },
 
-  createExercise: function (req, res) {
+  saveExercise: function (req, res) {
     var params = req.allParams();
     var exercise = {
       title: params.title,
@@ -147,9 +162,9 @@
       level: params.level,
       tutorialId: params.tutorialId
     };
-    Exercise.create(exercise).exec( function (err, e) {
+    (params.id ? Exercise.update({id:params.id}, exercise) : Exercise.create(exercise)).exec( function (err, e) {
       if (!err) {
-        req.flash('success', 'Created exercise successfully!');
+        req.flash('success', 'Saved exercise successfully!');
         return res.redirect('/admin');
       } else {
         return res.serverError(err);
