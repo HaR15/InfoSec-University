@@ -5,9 +5,9 @@
   <!-- Table -->
   <table class="table">
     <tr>
-      <th>Title</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th class="table-heading">Title</th>
+      <th class="table-heading">Edit</th>
+      <th class="table-heading">Delete</th>
     </tr>
     <% _.each(categories, function(category) { %>
         <tr>
@@ -18,6 +18,6 @@
     <% }) %>
   </table>
   <a href="/admin/createCategory">
-    <h5>Add Category</h5>
+    <h5 style>Add Category</h5>
   </a>
 </div>
