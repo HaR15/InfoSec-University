@@ -88,7 +88,7 @@
     var categoryEdit = {
       title: params.title,
       brief: params.brief,
-      description: params.description,
+      description: params.description
     };
 
     var saveAction;
