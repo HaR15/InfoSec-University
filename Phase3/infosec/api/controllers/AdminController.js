@@ -121,40 +121,69 @@
     });
   },
 
+  /*
+    DESCRIPTION
+      Returns the exercise editor view. If the `id` parameter of an exercise is 
+      supplied, then the respective exercise can be edited and updated,
+      otherwise hitting the save button will create a new exercise via the 
+      saveExercise action.
+
+    PARAMETERS
+      id:   (optional) exercise id
+  */
   exerciseEditor: function (req, res) {
     var exerciseId = req.allParams().id;
+    
     Tutorial.find().exec( function (err, tutorials) {
 
-      // If no error occurred, then return all the tutorials
-      if(!err && tutorials) {
+      // Continue searching for exercise
+      if(!err) {
         var locals = {
           edit: false,
           tutorials: tutorials 
         };
-        if (exerciseId) {
+
+        // if an id was given, check if it exists
+        if (exerciseId) {        
           Exercise.findOne({id:exerciseId}).exec(function (err, exercise) {
-            if (!err && exercise) {
-              locals.edit = true;
-              locals.exercise = exercise;
-              return res.view("admin/exerciseEditor", locals);
-            } else {
+            if (!err) {
+              if (exercise) { // exercise found, send locals for editing
+                locals.edit = true;
+                locals.exercise = exercise;
+                return res.view("admin/exerciseEditor", locals);  
+              
+              } else { // given id was not found, send 404
+                return res.view('404');
+              }
+            
+            } else { // error occurred
               return res.serverError(err);
             }
           });
-        } else {
+
+        } else { // id was not given, send locals for creating a new exercise
           return res.view("admin/exerciseEditor", locals);
         }
 
-      // If an error occurred, send error
+      // error occurred
       }else{ 
         return res.serverError(err);
       }
     });
   },
 
+  /*
+    DESCRIPTION
+      Saves an exercise to the database. If an exercise `id` parameter is 
+      supplied, then the changes to the respective exercise are saved, otherwise 
+      a new exercise is created. If an bad id is supplied, nothing happens.
+
+    PARAMETERS
+      id:   (optional) exercise id
+  */
   saveExercise: function (req, res) {
     var params = req.allParams();
-    var exercise = {
+    var exerciseEdit = {
       title: params.title,
       instructions: params.instructions,
       expected: params.expected,
@@ -162,11 +191,20 @@
       level: params.level,
       tutorialId: params.tutorialId
     };
-    (params.id ? Exercise.update({id:params.id}, exercise) : Exercise.create(exercise)).exec( function (err, e) {
+
+    var saveAction;
+    if (params.id) { // update exercise if an exercise id was given
+      saveAction = Exercise.update({id:params.id}, exerciseEdit);
+    
+    } else { // save a newly created exercise
+      saveAction = Exercise.create(exerciseEdit);
+    }
+
+    // return respective page
+    saveAction.exec(function (err, exercise) {
       if (!err) {
-        req.flash('success', 'Saved exercise successfully!');
-        return res.redirect('/admin');
-      } else {
+        return res.redirect('/admin');  
+      } else { // error occurred
         return res.serverError(err);
       }
     });

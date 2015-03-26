@@ -1,5 +1,7 @@
-<div class="small-container">
+<div class="panel small-container">
+  
   <h1 class="text-center"><%= edit ? "Edit" : "Create an" %> Exercise</h1>
+  
   <form id="exerciseEditor" action="/admin/saveExercise<%= edit ? '?id=' + exercise.id : ''%>" method="post">
 
     <div class="form-group">
@@ -8,18 +10,18 @@
     </div>
 
     <div class="form-group">
-      <label>Instructions</label>
-      <textarea class="form-control" rows="10" placeholder="Instructions" name="instructions"><% if (edit) { %><%= exercise.instructions %><% } %></textarea>
+      <label>Instructions (supports html formatting)</label>
+      <textarea class="form-control" rows="5" placeholder="Instructions" name="instructions"><% if (edit) { %><%= exercise.instructions %><% } %></textarea>
     </div>
 
     <div class="form-group">
       <label>Expected</label>
-      <textarea class="form-control" rows="10" placeholder="Expected" name="expected"><% if (edit) { %><%= exercise.expected %><% } %></textarea>
+      <textarea class="form-control" rows="5" placeholder="Expected" name="expected"><% if (edit) { %><%= exercise.expected %><% } %></textarea>
     </div>
 
     <div class="form-group">
       <label>Additional Code</label>
-      <textarea class="form-control" rows="10" placeholder="Additional code" name="additionalCode"><% if (edit) { %><%= exercise.additionalCode %><% } %></textarea>
+      <textarea class="form-control" rows="5" placeholder="Additional code" name="additionalCode"><% if (edit) { %><%= exercise.additionalCode %><% } %></textarea>
     </div>
 
     <div class="form-group">
