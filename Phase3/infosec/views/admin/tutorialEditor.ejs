@@ -23,7 +23,7 @@
       <label>Category</label>
       <select class="form-control" form="tutorialEditor" name="tutorialId">
         <% _.each(categories, function(category) { %>
-          <option value="<%= tutorial.id %>" <% if (edit && category.id == tutorial.categoryId) { %><%= 'selected' %><% } %>><%= category.title %></option>
+          <option value="<%= category.id %>" <% if (edit && category.id == tutorial.categoryId) { %><%= 'selected' %><% } %>><%= category.title %></option>
         <% }) %>
       </select>
     </div>
