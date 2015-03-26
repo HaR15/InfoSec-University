@@ -1,12 +1,12 @@
-<h3>Product Highlights :</h3.
+<h3>Product Highlights :</h3>.
 
  * Infosec University is a website focused on teaching computer security for developers . The idea is to have an organized and good looking website that contains several courses about security , such as SQL Injection , Cryptography, etc . However, Infosec  doesn’t focus only in understanding the problem, it also teach the user how to exploit and prevent such breaches  .
 
-The major product decisions that differentiate our project from others include :
+<h3>The major product decisions that differentiate our project from others include :</h3>
 
- *	A well planned design, differentiated from all the others websites that just look sloppy.
- *	Proper content organization ,  we separated the content in a way that the user will be more comfortable while others websites just throw content after content .
- *	Accessibility, our website is designed to be a easy way to enter the security topic.
+ * A well planned design, differentiated from all the others websites that just look sloppy.
+ * Proper content organization ,  we separated the content in a way that the user will be more comfortable while others websites just throw content after content .
+ * Accessibility, our website is designed to be a easy way to enter the security topic.
 
 <h3>Features that we focused on:</h3>
  *	The design of our project was a big part of it , because most websites tend to be confusing .
