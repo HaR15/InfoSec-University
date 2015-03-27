@@ -18,9 +18,13 @@ $(function(){
 	            	$("#validation-sucess").toggle(true);
    					$("#button-submit").toggle(false);
    					$("#button-more").toggle(true);
+	            	$("#exercise-picture-before").toggle(false);   					
+	            	$("#exercise-picture-after").toggle(true);   					
 	            }else{
-	            	$("#validation-invalid").toggle(true);            	
-   					
+	            	$("#validation-invalid").toggle(true);
+	            	$("#exercise-picture-before").toggle(true);
+	            	$("#exercise-picture-after").toggle(false);
+
 	            }
 	        }
 	    });
@@ -44,13 +48,17 @@ $(function(){
    			$("#validation-invalid").toggle(false);
    			$("#button-more").toggle(false);
    			$("#button-submit").toggle(true);
+			$("#exercise-picture-before").toggle(true);
+			$("#exercise-picture-after").toggle(false);
+
    		});
 
 
    	$("#validation-sucess").toggle(false);
    	$("#validation-invalid").toggle(false);
    	$("#button-more").toggle(false);
-        
+	$("#exercise-picture-after").toggle(false);
+       
     
 
 });
