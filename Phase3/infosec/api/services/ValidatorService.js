@@ -13,6 +13,7 @@ module.exports = {
 
     switch(exercise.validationType){
 
+      // fullMatchString will match the received solution to the expected solution using exact string match
       case "fullMatchString":
         var received = String(code).replace(/[\n\r\t]/g,'').replace(/ /g,'');
         var expected = exercise.expected[0].replace(/[\n\r\t]/g,'').replace(/ /g,'');
@@ -24,6 +25,9 @@ module.exports = {
 
         break;
 
+      // partialMatchString will match the received solution to the expected solution using partial string matching
+      // by checking the list of partial string matches in the expected solution that must be in the received solution
+      // and in the same order 
       case "partialMatchString":
         var received = String(code).replace(/[\n\r\t]/g,'').replace(/ /g,'');
         var validated = false;
