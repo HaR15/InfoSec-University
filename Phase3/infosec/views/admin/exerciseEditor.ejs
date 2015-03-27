@@ -21,14 +21,19 @@
           if (edit) { 
             if (exercise.expected.constructor === Array) {
               for (i = 0; i < exercise.expected.length; i++) {
-                expected = expected + exercise.expected[i] + ",,,";
+                if (exercise.expected.length - 1 == i) {
+                  expected = expected + exercise.expected[i];
+                }
+                else {
+                  expected = expected + exercise.expected[i] + ",,,";
+                }
               }
             }
             else {
               expected = exercise.expected;
             }
           }
-        %><%= exercise.expected %></textarea>
+        %><%= expected %></textarea>
     </div>
 
     <div class="form-group">

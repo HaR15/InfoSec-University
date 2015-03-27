@@ -313,7 +313,9 @@
     if (params.validationType == "partialMatchString") {
       expected = params.expected.split(",,,");
     }
-    console.log(expected);
+    else {
+      expected = params.expected;
+    }
 
     var exerciseEdit = {
       title: params.title,

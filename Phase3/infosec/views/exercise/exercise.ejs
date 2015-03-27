@@ -11,15 +11,18 @@
 	</div>
 
 
-	<div class="exercise-container-picture">
-
-		<img src="images/exercises/<%= exercise.id %>-before.png">
-
-	</div>
 
 
 	<div class="exercise-container-editor">
 
+		<div class="exercise-container-picture">
+
+			<img id="exercise-picture-before" src="/images/exercises/<%= exercise.id %>-before.png">
+			<img id="exercise-picture-after" src="/images/exercises/<%= exercise.id %>-after.png">
+
+		</div>
+
+		<div sytle="clear: both;"></div>
 
 		<div id="editor"></div>
 
@@ -38,7 +41,7 @@
 		</form>
 
 		<a href="/exercise/byTutorial?id=<%= exercise.tutorialId %>">
-			<button id="button-more" class="btn btn-primary" style="margin: 6px; font-size: 18px; position: fixed; right: 0; top: 1;">More Exercises</button>
+			<button id="button-more" class="btn btn-primary" style="margin: 6px; float: right; font-size: 18px;">More Exercises</button>
 		</a>
 
 	</div>
