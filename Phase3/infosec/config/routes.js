@@ -45,8 +45,9 @@
     view: 'main/guide'
   },
 
-  '/news':{
-    view: 'main/news'
+  'GET /news/index': {
+    controller: 'NewsController',
+    action: 'index'
   },
 
   'GET /user/login': {

@@ -1,0 +1,11 @@
+<section class="default-center">
+	<h1>Infosec News</h1>
+	<% _.each(news, function(newss) { %>
+		<div class="article">
+			<img src="images/logo-icon.svg">
+			<a href="/news/show/<%= newss.id %>"><h3><%= newss.title %></h3></a>
+			<h4><%= newss.createdAt %></h4>
+			<div class="content"><p><%= newss.body %></p></div>
+		</div>
+	<% }) %>
+</section>

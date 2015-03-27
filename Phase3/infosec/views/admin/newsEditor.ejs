@@ -1,0 +1,21 @@
+<div class="panel small-container">
+  
+  <h1 class="text-center"><%= edit ? "Edit" : "Create a" %> News Article</h1>
+  
+  <form id="newsEditor" action="/admin/saveNews<%= edit ? '?id=' + news.id : ''%>" method="post">
+
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="Title" name="title" value="<% if (edit) { %><%= news.title %><% } %>">
+    </div>
+
+    <div class="form-group">
+      <label>Body</label>
+      <textarea class="form-control" rows="10" placeholder="Body" name="body"><% if (edit) { %><%= news.body %><% } %></textarea>
+    </div>
+
+    <div class="form-group">
+      <input class="btn btn-primary btn-lg btn-block" value="Save" type="submit"/>
+    </div>
+  </form>
+</div>

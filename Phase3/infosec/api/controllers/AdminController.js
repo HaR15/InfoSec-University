@@ -23,12 +23,19 @@
               if (err) {
                 res.serverError(JSON.stringify(err));
               } else {
-                locals = {
-                  categories: categories,
-                  tutorials: tutorials,
-                  exercises: exercises
-                };
+                News.find().exec(function (err, news) {
+                if (err) {
+                  res.serverError(JSON.stringify(err));
+                } else {
+                  locals = {
+                    categories: categories,
+                    tutorials: tutorials,
+                    exercises: exercises,
+                    news: news
+                  }; 
                 return res.view('admin/dashboard', locals);
+                }
+              });
               }
             });
           }
@@ -337,6 +344,61 @@
     });
   },
 
+  newsEditor: function (req, res) {
+      var newsId = req.param('id');
+      
+      var locals = {
+        edit: false,
+      };
+
+      if (newsId) { // if an id was given, check if it exists
+        News.findOne({id:newsId}).exec(function (err, news) {
+          if (err) {  // error occurred
+            return res.serverError(JSON.stringify(err));
+          
+          } else if (News) { // category found, send locals for editing
+            locals.edit = true;
+            locals.news = news;
+            return res.view("admin/newsEditor", locals);  
+          
+          } else { // given id was not found, send 404
+            return res.view('404');
+          }
+        });
+
+      } else { // id was not given, send locals for creating a new category
+        return res.view("admin/newsEditor", locals);
+      }
+    },
+
+  saveNews: function (req, res) {
+    var params = req.allParams();
+
+    var newsEdit = {
+      title: params.title,
+      body: params.body,
+      id: params.id
+    };
+
+    var saveAction;
+    if (params.id) { // update exercise if an exercise id was given
+      saveAction = News.update({id:params.id}, newsEdit);
+    
+    } else { // save a newly created exercise
+      saveAction = News.create(newsEdit);
+    }
+
+    // return respective page
+    saveAction.exec(function (err, news) {
+      if (err) { // error occurred
+        return res.serverError(JSON.stringify(err));
+      } else {
+        req.flash('success', 'Saved news article!');
+        return res.redirect('/admin');  
+      }
+    });
+  },
+
   /*
     DESCRIPTION
       Deletes the specified exercise.
@@ -352,6 +414,22 @@
 
       } else if (deleted.length) {
         req.flash('success', 'Successfully deleted exercise!');
+        return res.redirect('/admin');
+
+      } else {
+        return res.view('404');
+      }
+    });
+  },
+
+    deleteNews: function (req, res) {
+    var newsId = req.param('id');
+    News.destroy({id:newsId}).exec(function (err, deleted) {
+      if (err) {
+        return res.serverError(JSON.stringify(err));
+
+      } else if (deleted.length) {
+        req.flash('success', 'Successfully deleted news article!');
         return res.redirect('/admin');
 
       } else {
