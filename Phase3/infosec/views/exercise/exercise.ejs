@@ -17,8 +17,10 @@
 
 		<div class="exercise-container-picture">
 
-			<img id="exercise-picture-before" src="/images/exercises/<%= exercise.id %>-before.png">
-			<img id="exercise-picture-after" src="/images/exercises/<%= exercise.id %>-after.png">
+			<img id="exercise-picture-before" src="/images/exercises/<%= exercise.id %>-before.png" alt="Exercise" onerror="this.src='/images/default.png'">
+			<img id="exercise-picture-failure" src="/images/exercises/<%= exercise.id %>-failure.png" alt="Exercise" onerror="this.src='/images/default.png'">
+			<img id="exercise-picture-after" src="/images/exercises/<%= exercise.id %>-after.png" 
+			alt="Exercise" onerror="this.src='/images/default.png'">
 
 		</div>
 
@@ -28,9 +30,15 @@
 
 		<div style="clear: both;"></div>
 
-		<div id="validation-sucess" class="exercise-alert" style="color: green;">Well done! You successfully completed the exercise.</div>
+		<div id="validation-message">
 
-		<div id="validation-invalid" class="exercise-alert" style="color: red;">Oops, try again.</div>
+
+<!-- 			<div id="validation-sucess" class="exercise-alert" style="color: green;">Well done! You successfully completed the exercise.</div>
+
+			<div id="validation-invalid" class="exercise-alert" style="color: red;">Oops, try again.</div> -->
+
+		</div>
+
 
 		<form id="submitExercise">
 

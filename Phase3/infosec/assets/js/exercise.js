@@ -1,5 +1,8 @@
 $(function(){
 
+	var exerciseSuccess = '<div id="validation-sucess" class="exercise-alert" style="color: green;">Well done! You successfully completed the exercise.</div>';
+	var exerciseFailure = '<div id="validation-invalid" class="exercise-alert" style="color: red;">Oops, try again.</div>';
+
 	$("#submitExercise").submit(function(e){
 
 		var postData = $(this).serialize();
@@ -15,14 +18,17 @@ $(function(){
 	        success: function(data, textStatus, jqXHR) 
 	        {
 	            if(data["validation"]=="true"){
-	            	$("#validation-sucess").toggle(true);
+	            	//$("#validation-sucess").toggle(true);
+	            	$("#validation-message").html(exerciseSuccess);
    					$("#button-submit").toggle(false);
    					$("#button-more").toggle(true);
 	            	$("#exercise-picture-before").toggle(false);   					
 	            	$("#exercise-picture-after").toggle(true);   					
 	            }else{
-	            	$("#validation-invalid").toggle(true);
-	            	$("#exercise-picture-before").toggle(true);
+	            	//$("#validation-invalid").toggle(true);
+	            	$("#validation-message").html(exerciseFailure);
+	            	$("#exercise-picture-failure").toggle(true);
+	            	$("#exercise-picture-before").toggle(false);
 	            	$("#exercise-picture-after").toggle(false);
 
 	            }
@@ -50,6 +56,7 @@ $(function(){
    			$("#button-submit").toggle(true);
 			$("#exercise-picture-before").toggle(true);
 			$("#exercise-picture-after").toggle(false);
+			$("#exercise-picture-failure").toggle(false);
 
    		});
 
@@ -58,6 +65,7 @@ $(function(){
    	$("#validation-invalid").toggle(false);
    	$("#button-more").toggle(false);
 	$("#exercise-picture-after").toggle(false);
+	$("#exercise-picture-failure").toggle(false);
        
     
 
