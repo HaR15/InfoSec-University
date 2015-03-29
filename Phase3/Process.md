@@ -1,0 +1,11 @@
+### What worked (Tools/Techniques/Conventions)
+
+One of the tools that worked well for our team was using MongoLab, a platform as service hosting MongoDB. Using this, we were able to have our database setup and everything installed quickly, and also not having to worry about the data's security as it was being hosted by a trusted cloud service. Also, having a web UI instead of just the commandline, and set of available APIs meant we were able to easily manipulate our database's content and structure. A convention that worked well for our team was having each team member assigned a user story at the start of the phase/s to finish by the end of that deliverable. This helped each member focus on one or two features that they knew were required to finish. This convention helped the team complete all of our user stories by the end of the project. 
+
+### What did not work (Tools/Techniques/Conventions)
+
+One of the tools that did not work so well for us was using Skype chat as a tool for meetings. It took a longer time for ideas to come across to others (typing speed, and misinterpretation) in Skype chats, and we were often guilty of multi-tasking or being idle, resulting in missing important things mentioned in chat regarding the next steps in the project. Not having tutorials with our T.A also affected our team as we were unable to receive any feedback on Phase 2 and moving forward in Phase3, we had to make assume that our Phase 2 deliverable did not need any changes but just additions to complete the user stories.
+
+### An Ideal Process
+
+An ideal process for our team would include holding a short meeting (an hour maximum) every two days for status updates on the work every individual has done and plans to for the next few days. This would help the team maintain communication, clear up confusions, provide feedback, and help someone who’s stuck on something. At the end of these meetings, a short log will be written outlining the goals for each member. To discuss the entire team’s goals, the team would preferably meet at the beginning of each week to evaluate the updates made by each member, discuss the team’s goals for the following week, and delegate the tasks once again. 
