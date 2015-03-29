@@ -1,6 +1,6 @@
 <section class="default-center">
 	<h1>Infosec News</h1>
-	<% _.each(news, function(newss) { %>
+	<% _.each(news.reverse(), function(newss) { %>
 		<div class="article">
 			<img src="images/logo-icon.svg">
 			<a href="/news/show/<%= newss.id %>"><h3><%= newss.title %></h3></a>
