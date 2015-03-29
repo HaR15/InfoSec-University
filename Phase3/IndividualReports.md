@@ -13,7 +13,7 @@
     Based on the material outlined in the last phase I created the tutorials and exercises within the Category Cryptography.
   </li>
   <li>
-    For this project we used the framework [Sails.js](http://sailsjs.org/#!/) which I haven't used before. It was very interesting learning about the framework and seeing how useful it is.
+    For this project we used the framework [Sails.js](http://sailsjs.org/#!/)which I haven't used before. It was very interesting learning about the framework and seeing how useful it is.
   </li>
   <li> 
   I am responsible with the work - I tried to plan ahead, and I finished my parts of the work as soon as possible.
