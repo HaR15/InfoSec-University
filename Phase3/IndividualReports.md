@@ -7,7 +7,7 @@
 <h3>Caroline Caetano (carolinecaetano17)</h3> 
 <ul>
   <li>
-    During the last I was responsible for these two User Stories:<br>
+    During the last phase I was responsible for these two User Stories:<br>
     -As Sergina I want to review Cryptography so that I understand how it works.<br>
     -As Sergina I want to practice using Cryptography so that I can test my understanding.<br>
     Based on the material outlined in the last phase I created the tutorials and exercises within the category Cryptography.
