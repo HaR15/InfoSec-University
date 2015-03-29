@@ -9,13 +9,14 @@
  * Accessibility, our website is designed to be a easy way to enter the security topic.
 
 <h3>Features that we focused on:</h3>
- *	The design of our project was a big part of it , because most websites tend to be confusing .
+ * The design of our project was a big part of it , because most websites tend to be confusing .
  *	The tutorials is a important part of the project, our focus is not only to teach the user how to use an exploit, but also to help him understand more about it.
  *	The exercises is a decisive feature, is what a user want to see in a website like this .
 
 <h3>Features that we postponed:</h3>
 
- 	* We postponed the chat for future releases, its a feature that for now is not important, but might be in the future.
+  * We postponed the chat for future releases, its a feature that for now is not important, but might be in the future.
+ 	* We also postponed the challanges, since the most important part is the exercises and tutorials.
 
 <h3>Typical uses of the product :</h3>
 
