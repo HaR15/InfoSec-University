@@ -11,6 +11,14 @@
 	<div class="exercise-complete">
 		<h3>Exercises Completed</h3>
 		<div class="container">
+			<h4>Basic Security</h4>
+			<ul>
+				<% if (completedExercisesList.indexOf("Comments are deadly") >= 0){ %> <li>Comments are deadly</li> <% } %>
+				<% if (completedExercisesList.indexOf("Enter password") >= 0){ %> <li>Enter password</li> <% } %>
+				<% if (completedExercisesList.indexOf("Hey Best Friend") >= 0){ %> <li>Hey Best Friend</li> <% } %>
+			</ul>
+		</div>
+		<div class="container">
 			<h4>SQL Injections</h4>
 			<ul>
 				<% if (completedExercisesList.indexOf("Error Based: Exploit") >= 0){ %> <li>Error Based: Exploit</li> <% } %>
@@ -18,21 +26,22 @@
 			</ul>
 		</div>
 		<div class="container">
-			<h4>Cross Site Scripting</h4>
-			<ul>
-				<!-- CROSS SITE SCRIPTING EXERCISES GO HERE -->
-			</ul>
-		</div>
-		<div class="container">
 			<h4>Sessions</h4>
 			<ul>
-				<!-- SESSION EXERCISES GO HERE -->
+				<% if (completedExercisesList.indexOf("Fix their session ID") >= 0){ %> <li>Fix their session ID</li> <% } %>
+				<% if (completedExercisesList.indexOf("Steal their key") >= 0){ %> <li>Steal their key</li> <% } %>
+				<% if (completedExercisesList.indexOf("Bank Heist") >= 0){ %> <li>Bank Heist</li> <% } %>
 			</ul>
 		</div>
 		<div class="container">
 			<h4>Cryptography</h4>
 			<ul>
-				<!-- CRYPTOGRAPHY EXERCISES GO HERE -->
+				<% if (completedExercisesList.indexOf("Caesar Cipher") >= 0){ %> <li>Caesar Cipher</li> <% } %>
+				<% if (completedExercisesList.indexOf("Substitution Cipher") >= 0){ %> <li>Substitution Cipher</li> <% } %>
+				<% if (completedExercisesList.indexOf("Crypt Goals") >= 0){ %> <li>Crypt Goals</li> <% } %>
+				<% if (completedExercisesList.indexOf("Working with etc/passwd") >= 0){ %> <li>Working with etc/passwd</li> <% } %>
+				<% if (completedExercisesList.indexOf("Hashing Properties") >= 0){ %> <li>Hashing Properties</li> <% } %>
+				<% if (completedExercisesList.indexOf("Diffie-Hellman key") >= 0){ %> <li>Diffie-Hellman Key Exchange</li> <% } %>
 			</ul>
 		</div>
 	</div>
