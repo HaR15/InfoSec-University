@@ -14,7 +14,8 @@
  *	The exercises is a decisive feature, is what a user want to see in a website like this .
 
 <h3>Features that we postponed:</h3>
- 	
+
+ 	* We postponed the chat for future releases, its a feature that for now is not important, but might be in the future.
 
 <h3>Typical uses of the product :</h3>
 
