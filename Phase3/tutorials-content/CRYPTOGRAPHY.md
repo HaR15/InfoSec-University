@@ -154,7 +154,7 @@ D: K x C -> M
 			root:ueqwOCnSGdsuM:993:993::/home/root:/bin/sh
 		</p>
 		<p>
-			<b>Soluton:</b> hello
+			<b>Solution:</b> hello
 		</p>
 	</li>
 
