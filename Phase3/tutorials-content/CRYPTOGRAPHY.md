@@ -157,5 +157,5 @@ D: K x C -> M
 			<b>Soluton:</b> hello
 		</p>
 	</li>
-	<li>Provide user with example etc/passwd file (that is using shadow file), determine unencrypted password and login using it.</li>
+
 </ol>
