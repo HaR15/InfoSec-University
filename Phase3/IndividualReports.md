@@ -21,6 +21,13 @@
 
 
 <h3>Antonio Raposo (antoniocarlosraposo)</h3>
+<ul>
+  <li>Most significant contribution - <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase3/Phase3/Product.md">Phase 3 Product.md</a>, 
+    <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/blob/Phase3/Phase2/infosec/views/category/categories.ejs">Category view</a></li>
+  <li>Concepts learned - i have learned a lot more about node.js with sails and many things about security that i had no idea.</li>
+  <li>Strengths - good at improvising , always willing to help  </li>
+  <li>Weaknesses - By the end of the project i didnt had much motivation to it.</li>
+</ul>
 
 <h3>Caroline Caetano (carolinecaetano17)</h3> 
 <ul>
