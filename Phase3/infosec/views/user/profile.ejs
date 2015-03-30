@@ -26,6 +26,12 @@
 			</ul>
 		</div>
 		<div class="container">
+			<h4>Cross Site Scripting</h4>
+			<ul>
+				<% if (completedExercisesList.indexOf("Steal an new user's credentials") >= 0){ %> <li>Steal an new user's credentials</li> <% } %>
+			</ul>
+		</div>
+		<div class="container">
 			<h4>Sessions</h4>
 			<ul>
 				<% if (completedExercisesList.indexOf("Fix their session ID") >= 0){ %> <li>Fix their session ID</li> <% } %>

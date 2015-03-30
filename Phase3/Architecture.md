@@ -19,7 +19,7 @@
 <h3>Significant Architecture decisions</h3>
 
 * __MVC__: MVC pattern could improve the design of modules and services.
-  * The use of MVC was essencial when assigning tasks and also helped the development team design robust modules that could be easily integrated and modifield. 
-* __NoSQL__: NoSQL database could provide better data manipulation and itegration.
+  * The use of MVC was essential when assigning tasks and also helped the development team design robust modules that could be easily integrated and modifield. 
+* __NoSQL__: NoSQL database could provide better data manipulation and integration.
   * The use of a NoSQL database provided easy manipulation of data in our application and was significant in the development workflow. Throughout the application development, by using MongoDB the team was capable of easily changing the design of the database, and also had remote work improved (remote database made the data available to all developers).
 

@@ -154,8 +154,8 @@ D: K x C -> M
 			root:ueqwOCnSGdsuM:993:993::/home/root:/bin/sh
 		</p>
 		<p>
-			<b>Soluton:</b> hello
+			<b>Solution:</b> hello
 		</p>
 	</li>
-	<li>Provide user with example etc/passwd file (that is using shadow file), determine unencrypted password and login using it.</li>
+
 </ol>
