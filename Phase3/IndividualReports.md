@@ -22,6 +22,26 @@
 </ul>
 
 <h3>Eric Scott (eric-scott)</h3>  
+<ul>
+    <li>
+        Most significant contribution - exercise content:
+        <br>
+        <ul>
+            <li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/commit/ac3717d4622bb0f8981d15d48daddd8da6226b73">Cryptography</a></li>
+            <li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/commit/96d8eed157f121d9c47f96f23533a484f242358e">Sessions</a></li>
+            <li><a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/commit/3c7efc7283796d6ff63f0d6eab3a2c2d14546267">Screenshots for exercises to show in preview window, based on progress in the exercise (before completion, after successful submission, and after incorrect submission)</a></li>
+        </ul>
+    </li>
+    <li>
+        Concept learned - Learned how to manipulate Javascript on page to take the JSON data, iterate through its contents to display results on the page. This concept was useful for displaying completed exercises on the profile page, as well as displaying content (such as news articles) in a specific format.
+    </li>
+    <li>
+        Strengths - In-depth security knowledge was used to explain how exercises and tutorials should be implemented. For example, using SQL Injection on a login page, breaking password encryption for passwords stored in etc/passwd file. 
+    </li>
+    <li>
+        Weaknesses - Workload management. While waiting on work that requires other group members to complete something first, I should complete other work in the meantime that does not require prerequisite work to completed first. This way, I will be able to complete my total work much faster. 
+    </li>
+</ul>
 
 <h3>Shudmanul Chowdhury (g3chowd)</h3>  
 
