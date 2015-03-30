@@ -47,6 +47,12 @@
 
 <h3>Haris Shoaib (HaR15)</h3>  
 
+* My most significant contribution was implementing the <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/commit/81cf4301fad7ccd6bca0de8b5919b6d5ad2529">categoryEditor, tutorialEditor, and exerciseEditor for the AdminController</a>
+* I learned how to write actions in a Sails.js controller. <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/commit/554f6b425e972bee14d94e1c94ccd85bcf7554f6">For example querying a model and sending that returned object to a view.</a>
+* My main strength as a team member is keeping team members on task and making sure that our team is fulfilling our requirements for a phase. Also, I am at most group meetings and take an active part in the discussions. 
+* I think I can improve in learning about a new framework, such as Sails.js, by carefully studying the documentation instead of getting help most of the time from a team member. 
+
+
 <h3>Lucas Lima (lucaslsl)</h3>
 
 <ul>
