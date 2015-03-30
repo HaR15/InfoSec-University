@@ -1,6 +1,24 @@
 #Individual Reports
 
 <h3>Alexei Darmin (AlexDar)</h3>  
+<ul>
+  <li>Most Significant Technical Contribution: News functionality <i>[admin can create, edit, delete news stories]</i>
+    <ul>
+      <li>Backend | Commit: <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/commit/a9c2f0e19724151dcebb21358c3e5e16e413b60a">a9c2f0</a></li>
+      <li>Frontend | Commit: <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/commit/b641e39ea99a9f4b90f1b516087f6fb3550a30a7">b641e3</a>
+    </ul>
+  </li>
+  <li>In addition to learning SailsJS for the first time, I learned about various levels of input sanitation.
+    <ul>
+      <li>Client-side regex: <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/commit/727a91bfc77948f5f1b5860b30de68d864e34ac6">727a91</a></li>
+      <li>Server-side: <a href="https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/issues/1">https://github.com/UoT-CSC30x-W15/302W15-Prj-Team12-repo/issues/1</a>
+    </ul>
+  </li>
+  <li>I communicate well, and when I start working I'm very productive and a quick learner.</li>
+  <li>I was a bit slow to start learning SailsJS so this restricted me from making major contributions in the earlier phases.  I could improve by facing my fears of learning a whole new framework earlier.</li>
+</ul>
+
+
 
 <h3>Antonio Raposo (antoniocarlosraposo)</h3>
 
