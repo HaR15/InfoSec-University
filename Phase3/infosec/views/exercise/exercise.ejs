@@ -1,0 +1,61 @@
+<section class="exercise-container">
+
+
+	<div class="exercise-container-instructions">
+
+		<% if(exercise) {%>
+			<h1> <%= exercise.title %> </h1>
+			<p> <%- exercise.instructions %> </p>
+		<% } %>
+
+	</div>
+
+
+
+
+	<div class="exercise-container-editor">
+
+		<div class="exercise-container-picture">
+
+			<img id="exercise-picture-before" src="/images/exercises/<%= exercise.id %>-before.png" alt="Exercise" onerror="this.src='/images/default.png'">
+			<img id="exercise-picture-failure" src="/images/exercises/<%= exercise.id %>-failure.png" alt="Exercise" onerror="this.src='/images/default.png'">
+			<img id="exercise-picture-after" src="/images/exercises/<%= exercise.id %>-after.png" 
+			alt="Exercise" onerror="this.src='/images/default.png'">
+
+		</div>
+
+		<div sytle="clear: both;"></div>
+
+		<div id="editor"></div>
+
+		<div style="clear: both;"></div>
+
+		<div id="validation-message">
+
+
+<!-- 			<div id="validation-sucess" class="exercise-alert" style="color: green;">Well done! You successfully completed the exercise.</div>
+
+			<div id="validation-invalid" class="exercise-alert" style="color: red;">Oops, try again.</div> -->
+
+		</div>
+
+
+		<form id="submitExercise">
+
+			<input type="hidden" name="id" value="<%= exercise.id %>">
+			<textarea name="code" id="code" style="display: none;"></textarea>
+			<input id="button-submit" type="submit" class="btn btn-primary" value="Submit" style="float: right; margin: 6px; font-size: 18px;">
+
+		</form>
+
+		<a href="/exercise/byTutorial?id=<%= exercise.tutorialId %>">
+			<button id="button-more" class="btn btn-primary" style="margin: 6px; float: right; font-size: 18px;">More Exercises</button>
+		</a>
+
+	</div>
+
+
+</section>
+
+
+

@@ -1,0 +1,54 @@
+<section class="default-center">
+	<h1 style="text-align:center"><%= req.session.username %>'s Profile</h1>
+
+	<!--DISPLAY COMPLETED EXERCISES HERE-->
+	<% 
+		var completedExercisesList = [];
+		for (i = 0; i < user[0].completedExercises.length; i++) {    
+			completedExercisesList.push(user[0].completedExercises[i]);
+		} 
+	%>
+	<div class="exercise-complete">
+		<h3>Exercises Completed</h3>
+		<div class="container">
+			<h4>Basic Security</h4>
+			<ul>
+				<% if (completedExercisesList.indexOf("Comments are deadly") >= 0){ %> <li>Comments are deadly</li> <% } %>
+				<% if (completedExercisesList.indexOf("Enter password") >= 0){ %> <li>Enter password</li> <% } %>
+				<% if (completedExercisesList.indexOf("Hey Best Friend") >= 0){ %> <li>Hey Best Friend</li> <% } %>
+			</ul>
+		</div>
+		<div class="container">
+			<h4>SQL Injections</h4>
+			<ul>
+				<% if (completedExercisesList.indexOf("Error Based: Exploit") >= 0){ %> <li>Error Based: Exploit</li> <% } %>
+				<% if (completedExercisesList.indexOf("Time Delay: Exploit") >= 0){ %> <li>Time Delay: Exploit</li> <% } %>
+			</ul>
+		</div>
+		<div class="container">
+			<h4>Cross Site Scripting</h4>
+			<ul>
+				<% if (completedExercisesList.indexOf("Steal an new user's credentials") >= 0){ %> <li>Steal an new user's credentials</li> <% } %>
+			</ul>
+		</div>
+		<div class="container">
+			<h4>Sessions</h4>
+			<ul>
+				<% if (completedExercisesList.indexOf("Fix their session ID") >= 0){ %> <li>Fix their session ID</li> <% } %>
+				<% if (completedExercisesList.indexOf("Steal their key") >= 0){ %> <li>Steal their key</li> <% } %>
+				<% if (completedExercisesList.indexOf("Bank Heist") >= 0){ %> <li>Bank Heist</li> <% } %>
+			</ul>
+		</div>
+		<div class="container">
+			<h4>Cryptography</h4>
+			<ul>
+				<% if (completedExercisesList.indexOf("Caesar Cipher") >= 0){ %> <li>Caesar Cipher</li> <% } %>
+				<% if (completedExercisesList.indexOf("Substitution Cipher") >= 0){ %> <li>Substitution Cipher</li> <% } %>
+				<% if (completedExercisesList.indexOf("Crypt Goals") >= 0){ %> <li>Crypt Goals</li> <% } %>
+				<% if (completedExercisesList.indexOf("Working with etc/passwd") >= 0){ %> <li>Working with etc/passwd</li> <% } %>
+				<% if (completedExercisesList.indexOf("Hashing Properties") >= 0){ %> <li>Hashing Properties</li> <% } %>
+				<% if (completedExercisesList.indexOf("Diffie-Hellman key") >= 0){ %> <li>Diffie-Hellman Key Exchange</li> <% } %>
+			</ul>
+		</div>
+	</div>
+</section>

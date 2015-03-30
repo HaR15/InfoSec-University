@@ -1,0 +1,26 @@
+<div class="panel small-container">
+  
+  <h1 class="text-center"><%= edit ? "Edit" : "Create an" %> Category</h1>
+  
+  <form id="categoryEditor" action="/admin/saveCategory<%= edit ? '?id=' + category.id : ''%>" method="post">
+
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="Title" name="title" value="<% if (edit) { %><%= category.title %><% } %>">
+    </div>
+
+    <div class="form-group">
+      <label>Brief</label>
+      <textarea class="form-control" rows="5" placeholder="Brief Description" name="brief"><% if (edit) { %><%= category.brief %><% } %></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" rows="5" placeholder="Description" name="description"><% if (edit) { %><%= category.description %><% } %></textarea>
+    </div>
+
+    <div class="form-group">
+      <input class="btn btn-primary btn-lg btn-block" value="Save" type="submit"/>
+    </div>
+  </form>
+</div>

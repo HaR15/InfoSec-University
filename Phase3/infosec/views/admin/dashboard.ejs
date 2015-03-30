@@ -1,0 +1,117 @@
+<div class="container">
+  <!-- Flash info messages -->
+  <% msg = req.flash('success') %>
+  <% if (msg != '') { %>
+    <div class="alert alert-success alert-dismissible fade in text-center" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <%- msg %>
+    </div>
+  <% } %>
+ 
+  <!-- Flash warning messages -->
+  <% msg = req.flash('error') %>
+  <% if (msg != '') { %>
+    <div class="alert alert-error alert-dismissible fade in text-center" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <%- msg %>
+    </div>
+  <% } %>
+</div>
+
+<div class="panel large-container">
+  <!-- Default panel contents -->
+  <div class="panel-heading large-heading">Categories</div>
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th class="table-heading">Title</th>
+      <th class="table-heading">Edit</th>
+      <th class="table-heading">Delete</th>
+    </tr>
+    <% _.each(categories, function(category) { %>
+        <tr>
+          <td><%= category.title %></td>
+          <td><a href="/admin/categoryEditor?id=<%= category.id %>">Edit</a></td>     
+          <td><a href="/admin/deleteCategory?id=<%= category.id %>">Delete</a></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/admin/categoryEditor">
+    <h5 style>Add Category</h5>
+  </a>
+</div>
+
+<div class="panel large-container">
+  <!-- Default panel contents -->
+  <div class="panel-heading large-heading">Tutorials</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th class="table-heading">Title</th>
+      <th class="table-heading">Edit</th>
+      <th class="table-heading">Delete</th>
+    </tr>
+    <% _.each(tutorials, function(tutorial) { %>
+        <tr>
+          <td><%= tutorial.title %></td>
+          <td><a href="/admin/tutorialEditor?id=<%= tutorial.id %>">Edit</a></td>     
+          <td><a href="/admin/deleteTutorial?id=<%= tutorial.id %>">Delete</a></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/admin/tutorialEditor">
+    <h5 style>Add Tutorial</h5>
+  </a>
+</div>
+
+<div class="panel large-container">
+  <!-- Default panel contents -->
+  <div class="panel-heading large-heading">Exercise</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th class="table-heading">Title</th>
+      <th class="table-heading">Edit</th>
+      <th class="table-heading">Delete</th>
+    </tr>
+    <% _.each(exercises, function(exercise) { %>
+        <tr>
+          <td><%= exercise.title %></td>
+          <td><a href="/admin/exerciseEditor?id=<%= exercise.id %>">Edit</a></td>     
+          <td><a href="/admin/deleteExercise?id=<%= exercise.id %>">Delete</a></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/admin/exerciseEditor">
+    <h5 style>Add Exercise</h5>
+  </a>
+</div>
+
+<div class="panel large-container">
+  <!-- Default panel contents -->
+  <div class="panel-heading large-heading">News Articles</div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th class="table-heading">Title</th>
+      <th class="table-heading">Edit</th>
+      <th class="table-heading">Delete</th>
+    </tr>
+    <% _.each(news, function(newss) { %>
+        <tr>
+          <td><%= newss.title %></td>
+          <td><a href="/admin/newsEditor?id=<%= newss.id %>">Edit</a></td>     
+          <td><a href="/admin/deleteNews?id=<%= newss.id %>">Delete</a></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/admin/newsEditor">
+    <h5 style>Add News Article</h5>
+  </a>
+</div>
+
+
+

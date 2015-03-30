@@ -1,0 +1,33 @@
+<div class="boxes-container">
+  
+  <div class="section-header">
+    <% if(category){ %>
+      <h1><%= category.title %></h1>
+      <br>
+      <p><%= category.description %></p>  
+    <% } %>
+  <div>
+
+  <% if(tutorials.length > 0) { %>
+    <% _.each(tutorials, function(tutorial) { %>
+    
+      <div class="section-box">
+          <div class="section-box-heading">            
+        <a href="/admin/byId?id=<%= tutorial.id %>">
+            <h2><%= tutorial.title %></h2>
+            <p><%= tutorial.brief %></p>
+        </a>
+          </div>
+        <div style="clear: both;"></div>
+
+        <a href="/admin/byTutorial?id=<%= tutorial.id  %>" class="exercise">Exercises</a>
+      </div>
+    </a>
+    <% }) %>
+  <% } %>
+  <a href="/tutorial/createTutorial?id=<%= category.id %>">
+    <div class="section-box">
+      <h2>Add tutorial</h2>
+    </div>
+  </a>
+</div>

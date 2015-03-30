@@ -1,0 +1,14 @@
+<div class="boxes-container">
+  
+
+  <% _.each(categories, function(category) { %>
+
+    <a href="/tutorial/byCategory?id=<%= category.id %>">
+      <div class="section-box">
+        <h2><%= category.title %></h2>
+        <p><%= category.brief %></p>
+      </div>
+    </a>
+
+  <% }) %>
+</div>

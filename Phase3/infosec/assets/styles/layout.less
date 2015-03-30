@@ -1,0 +1,287 @@
+@import url(http://fonts.googleapis.com/css?family=Advent+Pro);
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
+
+@light-blue: rgba(52, 152, 219,1.0);
+@asphalt: rgba(52, 73, 94,0.9);
+@white: rgba(255, 255, 255,1.0);
+@grey: rgba(236, 240, 241,1.0);
+@green: rgba(46, 204, 113,1.0);
+@bottom-shadow: 0 0 5pt 1pt rgba(0, 0, 0, 0.3);
+
+
+h1,h2,h3,h4{
+	margin: 0;
+}
+
+h1{
+	font-size: 50px;
+}
+
+h2{
+	font-size: 40px;
+}
+
+
+p{
+	margin: 0;
+	font-size: 22px;
+	text-decoration: none;
+	display: block;	
+}
+
+a{
+	text-decoration: none;
+}
+
+html, body{
+	height:100%;
+	width: 100%;
+	color: @asphalt;	
+}
+
+body{
+	padding-top: 55px;
+	background-color: #F1F2F2;
+	font-family: 'Advent Pro', sans-serif;
+}
+
+#navbar-top{
+	background-color: @white;
+	height: 55px;
+	//box-shadow: @bottom-shadow;
+
+	.container{
+		background-color: @white;
+		width: 75%;
+		margin: 0 auto;
+		margin-top:2px;
+
+		a{
+			color: @asphalt;
+		}
+	}
+}
+
+.navbar-brand{	
+	padding: 0;
+
+	img{
+		height: 50px;
+		max-width: 100%;
+	}
+}
+
+
+
+.default-center{
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 4%;
+
+	p{
+		margin-left: 2%;
+		margin-top: 2%;
+	}
+}
+
+
+.exercise{
+	.instructions{
+		border-width:1px;
+		border-color:black;
+		border-style:solid;
+		border-radius: 10px;
+		padding:10px;
+		margin:20px 0px 20px 0px;
+	}
+
+	code{
+		padding:10px;
+		background-color:#63ACD1;
+		border-radius: 10px;
+		display:block;
+		white-space: pre-wrap;
+	}
+}
+
+.main-links-frame{
+	img {
+		height:125px;
+		max-width:90px;
+		margin:auto;
+		padding:5px 0px 5px 0px;
+	}
+}
+
+.user-container{
+	max-width:200px;
+	display:block;
+	margin:auto;
+	h1{
+		margin-bottom:25px;
+	}
+}
+
+.small-container{
+  max-width:500px;
+  display:block;
+  padding: 25px;
+  margin:auto;
+  margin-top:25px;
+}
+
+.large-container{
+	max-width:80%;
+  display:block;
+  padding: 25px;
+  margin:auto;
+  margin-top:25px;
+}
+
+.large-heading{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.table-heading{
+	font-size: 18px;
+}
+.section-box{
+	padding:0px!important;
+
+	h2{
+		margin-top:3%;
+	}
+	.tutorial{
+		background-color:#666699;
+		//margin-top:0px;
+		float:left;
+		color:white;
+		padding:6px 0px 6px 0px;
+		text-align:center;
+		width:50%;
+		font-size:125%;
+		display:block;
+		bottom:0px;
+	}
+	.tutorial:hover{
+		background-color:#9E9EBF;
+	}
+	.exercise{
+		background-color:#FF6600;
+		width:100%;
+		display:block;
+		color:white;		
+		float: right;
+		padding:6px 0px 6px 0px;
+		text-align:center;
+		font-size:125%;
+		bottom:0px;
+
+	}
+	.exercise:hover{
+		background-color:#FF9E5E;
+	}
+	a:hover{
+		text-decoration:none;
+	}
+}
+
+.article{
+	padding-right:10px;
+	max-width:900px;
+	display:block;
+	width:100%;
+	border-color:grey;
+	border-width:2px;
+	border-radius:5px;
+	border-style:solid;
+	overflow:auto;
+	margin-top:20px;
+	background-color:rgba(0, 153, 255, 0.2);
+	h3{
+		margin: 10px 0px 10px 0px;
+	    overflow: hidden;
+	    text-overflow: ellipsis; 
+	}
+	h4{
+		font-style: italic;
+	}
+	img{
+		max-height:200px;
+		max-width:300px;
+		margin-right:10px;
+		float:left;
+		width:20%;
+	}
+	.content{
+		display:block;
+	}
+	.content p{
+		display:block;
+		font-size:12pt;
+	}
+}
+
+.article:hover{
+	background-color:rgba(0, 153, 255, 0.4)
+}
+
+/* Applies new design to small screens */
+@media (max-width: 700px) {
+  .article {
+    /* Removes paragraph snapshot */
+    .content{
+    	display:none;
+    }
+    .content-full{
+    	display:block;
+    }
+
+    /* Article titles become 3 lines long */
+    h3{
+    	display:block;
+    	width:70%;
+    	height:100%;
+    	font-size:13pt;
+    	margin: 10px 0px 10px 0px;
+		white-space: initial; 
+		/* Below code enforces a multi-line ellipses */
+	       overflow: hidden;
+		   text-overflow: ellipsis;
+		   display: -webkit-box;
+		   -webkit-box-orient: vertical;
+		   -webkit-line-clamp: 3; /* number of lines to show */
+		   line-height: 1.2;        /* fallback */
+		   max-height: 3*3;       /* fallback */
+    }
+  }
+}
+
+/* user profile page */
+.exercise-complete{
+	.container{
+		display:inline-block;
+		width:25%;
+		overflow:auto;
+		margin:4%;
+		background-color:rgba(0, 153, 255, 0.2);
+		border-color:grey;
+		border-width:2px;
+		border-radius:5px;
+		border-style:solid;
+		padding-top:10px;
+		padding-bottom:10px;
+		min-width:150px;
+		ul{
+			list-style:none;
+			padding-left:15px;
+			margin:0px;
+		}
+	}
+	.container:hover{
+		background-color:rgba(0, 153, 255, 0.4)
+	}
+}
+
+
