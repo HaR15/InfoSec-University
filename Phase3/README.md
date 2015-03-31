@@ -1,3 +1,7 @@
+# Video presenting the project
+
+<a href="https://www.youtube.com/watch?v=fW7JD1GsvGg">Watch on Youtube</a>
+
 # Running the application
 <ol>
 	<li>
