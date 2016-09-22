@@ -1,28 +1,21 @@
-# Video presenting the project
+# About
 
-<a href="https://www.youtube.com/watch?v=xkNhH_5E9vA">Watch on Youtube</a>
+InfoSec is the one-stop platform to learn different topics in computer security,  
+practice what you've learned, and then go a step further. 
 
-# Running the application
-<ol>
-	<li>
-		Download Ubuntu virtual machine containing our prepared application from the following link: https://mega.co.nz/#!slRUibzT!EZpOMrmbICBMLtZ0zG6m4tJjs6gkDsdhd7BgU32F2ws
-	</li>
-	<li>
-		Open the virtual machine using VMplayer, VMware Fusion, or your prefered virtual machine tool.
-	</li>
-	<li>
-		Log into with username = infosec and password = csc302vm
-	</li>
-	<li>
-		Open Terminal and navigate to the infosec folder on the Desktop.
-	</li>
-	<li>
-		Execute the following command: ```sails lift```
-	</li>
-	<li>
-		Open Firefox and go to the following URL: ```localhost:1337```
-	</li>
-	<li>
-		You can now begin using our application.
-	</li>
-</ol>
+Our web app provides you with access to:
+
+* **Tutorials:**  Get the background and understanding of a security topic of interest.
+* **Exercises:**  Apply your new knowledge of a topic to a problem.
+* **Challenges:**  Try something harder if you're not challenged.
+* **News:**  Read the latest news on security, hacks, and more. 
+
+Watch the video to learn more: https://www.youtube.com/watch?v=xkNhH_5E9vA
+
+
+# Running the application:
+
+1. Clone git repo: ```git clone https://github.com/HaR15/302W15-Prj-Team12-repo.git```
+2. Change into the Phase3/infosec folder: ```cd Phase3/infosec```
+3. Install the dependencies: ```npm install```
+4. Run the app: ```sails lift```
