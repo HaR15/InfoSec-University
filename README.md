@@ -3,15 +3,15 @@
 InfoSec is the one-stop platform to learn different topics in computer security,  
 practice what you've learned, and then go a step further. 
 
+# Learn more from this video: 
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/xkNhH_5E9vA/0.jpg)](http://www.youtube.com/watch?v=xkNhH_5E9vA)
+
 Our web app provides you with access to:
 
 * **Tutorials:**  Get the background and understanding of a security topic of interest.
 * **Exercises:**  Apply your new knowledge of a topic to a problem.
 * **Challenges:**  Try something harder if you're not challenged.
 * **News:**  Read the latest news on security, hacks, and more. 
-
-Watch the video to learn more: https://www.youtube.com/watch?v=xkNhH_5E9vA
-
 
 # Running the application:
 
